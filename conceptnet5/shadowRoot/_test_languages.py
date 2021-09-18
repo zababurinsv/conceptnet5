@@ -314,4 +314,5 @@ LANGUAGE_NAMES = {
 def test_language_names():
     for code in LANGUAGE_NAMES:
         name = get_language_name(code)
+        repr(name)
         assert name == LANGUAGE_NAMES[code]
