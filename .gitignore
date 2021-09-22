@@ -23,16 +23,16 @@ attic/
 static/img/build/
 logs/*.log
 *.zip
-static/img/build/
+./static/img/build/
 lib/apsw-3.8.5-r1/
 lib/apsw-3.8.6-r1/
 .snakemake/
 testdata/current
-
+.idea
 .DS_Store
 */.DS_Store
 .DS_Store?
-
+yarn.lock
 # Logs
 logs
 *.log
