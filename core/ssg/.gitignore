@@ -16,7 +16,6 @@ wikipedia.txt
 secrets.py
 *.tar.bz2
 dist/
-src/*
 env/
 data
 conceptnet.s3.amazonaws.com/

@@ -1,0 +1,203 @@
+@-webkit-keyframes rotation {
+  from {-webkit-transform: rotate(0deg);}
+  to {-webkit-transform: rotate(360deg);}
+}
+@-moz-keyframes rotation {
+  from {-moz-transform: rotate(0deg);}
+  to {-moz-transform: rotate(360deg);}
+}
+@-o-keyframes rotation {
+  from {-o-transform: rotate(0deg);}
+  to {-o-transform: rotate(360deg);}
+}
+@keyframes rotation {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+
+:root {
+  --I: 0.7vw;
+  --gap: 0.3vw;
+  --8: calc(2.4 / 0.7);
+  --7: calc(2 / 0.7);
+  --6: calc(1.4 / 0.7);
+  --border-radius: 0.2vw;
+  --button-padding: 0.5vw;
+}
+
+.__header {
+  display: flex;
+  flex-direction: row;
+  grid-gap: var(--gap);
+  margin-top: 0;
+  font-size: var(--I);
+  height: 14vw;
+}
+
+.__header_logo_value {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: var(--I);
+}
+
+.__header_menu {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: auto;
+  flex-direction: column;
+  font-size: calc(var(--I) * var(--8));
+}
+
+.__header-menu_status span {
+  padding-left: var(--I);
+  box-sizing: border-box;
+  font-size: calc(var(--I) * var(--7));
+}
+
+.__header-menu_status_db span {
+  padding-left: calc(var(--I));
+}
+
+.__header-menu_status_fs span {
+  padding-left: calc(var(--I));
+}
+
+page-external {
+  height: 50vw;
+}
+
+venus-tabs {
+  --background-color: #7694f4;
+  --width: max-content;
+  --border-radius: 0.2vw;
+  --padding: 0.2vw;
+  --height: auto;
+  --box-shadow: inset 0 0 1vw 0 #7694f4;
+  --background: white;
+  --font-family: 'Roboto Slab';
+  --tabs-font: 400 1.2vw/0.4vw 'Roboto';
+  --tabs-width: 5vw;
+  --min-width: 20.1vw;
+  --max-width: 20.1vw;
+  --button-max-width: 8vw;
+  --button-min-width: 8vw;
+  --button-text-align: center
+}
+
+.__peer-body-menu-item_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.__peer-body-menu-item {
+  box-shadow: inset 0 0 1vw 0 rgba(244, 118, 156, 0.98);
+  box-sizing: border-box;
+  padding: var(--button-padding, 0.5vw);
+  margin: 0.25vw;
+  border-radius: var(--border-radius,0.2vw);
+  cursor:pointer;
+  max-width: var(--button-max-width, 8vw);
+  min-width: var(--button-min-width, 8vw);
+  text-align: var(--button-text-align, center);
+}
+
+.__peer-body-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.__peer-body-menu_item_menu {
+  width: 20vw;
+}
+
+.__peer-body-menu_item_menu:last-child {
+
+}
+
+.emscripten {
+  padding-right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+div.emscripten { text-align: center; }
+div.emscripten_border { border: 1px solid black; }
+/* the canvas *must not* have any border or padding, or mouse coords will be wrong */
+canvas.emscripten { border: 0px none; background-color: black; }
+
+#emscripten_logo {
+  display: inline-block;
+  margin: 0;
+}
+
+.spinner {
+  position: absolute;
+  top: 1.9vw;
+  left: 6.5vw;
+  margin: 0;
+  width: 1.6vw;
+  height: 1.6vw;
+  display: inline-block;
+  vertical-align: top;
+  -webkit-animation: rotation .8s linear infinite;
+  -moz-animation: rotation .8s linear infinite;
+  -o-animation: rotation .8s linear infinite;
+  animation: rotation 0.8s linear infinite;
+  border-left: 5px solid rgb(235, 235, 235);
+  border-right: 5px solid rgb(235, 235, 235);
+  border-bottom: 5px solid rgb(235, 235, 235);
+  border-top: 5px solid rgb(120, 120, 120);
+  border-radius: 50%;
+  background-color: rgb(189, 215, 46);
+}
+
+#status {
+  display: inline-block;
+  margin: 0;
+  position: absolute;
+  top: 3vw;
+  right: 0.4vw;
+  font-size: 1.3vw;
+  vertical-align: top;
+  font-weight: bold;
+  color: black;
+}
+
+#progress {
+  height: 20px;
+  width: 300px;
+}
+
+#controls {
+  display: flex;
+  flex-direction: column;
+  max-width: 21vw;
+}
+
+#controls div {
+  display: flex;
+  align-items: center;
+  font-size: calc(var(--I) * var(--8));
+}
+
+#output {
+  width: 100%;
+  height: 200px;
+  margin: 0 auto;
+  margin-top: 10px;
+  border-left: 0;
+  border-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+  display: block;
+  background-color: black;
+  color: white;
+  font-family: 'Lucida Console', Monaco, monospace;
+  outline: none;
+}

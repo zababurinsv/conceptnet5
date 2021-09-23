@@ -1,0 +1,1475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dialer</title>
+  <link rel="manifest" href="https://zababurinsv.github.io/manifest.json"/>
+  <link rel="shortcut icon" href="data:image/png;base64, AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAbbv+DGW3/mRlt/5kZbf+ZGq6/hIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGa3/ohkt/7/Zbj//2S3/v9lt/6WAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGm5/iRlt/74Zbj//2W4//9luP//Zbf++mi4/i4gIPciGhr24hsb9uwbG/bsGhr24CEh9xoAAAAAAAAAAAAAAABnuP5mZLf+/2W4//9luP//Zbj//2S3/v9muP5yGBj2rhMT9v8TE/b/ExP2/xMT9f8YGPWkAAAAAAAAAAAAAAAAb7z/BGW3/tZluP//Zbj//2W4//9lt/7gJzH3ShMT9f8TE/b/ExP2/xMT9v8TE/b/ExP1/CAg9joAAAAAAAAAAAAAAABmuP5GZLf+6GS3/uhkt/7oZbf+UhgY9YQSEvX/ExP2/xMT9v8TE/b/ExP2/xIS9f8aGvZ8AAAAAD4++gQgIPZ6IiL2hiIi9oYgIPZ8KCj5BAAAAAAtLfgUFBT17BMT9v8TE/b/ExP2/xMT9v8VFfXoLCz4DgAAAAAaGvZqEhL1/xMT9v8TE/b/EhL1/xsb9nIAAAAAAAAAABwc9m4SEvX/ExP2/xMT9v8SEvX/HR32ZAAAAAAnJ/gSFRX16hMT9v8TE/b/ExP2/xMT9v8UFPXuJyf4Fp2xlAKNnqUYLC/mfhYW83ATE/VuFxf1aDc3+gIAAAAAGBj1fhIS9f8TE/b/ExP2/xMT9v8TE/b/ExP1/xkZ9YaGn3yIhZ57/4Wee/+Gn3yKAAAAAAAAAAAAAAAAAAAAACMj9zYTE/X8ExP2/xMT9v8TE/b/ExP2/xMT9f9JUshihZ57+IaffP+Gn3z/hZ579oigfiYAAAAAAAAAAAAAAAAAAAAAGBj1oBIS9f8TE/b/ExP2/xMT9f8YGPWmiKB+PIWee/+Gn3z/hp98/4Wee/+HoH06AAAAAAAAAAAAAAAAAAAAACUl9xgVFfXOExP11BMT9dQUFPXQJib3HgAAAACGn3ymhp98/4affP+Gn3ymAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAiKB+EIihf0CIoX9AiKB+EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAP//AADg/wAA4MMAAOCBAADggQAA8QEAAOeBAADDwwAAgf8AAIAPAACBDwAAgQ8AAMMPAAD//wAA//8AAA==" type="image/png">
+</head>
+<body>
+<div class="__peer">
+  <div class="__peer-header">
+    <pre class="__peer-header_logo_value">
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+░░░░░░░░░░░░░░░░░░█░░░░░░░░░░░░░░░░░░░░░░░░░░░
+░░░░░░████░░░░░░█████░░░░░░░░░░░░░░░░░░░░░░░░░
+░░░░████████░░░███████░░░░░░░░░░░░░░░░░░░░░░░░
+░░░██████████░█████████░░░░░░░░░░░░░░░░░░░░░░░
+░░████████████░░█████░░░░░░░░░░░░░░░░░░░░░░░░░
+░░░██████████░░░░░█░░░░░░░░░░░░░░░░░░░░░░░░░░░
+░░░░████████░░░░░░█████╗░██████╗░░██████╗░░░░░
+░░░░░░░░█████░░░░██╔══██╗██╔══██╗██╔════╝░░░░░
+░░░░░░█████████░░██║░░██║██████╔╝██║░░██╗░░░░░
+░░░░░███████████░██║░░██║██╔══██╗██║░░╚██╗░░░░
+░░░░░░█████████░░╚█████╔╝██║░░██║╚██████╔╝░░░░
+░░░░░░░███████░░░░╚════╝░╚═╝░░╚═╝░╚═════╝░░░░░
+░░░░░░░░░███░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░</pre>
+    <div class="__peer-header-info_value">
+      <div class="__peer-header-info_status">
+        <div class="__peer-header-info_status_peer">peer:<span>stop</span></div>
+        <div class="__peer-header-info_status_db">db:<span>stop</span></div>
+        <div class="__peer-header-info_status_fs">fs:<span>stop</span></div>
+        <div class="__peer-header-info_status_worker">worker:<span>stop</span></div>
+      </div>
+      <div class="__peer-header-info_db"><span></span></div>
+    </div>
+  </div>
+  <div class="__peer-body">
+    <fieldset class="__peer-body-menu">
+      <legend>Menu</legend>
+      <fieldset class="__peer-body-menu_item_menu">
+        <legend>Peer</legend>
+        <venus-tabs background>
+          <a slot="title" selected >Control</a>
+          <a slot="title">Info</a>
+          <a slot="title">Logs</a>
+          <section>
+            <span class="__peer-body-menu-item_status"></span>
+            <div class="__peer-body-menu-item_wrapper">
+              <label class="__peer-body-menu-item" for="__peer-body-menu-item_peer_reset">Message<input type="button" id="__peer-body-menu-item_peer_reset" name="reset" style="display: none"></label>
+              <label class="__peer-body-menu-item" for="__peer-body-menu-item_peer_create">Create<input type="button" id="__peer-body-menu-item_peer_create" name="reset" style="display: none"></label>
+              <label class="__peer-body-menu-item" for="__peer-body-menu-item_peer_delete">Delete<input type="button" id="__peer-body-menu-item_peer_delete" name="reset" style="display: none"></label>
+              <label class="__peer-body-menu-item" for="__peer-body-menu-item_peer_update">Update<input type="button" id="__peer-body-menu-item_peer_update" name="reset" style="display: none"></label>
+              <label class="__peer-body-menu-item" for="__peer-body-menu-item_peer_read">Read<input type="button" id="__peer-body-menu-item_peer_read" name="reset" style="display: none"></label>
+            </div>
+          </section>
+          <section>content panel 2</section>
+          <section>content panel 3</section>
+        </venus-tabs>
+      </fieldset>
+      <fieldset class="__peer-body-menu_item_menu">
+        <legend>DB</legend>
+        <venus-tabs background>
+          <a slot="title" selected >Control</a>
+          <a slot="title">Info</a>
+          <a slot="title">Logs</a>
+          <section>
+            <span class="__peer-body-menu-item_status"></span>
+            <div class="__peer-body-menu-item_wrapper">
+              <label class="__peer-body-menu-item" for="__peer-body-menu-item_db_connect-ipfs">Init FS<input type="button" id="__peer-body-menu-item_db_connect-ipfs" name="reset" style="display: none"></label>
+              <label class="__peer-body-menu-item" for="__peer-body-menu-item_db_connect-orbit">Init DB<input type="button" id="__peer-body-menu-item_db_connect-orbit" name="reset" style="display: none"></label>
+              <label class="__peer-body-menu-item" for="__peer-body-menu-item_db_connect-db">Open Db<input type="button" id="__peer-body-menu-item_db_connect-db" name="reset" style="display: none"></label>
+              <label class="__peer-body-menu-item" for="__peer-body-menu-item_db_connect-pinata">Init Pin<input type="button" id="__peer-body-menu-item_db_connect-pinata" name="reset" style="display: none"></label>
+              <label class="__peer-body-menu-item" for="__peer-body-menu-item_db_terminate">Terminate<input type="button" id="__peer-body-menu-item_db_terminate" name="reset" style="display: none"></label>
+              <label class="__peer-body-menu-item" for="__peer-body-menu-item_db_create">Create<input type="button" id="__peer-body-menu-item_db_create" name="reset" style="display: none"></label>
+              <label class="__peer-body-menu-item" for="__peer-body-menu-item_db_delete">Delete<input type="button" id="__peer-body-menu-item_db_delete" name="reset" style="display: none"></label>
+              <label class="__peer-body-menu-item" for="__peer-body-menu-item_db_update">Update<input type="button" id="__peer-body-menu-item_db_update" name="reset" style="display: none"></label>
+              <label class="__peer-body-menu-item" for="__peer-body-menu-item_db_read">Read<input type="button" id="__peer-body-menu-item_db_read" name="reset" style="display: none"></label>
+            </div>
+          </section>
+          <section>content panel 2</section>
+          <section>content panel 3</section>
+        </venus-tabs>
+      </fieldset>
+      <fieldset class="__peer-body-menu_item_menu">
+        <legend>FS</legend>
+        <venus-tabs background>
+          <a slot="title" selected >Control</a>
+          <a slot="title">Info</a>
+          <a slot="title">Logs</a>
+          <section>
+            <span class="__peer-body-menu-item_status"></span>
+            <div class="__peer-body-menu-item_wrapper">
+              <label class="__peer-body-menu-item" for="__peer-body-menu-item_fs_init">Init FS<input type="button" id="__peer-body-menu-item_fs_init" name="reset" style="display: none"></label>
+              <label class="__peer-body-menu-item" for="__peer-body-menu-item_fs_open">Open FS<input type="button" id="__peer-body-menu-item_fs_open" name="reset" style="display: none"></label>
+              <label class="__peer-body-menu-item" for="__peer-body-menu-item_fs_delete">Delete<input type="button" id="__peer-body-menu-item_fs_delete" name="reset" style="display: none"></label>
+              <label class="__peer-body-menu-item" for="__peer-body-menu-item_fs_update">Update<input type="button" id="__peer-body-menu-item_fs_update" name="reset" style="display: none"></label>
+              <label class="__peer-body-menu-item" for="__peer-body-menu-item_fs_read">Read<input type="button" id="__peer-body-menu-item_fs_read" name="reset" style="display: none"></label>
+            </div>
+          </section>
+          <section>content panel 2</section>
+          <section>content panel 3</section>
+        </venus-tabs>
+      </fieldset>
+      <fieldset class="__peer-body-menu_item_menu">
+        <legend>Worker</legend>
+        <venus-tabs background>
+          <a slot="title" selected >Control</a>
+          <a slot="title">Info</a>
+          <a slot="title">Logs</a>
+          <section>
+            <span class="__peer-body-menu-item_status"></span>
+            <div class="__peer-body-menu-item_wrapper">
+              <label class="__peer-body-menu-item" for="__peer-body-menu-item_worker_reset">Reset<input type="button" id="__peer-body-menu-item_worker_reset" name="reset" style="display: none"></label>
+              <label class="__peer-body-menu-item" for="__peer-body-menu-item_worker_create">Create<input type="button" id="__peer-body-menu-item_worker_create" name="reset" style="display: none"></label>
+              <label class="__peer-body-menu-item" for="__peer-body-menu-item_worker_delete">Delete<input type="button" id="__peer-body-menu-item_worker_delete" name="reset" style="display: none"></label>
+              <label class="__peer-body-menu-item" for="__peer-body-menu-item_worker_update">Update<input type="button" id="__peer-body-menu-item_worker_update" name="reset" style="display: none"></label>
+              <label class="__peer-body-menu-item" for="__peer-body-menu-item_worker_read">Read<input type="button" id="__peer-body-menu-item_worker_read" name="reset" style="display: none"></label>
+            </div>
+          </section>
+          <section>content panel 2</section>
+          <section>content panel 3</section>
+        </venus-tabs>
+      </fieldset>
+      <fieldset class="__peer-body-menu_item_menu">
+        <legend>DEX</legend>
+        <venus-tabs background>
+          <a slot="title" selected >Control</a>
+          <a slot="title">Info</a>
+          <a slot="title">Logs</a>
+          <section>
+            <span class="__peer-body-menu-item_status"></span>
+            <div class="__peer-body-menu-item_wrapper">
+              <label class="__peer-body-menu-item" for="__peer-body-menu-item_dex_reset">Reset<input type="button" id="__peer-body-menu-item_dex_reset" name="reset" style="display: none"></label>
+              <label class="__peer-body-menu-item" for="__peer-body-menu-item_dex_create">Create<input type="button" id="__peer-body-menu-item_dex_create" name="reset" style="display: none"></label>
+              <label class="__peer-body-menu-item" for="__peer-body-menu-item_dex_delete">Delete<input type="button" id="__peer-body-menu-item_dex_delete" name="reset" style="display: none"></label>
+              <label class="__peer-body-menu-item" for="__peer-body-menu-item_dex_update">Update<input type="button" id="__peer-body-menu-item_dex_update" name="reset" style="display: none"></label>
+              <label class="__peer-body-menu-item" for="__peer-body-menu-item_dex_read">Read<input type="button" id="__peer-body-menu-item_dex_read" name="reset" style="display: none"></label>
+            </div>
+          </section>
+          <section>content panel 2</section>
+          <section>content panel 3</section>
+        </venus-tabs>
+      </fieldset>
+      <fieldset class="__peer-body-menu_item_menu">
+        <legend>Contract</legend>
+        <venus-tabs background>
+          <a slot="title" selected >Control</a>
+          <a slot="title">Info</a>
+          <a slot="title">Logs</a>
+          <section>
+            <span class="__peer-body-menu-item_status"></span>
+            <div class="__peer-body-menu-item_wrapper">
+              <label class="__peer-body-menu-item" for="__peer-body-menu-item_contract_reset">Reset<input type="button" id="__peer-body-menu-item_contract_reset" name="reset" style="display: none"></label>
+              <label class="__peer-body-menu-item" for="__peer-body-menu-item_contract_create">Create<input type="button" id="__peer-body-menu-item_contract_create" name="reset" style="display: none"></label>
+              <label class="__peer-body-menu-item" for="__peer-body-menu-item_contract_delete">Delete<input type="button" id="__peer-body-menu-item_contract_delete" name="reset" style="display: none"></label>
+              <label class="__peer-body-menu-item" for="__peer-body-menu-item_contract_update">Update<input type="button" id="__peer-body-menu-item_contract_update" name="reset" style="display: none"></label>
+              <label class="__peer-body-menu-item" for="__peer-body-menu-item_contract_read">Read<input type="button" id="__peer-body-menu-item_contract_read" name="reset" style="display: none"></label>
+            </div>
+          </section>
+          <section>content panel 2</section>
+          <section>content panel 3</section>
+        </venus-tabs>
+      </fieldset>
+      <fieldset class="__peer-body-menu_item_menu">
+        <legend>OCW</legend>
+        <venus-tabs background>
+          <a slot="title" selected >Control</a>
+          <a slot="title">Info</a>
+          <a slot="title">Logs</a>
+          <section>
+            <span class="__peer-body-menu-item_status"></span>
+            <div class="__peer-body-menu-item_wrapper">
+              <label class="__peer-body-menu-item" for="__peer-body-menu-item_ocw_reset">Reset<input type="button" id="__peer-body-menu-item_ocw_reset" name="reset" style="display: none"></label>
+              <label class="__peer-body-menu-item" for="__peer-body-menu-item_ocw_create">Create<input type="button" id="__peer-body-menu-item_ocw_create" name="reset" style="display: none"></label>
+              <label class="__peer-body-menu-item" for="__peer-body-menu-item_ocw_delete">Delete<input type="button" id="__peer-body-menu-item_ocw_delete" name="reset" style="display: none"></label>
+              <label class="__peer-body-menu-item" for="__peer-body-menu-item_ocw_update">Update<input type="button" id="__peer-body-menu-item_ocw_update" name="reset" style="display: none"></label>
+              <label class="__peer-body-menu-item" for="__peer-body-menu-item_ocw_read">Read<input type="button" id="__peer-body-menu-item_ocw_read" name="reset" style="display: none"></label>
+            </div>
+          </section>
+          <section>content panel 2</section>
+          <section>content panel 3</section>
+        </venus-tabs>
+      </fieldset>
+      <fieldset class="__peer-body-menu_item_menu">
+        <legend>Artificial intelligence</legend>
+        <venus-tabs background>
+          <a slot="title" selected >Control</a>
+          <a slot="title">Info</a>
+          <a slot="title">Logs</a>
+          <section>
+            <span class="__peer-body-menu-item_status"></span>
+            <div class="__peer-body-menu-item_wrapper">
+              <label class="__peer-body-menu-item" for="__peer-body-menu-item_ai_reset">Reset<input type="button" id="__peer-body-menu-item_ai_reset" name="reset" style="display: none"></label>
+              <label class="__peer-body-menu-item" for="__peer-body-menu-item_ai_create">Create<input type="button" id="__peer-body-menu-item_ai_create" name="reset" style="display: none"></label>
+              <label class="__peer-body-menu-item" for="__peer-body-menu-item_ai_delete">Delete<input type="button" id="__peer-body-menu-item_ai_delete" name="reset" style="display: none"></label>
+              <label class="__peer-body-menu-item" for="__peer-body-menu-item_ai_update">Update<input type="button" id="__peer-body-menu-item_ai_update" name="reset" style="display: none"></label>
+              <label class="__peer-body-menu-item" for="__peer-body-menu-item_ai_read">Read<input type="button" id="__peer-body-menu-item_ai_read" name="reset" style="display: none"></label>
+            </div>
+          </section>
+          <section>content panel 2</section>
+          <section>content panel 3</section>
+        </venus-tabs>
+      </fieldset>
+    </fieldset>
+  </div>
+<!--  <div style="height: 190vh;">-->
+<!--    <page-external slot ="dex" data-url="https://github.com/users/zababurinsv/projects/4?fullscreen=true" data-height=190 data-width=30></page-external>-->
+<!--  </div>-->
+<!--  <div style="height: 190vh;">-->
+<!--    <page-external slot ="dex" data-url="https://zababurinsv.github.io/contract-deals/" data-height=190 data-width=30></page-external>-->
+<!--  </div>-->
+<!--  <div style="height: 81vh;">-->
+<!--    <page-external slot ="dex" data-url="http://localhost:9876/dex" data-height=81  data-width=30></page-external>-->
+<!--  </div>-->
+</div>
+
+<style>@import "./index.css";</style>
+<script type="module" src="./index.js"></script>
+<script type="module">
+  import SimplePeer from '@orbit/simple-peer'
+  import loaderFS from './fs/fs.mjs'
+  import wasm from './fs/wasmBinary.mjs'
+  import IPFS from 'ipfs'
+  import OrbitDB from './es5/OrbitDB.js'
+  import isEmpty from '@orbit/isEmpty'
+  import PeerId from 'peer-id'
+  import ipns from 'ipns'
+  import task from './task.js'
+  import bem from './bem.js'
+  import { base58btc } from 'multiformats/bases/base58'
+  import uint8ArrayFromString from 'uint8arrays/from-string'
+  import uint8ArrayConcat from 'uint8arrays/concat'
+  import pinataSDK from "@pinata/sdk";
+  import VenusTabs from './tabs/index.mjs'
+  import parser from './bemParser.mjs'
+  document.addEventListener("DOMContentLoaded",async () => {
+    let itemID = document.body.querySelectorAll("[id]")
+    let itemCLASS = document.body.querySelectorAll("[class]")
+    let API = {}
+    API['id'] = {}
+    API['class'] = {}
+    API['raw'] = {}
+    API['raw']['id'] = {}
+    API['raw']['class'] = {}
+    API = await parser(API, itemID, { type: 'id' })
+    API = await parser(API, itemCLASS, { type: 'class' })
+    await VenusTabs()
+    console.log('=== API ===', API)
+    let path = "http://localhost:4434"
+    // let path = "https://web3-star.herokuapp.com"
+    // let path = "https://web3.news"
+    let sys = {
+      raw: API['raw']['id'],
+      control: {
+        db: [{
+          origin: "__peer-header-info_status_peer",
+          type:"button",
+          key: document.body.querySelector('#__peer-body-menu_item_reset'),
+        }]
+      },
+      api: {
+        db: {
+          '/orbitdb': '',
+          '/orbitdb/set/:external': '',
+          '/orbitdb/get/:external': '',
+          '/orbitdb/delete': '',
+        }
+      },
+      alias: {
+        "peer:send-message": {
+          origin: ["__peer-header-info_status_peer"],
+          key: document.body.querySelector('.__peer-header-info_status_peer span'),
+          value: document.body.querySelector('.__peer-header-info_status_peer span').textContent
+        },
+        "peer": {
+          origin: ["__peer-header-info_status_peer", "__peer-body-menu-item_status"],
+          status: document.body.querySelector('.__peer-body-menu-item_status'),
+          key: document.body.querySelector('.__peer-header-info_status_peer span'),
+          value: document.body.querySelector('.__peer-header-info_status_peer span').textContent
+        },
+        "db": {
+          origin: ["__peer-header-info_status_db"],
+          key: document.body.querySelector('.__peer-header-info_status_db span'),
+          value: document.body.querySelector('.__peer-header-info_status_db span').textContent,
+        },
+        "fs": {
+          origin: "__peer-header-info_status_fs",
+          key: document.body.querySelector('.__peer-header-info_status_fs span'),
+          value: document.body.querySelector('.__peer-header-info_status_fs span').textContent
+        },
+        "worker": {
+          origin: "__peer-header-info_status_worker",
+          key: document.body.querySelector('.__peer-header-info_status_worker span'),
+          value: document.body.querySelector('.__peer-header-info_status_worker span').textContent
+        },
+        "writerText": {
+          origin: "__peer-header-info_db",
+          key: document.body.querySelector('.__peer-header-info_db span'),
+          value: document.body.querySelector('.__peer-header-info_db span').textContent
+        },
+      },
+      events: {
+        'connect-ipfs': {
+          key: API.id.peer.body.menu.item.db['connect-ipfs'][0],
+        },
+        "connect-orbit": {
+          key: API.id.peer.body.menu.item.db['connect-orbit'][0],
+        },
+        "connect-db": {
+          key: API.id.peer.body.menu.item.db['connect-db'][0],
+        },
+        "connect-pinata": {
+          key: API.id.peer.body.menu.item.db['connect-pinata'][0],
+        },
+        "connect-fs": {
+          key: API.id.peer.body.menu.item.fs.init[0],
+        },
+      }
+    }
+
+    let Peer = new Proxy({
+      peer: await createPeerID(),
+      initiator: false,
+      id: "Qma3GsJmB47xYuyahPZPSadh1avvxfyYQwk8R3UnFrQ6aP",
+      recipient: "QmcrQZ6RJdpYuGvZqD5QEHAv6qX4BrQLJLQPQUrTrzdcgm",
+      emoji: {
+        moon: [
+          ['💥','⭐','🌟','◼️'],
+          ['🌕','🌔','🌓','🌒'],
+          ['🌑','🌘','🌗','🌖'],
+        ],
+        hearts: [
+          ['💜','💛','💚','💙','🖤','💔'],
+          ['❤','♥','❣','😻','👩‍❤️‍👩','👨‍❤️‍👨'],
+          ['💗','💖','💕','💑','💓','💞','💟'],
+        ]
+      },
+      ipns: {
+        public: {
+          "id": "QmcrQZ6RJdpYuGvZqD5QEHAv6qX4BrQLJLQPQUrTrzdcgm",
+          "privKey": "CAASqAkwggSkAgEAAoIBAQDLZZcGcbe4urMBVlcHgN0fpBymY+xcr14ewvamG70QZODJ1h9sljlExZ7byLiqRB3SjGbfpZ1FweznwNxWtWpjHkQjTVXeoM4EEgDSNO/Cg7KNlU0EJvgPJXeEPycAZX9qASbVJ6EECQ40VR/7+SuSqsdL1hrmG1phpIju+D64gLyWpw9WEALfzMpH5I/KvdYDW3N4g6zOD2mZNp5y1gHeXINHWzMF596O72/6cxwyiXV1eJ000k1NVnUyrPjXtqWdVLRk5IU1LFpoQoXZU5X1hKj1a2qt/lZfH5eOrF/ramHcwhrYYw1txf8JHXWO/bbNnyemTHAvutZpTNrsWATfAgMBAAECggEAQj0obPnVyjxLFZFnsFLgMHDCv9Fk5V5bOYtmxfvcm50us6ye+T8HEYWGUa9RrGmYiLweuJD34gLgwyzE1RwptHPj3tdNsr4NubefOtXwixlWqdNIjKSgPlaGULQ8YF2tm/kaC2rnfifwz0w1qVqhPReO5fypL+0ShyANVD3WN0Fo2ugzrniCXHUpR2sHXSg6K+2+qWdveyjNWog34b7CgpV73Ln96BWae6ElU8PR5AWdMnRaA9ucA+/HWWJIWB3Fb4+6uwlxhu2L50Ckq1gwYZCtGw63q5L4CglmXMfIKnQAuEzazq9T4YxEkp+XDnVZAOgnQGUBYpetlgMmkkh9qQKBgQDvsEs0ThzFLgnhtC2Jy//ZOrOvIAKAZZf/mS08AqWH3L0/Rjm8ZYbLsRcoWU78sl8UFFwAQhMRDBP9G+RPojWVahBL/B7emdKKnFR1NfwKjFdDVaoX5uNvZEKSl9UubbC4WZJ65u/cd5jEnj+w3ir9G8n+P1gp/0yBz02nZXFgSwKBgQDZPQr4HBxZL7Kx7D49ormIlB7CCn2i7mT11Cppn5ifUTrp7DbFJ2t9e8UNk6tgvbENgCKXvXWsmflSo9gmMxeEOD40AgAkO8Pn2R4OYhrwd89dECiKM34HrVNBzGoB5+YsAno6zGvOzLKbNwMG++2iuNXqXTk4uV9GcI8OnU5ZPQKBgCZUGrKSiyc85XeiSGXwqUkjifhHNh8yH8xPwlwGUFIZimnD4RevZI7OEtXw8iCWpX2gg9XGuyXOuKORAkF5vvfVriV4e7c9Ad4Igbj8mQFWz92EpV6NHXGCpuKqRPzXrZrNOA9PPqwSs+s9IxI1dMpk1zhBCOguWx2m+NP79NVhAoGBAI6WSoTfrpu7ewbdkVzTWgQTdLzYNe6jmxDf2ZbKclrf7lNr/+cYIK2Ud5qZunsdBwFdgVcnu/02czeS42TvVBgs8mcgiQc/Uy7yi4/VROlhOnJTEMjlU2umkGc3zLzDgYiRd7jwRDLQmMrYKNyEr02HFKFn3w8kXSzW5I8rISnhAoGBANhchHVtJd3VMYvxNcQb909FiwTnT9kl9pkjhwivx+f8/K8pDfYCjYSBYCfPTM5Pskv5dXzOdnNuCj6Y2H/9m2SsObukBwF0z5Qijgu1DsxvADVIKZ4rzrGb4uSEmM6200qjJ/9U98fVM7rvOraakrhcf9gRwuspguJQnSO9cLj6",
+          "pubKey": "CAASpgIwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDLZZcGcbe4urMBVlcHgN0fpBymY+xcr14ewvamG70QZODJ1h9sljlExZ7byLiqRB3SjGbfpZ1FweznwNxWtWpjHkQjTVXeoM4EEgDSNO/Cg7KNlU0EJvgPJXeEPycAZX9qASbVJ6EECQ40VR/7+SuSqsdL1hrmG1phpIju+D64gLyWpw9WEALfzMpH5I/KvdYDW3N4g6zOD2mZNp5y1gHeXINHWzMF596O72/6cxwyiXV1eJ000k1NVnUyrPjXtqWdVLRk5IU1LFpoQoXZU5X1hKj1a2qt/lZfH5eOrF/ramHcwhrYYw1txf8JHXWO/bbNnyemTHAvutZpTNrsWATfAgMBAAE="
+        }
+      },
+      role: {
+        initiator:[],
+        dialer:[]
+      },
+      external: {
+        db: {},
+        interval:  Math.floor((Math.random() * 300) + (Math.random() * 2000)),
+        updateInterval: 0,
+        count: 0,
+        dbType: {},
+        dbAddress: {},
+        core: {}
+      },
+      location: {
+        signal: path,
+        message: {
+          initiator: "initiator",
+          dialer: "dialer"
+        },
+        terminate: {
+          initiator: "terminate",
+          dialer: "terminate"
+        }
+      },
+      fs: {},
+      ipfs: {},
+      db: {},
+      pinata: {},
+      isFS: false,
+      isIPFS: false,
+      isDB: false,
+      isPinata: false,
+      isOpenDB: false,
+      isCreate: false,
+      isEvents: false,
+      isTerminate: false,
+      isPeer: false,
+      isOffer: false,
+      isAnswer: false,
+      isReconnect: false,
+      isClose: false,
+      core: {},
+      signal: {},
+      message: {
+        offer: {},
+        answer: {}
+      }
+    }, {
+      get: function(obj, prop) {
+        switch (prop) {
+          default:
+            console.log('proxy get', prop)
+            break
+        }
+        return obj[prop];
+      },
+      set: function(obj, prop, value) {
+        switch (prop) {
+          case "isTerminate":
+            (value)
+              ? terminate()
+              : console.log('terminate true')
+            break
+          case "isEvents":
+            (value)
+              ? peer()
+              : console.log('create peer');
+            break
+          case "isOffer":
+            (value)
+              ? requestAnswerMessage()
+              : console.log('offer send')
+            break
+          case "isAnswer":
+            (value)
+              ? requestConnectMessage()
+              : console.log('answer send')
+            break
+          case "isClose":
+            (value)
+              ? eventsClose()
+              : console.log('events close')
+            break
+          case "isReconnect":
+            (value)
+              ? signalServer()
+              : console.log('reconnect true')
+            break
+          case "isPinata":
+            (value)
+              ? (
+                  initPinata().then((obj) => {
+                    if(!obj.status) {
+                      Peer.isPinata = false
+                    } else {
+                      sys.alias.db.key.textContent = "error load FS"
+                      console.log('error load FS', obj)
+                    }
+                  })
+                )
+              : (
+                  sys.alias.db.key.textContent = "connect pinata",
+                  next(prop, value)
+                )
+            break
+          case "isFS":
+            (value)
+              ? (
+                  initFS().then((obj)=>{
+                    if(!obj.status) {
+                      Peer.isFS = false
+                    } else {
+                      sys.alias.fs.key.textContent = "error load FS"
+                      console.log('error load FS', obj)
+                    }
+                  })
+                )
+              : (
+                  sys.alias.fs.key.textContent = "connect FS",
+                  next(prop, value)
+              )
+            break
+          case "isIPFS":
+            (value)
+              ? ( sys.alias.db.key.textContent = "ipfs init start ...",
+                  initIPFS().then(obj => {
+                    if(!obj.status) {
+                      Peer.isIPFS = obj.status
+                    } else {
+                      sys.alias.db.key.textContent = "error: " + obj.message
+                    }
+                  })
+              )
+              : (
+                  sys.alias.db.key.textContent = "ipfs init",
+                  next(prop, value)
+              )
+            break
+          case "isDB":
+            (value)
+              ? (
+                  sys.alias.db.key.textContent = "orbitdb init start ...",
+                  orbitDB(Peer.ipfs).then((status) => {
+                    if(!status) {
+                      Peer.isDB = status
+                    } else {
+                      console.log('error', status)
+                    }
+                  })
+              )
+              : (
+                  sys.alias.db.key.textContent = "orbitdb init",
+                  next(prop, value)
+              )
+            break
+          case "isCreate":
+            (value)
+              ? createDatabase().then((obj) => { console.log('~~~~~~',obj) })
+              : console.log('offer send')
+            break
+          case "isOpenDB":
+            (value)
+              ? (
+                  sys.alias.db.key.textContent = "loading ipfs",
+                    openDatabase('\n' +
+                      '/orbitdb/zdpuAsNQ2TorfhoXPYmaAKQj1n36kHSTyRs6cw7AfLyZ2LynC/test')
+                      .then((obj) => {
+                        (!obj.status)
+                          ? Peer.isOpenDB = status
+                          : (
+                              console.log('error', obj.message),
+                              sys.alias.db.key.textContent = "error to connect db"
+                            )
+                    })
+                )
+              : (
+                  sys.alias.db.key.textContent = "connect db",
+                  console.log(`connect to db`, sys.alias)
+                )
+            break
+          case"signal":
+              sys.alias.peer.key.textContent = "signal server connect"
+            break
+          default:
+            console.log('неисветсное свойство', prop)
+            break
+        }
+        obj[prop] = value;
+        return true
+      }
+    });
+
+    for(let item in sys.events) {
+      sys.events[item].key.type = 'button'
+      sys.events[item].key.addEventListener('click', (events) => {
+        switch (item) {
+          case"connect-ipfs":
+            Peer.isIPFS = true
+            sys.events[item].key.disabled = 'true'
+            break
+          case"connect-orbit":
+            Peer.isDB = true
+            sys.events[item].key.disabled = 'true'
+            break
+          case"connect-fs":
+            Peer.isFS = true
+            sys.events[item].key.disabled = 'true'
+            break
+          case"connect-pinata":
+            Peer.isPinata = true
+            sys.events[item].key.disabled = 'true'
+            break
+          default:
+            console.log('необработанные события', item)
+            break
+        }
+      })
+    }
+
+    function emoji(prop) {
+      switch (prop) {
+          case 'init':
+            (Peer.initiator)
+              ? sys.alias.peer.status.textContent = "🌎"
+              : sys.alias.peer.status.textContent = "🌞"
+            break
+          case 'await':
+            (Peer.initiator)
+              ? sys.alias.peer.status.textContent = "🌎 🌓"
+              : sys.alias.peer.status.textContent = "🌞 🌗"
+            break
+          case 'connect':
+            (Peer.initiator)
+              ? sys.alias.peer.status.textContent = "🌎 🌓 🌞"
+              : sys.alias.peer.status.textContent = "🌞 🌗 🌎"
+            break
+          case 'peer save connect':
+            (Peer.initiator)
+              ? sys.alias.peer.status.textContent = "🌎"
+              : sys.alias.peer.status.textContent = "🌞"
+            break
+          case 'incoming message offer':
+
+            break
+          default:
+            console.log('неизвестное emoji', {
+              prop: prop
+            })
+            break
+      }
+    }
+
+    function openORcreate(props, value) {
+      switch (props) {
+        case"isDB":
+
+          console.log('~~~~ openORcreate ~~~~~~~', Peer)
+            // Peer.isOpenDB = true,
+            // Peer.isCreate = true
+        // : (console.log('is Create'))
+
+          break
+        default:
+          console.log("Неопределено поведение", props)
+          break
+      }
+    }
+
+    function next(prop, value) {
+      return new Promise(async (resolve, reject) => {
+        switch (prop) {
+          case"isDB":
+            (!value)
+              ? (
+                  console.log('Orbit create: set open db'),
+                  await openORcreate(prop, value)
+                )
+              : (
+                console.warn('положительное значение', {
+                  prop: prop,
+                  value: value
+                })
+              )
+            break
+          case"isDB222":
+            (!value)
+              ? (
+                console.log('Orbit create: set open db'),
+                Peer.isPinata = true,
+                Peer.isIPFS = true
+              )
+              : (
+                console.warn('положительное значение', {
+                  prop: prop,
+                  value: value
+                })
+              )
+            break
+          case"isIPFS":
+            (!value)
+              ? (
+                console.log('следующее состояние за инициализацией ipfs', prop)
+              )
+              : (
+                console.warn('положительное значение', {
+                  prop: prop,
+                  value: value
+                })
+              )
+            break
+          case"peer save connect":
+            (!value)
+              ? (
+                console.log('следующее состояние за инициализацией peer - а', prop)
+              )
+              : (
+                console.warn('положительное значение', {
+                  prop: prop,
+                  value: value
+                })
+              )
+            break
+          case"Peer.message.offer-false":
+            (!value)
+              ? (
+                console.log('следующее состояние за инициализацией', prop)
+              )
+              : (
+                console.warn('положительное значение', {
+                  prop: prop,
+                  value: value
+                })
+              )
+            break
+          case"post: incoming message offer-offer":
+            (!value)
+              ? (
+                console.log('следующее состояние за инициализацией', prop)
+              )
+              : (
+                console.warn('положительное значение', {
+                  prop: prop,
+                  value: value
+                })
+              )
+            break
+          case"Peer.message.offer-true":
+            (!value)
+              ? (
+                console.log('следующее состояние за инициализацией', prop)
+              )
+              : (
+                console.warn('положительное значение', {
+                  prop: prop,
+                  value: value
+                })
+              )
+            break
+          case"post: incoming message offer-events":
+            (!value)
+              ? (
+                console.log('следующее состояние за инициализацией', prop)
+              )
+              : (
+                console.warn('положительное значение', {
+                  prop: prop,
+                  value: value
+                })
+              )
+            break
+          default:
+            console.warn("Неопределено поведение",{
+              prop: prop,
+              value: value
+            })
+            break
+        }
+        resolve(true)
+      })
+    }
+
+    function events() {
+      sys.control.db.forEach((item)=>{
+
+        console.log('@@@@@@@@@@@@@@@@@@', item)
+
+      })
+    }
+
+    function initTask() {
+      task.get(true, 'await', '5', '','/orbitdb', async (object)=>{
+        let md = query(db)
+        object.callback({status:'ok',md:md})
+      })
+      task.get(true, 'await', '5', '','/orbitdb/set/:external', async (object)=>{
+        await update(db, object.substrate, object.property)
+        object.callback({status:'ok'})
+      })
+      task.get(true, 'await', '5', '','/orbitdb/get/:external', async (object)=>{
+        // console.log('FFFFFFFFFFFFFFFFFFFFFFFFFffffFFFFfff', object.property)
+        try{
+          let md = await query(db, object.property)
+          isEmpty(md)
+            ?object.callback({status:'false', md:false})
+            :object.callback({status:'ok', md:md})
+
+        }catch (e) {
+          object.callback({status:'false', md:e})
+        }
+      })
+      task.get(true, 'await', '5', '','/orbitdb/delete', async (object)=>{
+        try{
+          console.log('/orbitdb/delete')
+          const hash = await db.del(object.substrate.item)
+          object.callback({status:'ok', hash:hash})
+        }catch (e) {
+          object.callback({status:'false', error:e})
+        }
+      })
+    }
+
+    function initDB() {
+      return new Promise(async (resolve, reject) => {
+        events()
+      })
+    }
+
+    // Peer.isFS = true
+    const openDatabase = (dbAddressField) => {
+      return new Promise(async (resolve, reject) => {
+        try {
+          const address = dbAddressField.value
+
+          await resetDatabase(Peer.external.db)
+
+          // openButton.disabled = true
+          // createButton.disabled = true
+
+          try {
+            statusElm.innerHTML = "Connecting to peers..."
+            Peer.external.db = await Peer.db.open(address, { sync: true })
+            await load(Peer.external.db, 'Loading database...')
+
+            if (!readonlyCheckbox.checked) {
+              Peer.external.core(Peer.external.db, Peer.external.interval)
+            } else {
+              sys.alias.fs.key.textContent = `Listening for updates to the database...`
+            }
+          } catch (e) {
+            console.error(e)
+          }
+          openButton.disabled = false
+          createButton.disabled = false
+          resolve({
+            _:"status ok",
+            status: false
+          })
+        } catch (e) {
+          resolve({
+            _:"status error",
+            message:e,
+            status: true
+          })
+        }
+      })
+    }
+
+    const update = async (db) => {
+      Peer.external.count ++
+
+      const time = new Date().toISOString()
+      const idx = Math.floor(Math.random() * Peer.emoji.moon.length)
+      const creature = Peer.emoji.moon[idx]
+
+      if (db.type === 'eventlog') {
+        const value = "GrEEtinGs from " + Peer.db.id + " " + creature + ": Hello #" + Peer.external.count + " (" + time + ")"
+        await db.add(value)
+      } else if (db.type === 'feed') {
+        const value = "GrEEtinGs from " + Peer.db.id + " " + creature + ": Hello #" + Peer.external.count + " (" + time + ")"
+        await db.add(value)
+      } else if (db.type === 'docstore') {
+        const value = { _id: 'peer1', avatar: creature, updated: time }
+        console.log('~~~~~~~~~', value)
+        await db.put(value)
+      } else if (db.type === 'keyvalue') {
+        await db.set('mykey', creature)
+      } else if (db.type === 'counter') {
+        await db.inc(1)
+      } else {
+        throw new Error("Unknown datatbase type: ", db.type)
+      }
+    }
+
+    const resetDatabase = async (db) => {
+      // writerText.innerHTML = ""
+      // outputElm.innerHTML = ""
+      // outputHeaderElm.innerHTML = ""
+
+      clearInterval(Peer.external.updateInterval)
+
+      if (!isEmpty(Peer.external.db)) {
+        await Peer.external.db.close()
+      }
+
+      Peer.external.interval = Math.floor((Math.random() * 300) + (Math.random() * 2000))
+    }
+
+   Peer.external.core = async (db, interval) => {
+     return new Promise(function (resolve, reject) {
+       // Set the status text
+       sys.alias.writerText.innerHTML = `Writing to database every ${Peer.external.interval} milliseconds...`
+
+       // Start update/insert loop
+       Peer.external.updateInterval = setInterval(async () => {
+         try {
+           await update(Peer.external.db)
+         } catch (e) {
+           console.error(e.toString())
+           sys.alias.writerText.innerHTML = '<span style="color: red">' + e.toString() + '</span>'
+           clearInterval(Peer.external.updateInterval)
+         }
+       }, Peer.external.interval)
+     })
+    }
+
+    const createDatabase = async () => {
+      await resetDatabase(Peer.external.db)
+
+      sys.alias.db.key.textContent = "create external db start"
+      // openButton.disabled = true
+      // createButton.disabled = true
+
+      try {
+        const name = "Olga"
+        const type = "docstore"
+        const publicAccess = true
+
+        Peer.external.db = await Peer.db.open(name, {
+          // If database doesn't exist, create it
+          create: true,
+          overwrite: true,
+          // Load only the local version of the database,
+          // don't load the latest from the network yet
+          localOnly: false,
+          type: type,
+          // If "Public" flag is set, allow anyone to write to the database,
+          // otherwise only the creator of the database can write
+          accessController: {
+            write: publicAccess ? ['*'] : [Peer.db.identity.id],
+          }
+        })
+
+        await load(Peer.external.db, 'Creating database...')
+        // await Peer.external.core(Peer.external.db, Peer.external.interval)
+      } catch (e) {
+        console.error(e)
+      }
+      // openButton.disabled = false
+      // createButton.disabled = false
+    }
+
+    const queryAndRender = async (db) => {
+        console.log('queryAndRender', db)
+    }
+
+    const load = async (db, statusText) => {
+      // Set the status text
+      sys.alias.db.key.textContent = statusText
+
+      // When the database is ready (ie. loaded), display results
+      db.events.on('ready', () => queryAndRender(db))
+      // When database gets replicated with a peer, display results
+      db.events.on('replicated', () => queryAndRender(db))
+      // When we update the database, display result
+      db.events.on('write', () => queryAndRender(db))
+
+      db.events.on('replicate.progress', () => queryAndRender(db))
+
+      // Hook up to the load progress event and render the progress
+      let maxTotal = 0, loaded = 0
+      db.events.on('load.progress', (address, hash, entry, progress, total) => {
+        loaded ++
+        maxTotal = Math.max.apply(null, [maxTotal, progress, 0])
+        total = Math.max.apply(null, [progress, maxTotal, total, entry.clock.time, 0])
+        sys.alias.db.key.textContent = `Loading database... ${maxTotal} / ${total}`
+      })
+
+      db.events.on('ready', () => {
+        // Set the status text
+        setTimeout(() => {
+          sys.alias.db.key.textContent = 'Database is ready'
+        }, 1000)
+      })
+
+      // Load locally persisted database
+      await db.load()
+    }
+
+  async function initPinata() {
+    return new Promise(async (resolve, reject) => {
+      try {
+        sys.alias.db.key.textContent = "pinata init start"
+        const pinata = pinataSDK('604779a1617a8dbb791e', '842b2195a752048e6f5db7ba178c622b2eeb64c937c266f75d5fe636aafebcd8');
+
+        pinata.testAuthentication().then((result) => {
+          console.log('pinata',result);
+          sys.alias.db.key.textContent = "pinata init"
+          Peer.pinata = pinata
+          resolve({
+            status: false,
+            success: false
+          })
+        }).catch((err) => {
+          resolve({
+            status: true,
+            success: true
+          })
+          console.log(err);
+        });
+        pinata.userPinnedDataTotal().then((result) => {
+          //handle results here
+          console.log(result);
+        }).catch((err) => {
+          //handle error here
+          console.log(err);
+        });
+
+        pinata.pinList().then((result) => {
+          //handle results here
+          console.log(result);
+        }).catch((err) => {
+          //handle error here
+          console.log(err);
+        });
+      } catch (e) {
+        sys.alias.db.key.textContent = "pinata error init"
+        resolve({
+          status: true,
+          success: true,
+          message: {
+            text: "error from pinata init",
+            e: e
+          }
+        })
+      }
+    })
+   }
+
+  function createPeerID() {
+    return new Promise(async (resolve, reject) => {
+      let id = await PeerId.create({ bits: 1024, keyType: 'RSA' })
+      resolve(id.toJSON())
+    })
+  }
+
+  function CreateRecordPublic(privateKey = {}, value = '', sequenceNumber = 0,  lifetime = 0) {
+    return new Promise(async (resolve, reject) => {
+      const entryData = await ipns.create(Peer.ipns.public.privateKey, value, sequenceNumber, lifetime)
+    })
+  }
+
+  function getLocalKeyPublic() {
+    return new Promise(async (resolve, reject) => {
+      ipns.getLocalKey(Peer.ipns.public.id)
+      resolve(true)
+    })
+  }
+
+  function initIPFS() {
+    return new Promise(async (resolve, reject) => {
+      try {
+        let node = await IPFS.create({
+          repo: '/universe',
+          emptyRepo: true,
+          start: true,
+          preload: {
+            enabled: true
+          },
+          EXPERIMENTAL: {
+            pubsub: true,
+          },
+          config: {
+            Addresses: {
+              Swarm: [
+                '/dns4/wrtc-star1.par.dwebops.pub/tcp/443/wss/p2p-webrtc-star/',
+                '/dns4/wrtc-star2.sjc.dwebops.pub/tcp/443/wss/p2p-webrtc-star/',
+                '/dns4/webrtc-star.discovery.libp2p.io/tcp/443/wss/p2p-webrtc-star/'
+              ]
+            },
+          }
+        });
+        // const repo = await ipfs.stats.repo()
+        // const profiles = await ipfs.config.profiles.list()
+        // const stats = await ipfs.repo.stat()
+        // const version = await ipfs.repo.version()
+
+        // const databasePeers = await ipfs.pubsub.peers(db.address.toString())
+        // console.log('~~~~~~~~~~~~~',{
+        //   repo: repo,
+        //   profiles: profiles,
+        //   stats: stats,
+        //   version: version
+        // })
+
+
+        // const { cid } = await node.add('Hello world')
+        for await (const res of node.repo.gc()) {
+          console.log('ssssssssssss',res)
+        }
+        Peer.ipfs = node
+        resolve({
+          success: false,
+          status: false,
+          message: 'ipfs init'
+        })
+      } catch (e) {
+        console.log('ipfs error',e)
+        resolve({
+          message: e.message,
+          success: true,
+          status: true
+        })
+      }
+    })
+  }
+
+  let orbitDB = async (ipfs) => {
+    return new Promise(async (resolve, reject) => {
+      try {
+        let db = await OrbitDB.createInstance(ipfs,{
+          maxHistory: 64,
+          directory:'./moon'
+        })
+        Peer.db = db
+        resolve(false)
+      } catch (e) {
+        console.log('error in db', e)
+        orbitDB().then((data) =>{ console.log('@@@@@@@@@@@@@@@@', data)})
+      }
+    })
+  }
+
+  async function postData(url = '', data = {}) {
+    const response = await fetch(url, {
+      method: 'POST',
+      mode: 'cors',
+      cache: 'no-cache',
+      credentials: 'same-origin',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      redirect: 'follow',
+      referrerPolicy: 'no-referrer',
+      body: JSON.stringify(data)
+    });
+    return await response.json();
+  }
+
+  function peer() {
+    let peer = new SimplePeer({ initiator: Peer.initiator,  trickle: false });
+    Peer.core = peer
+    peer.on('error', (err) => {
+      let error = err
+      switch (error.message) {
+        case"Transport channel closed":
+         sys.alias.peer.key.textContent  = error.message
+          Peer.isReconnect = true
+          break
+        case"Connection failed.":
+          Peer.isTerminate = true
+          break
+        default:
+          console.log('неизвестная ошибка', error.message)
+          sys.alias.peer.key.textContent = error.message
+          break
+      }
+    })
+
+    peer.on('signal', async data => {
+      try {
+        let query = Peer.location
+        let qs = await postData((Peer.initiator)
+          ? `${query.signal}/${query.message.initiator}`
+          : `${query.signal}/${query.message.dialer}`, {
+          message: data,
+          id: Peer.id,
+          recipient: Peer.recipient
+        })
+        sys.alias.peer.key.textContent = qs.status
+      } catch (e) {
+        console.log('error from signal', e)
+      }
+    })
+
+    peer.on('connect', () => {
+      console.log('CONNECT')
+      emoji('connect')
+      sys.alias.peer.key.textContent = "connect"
+      Peer.isClose = true
+    })
+
+    peer.on('data', data => {
+      console.log('data', data)
+      emoji('message')
+      sys.alias.peer.key.textContent = `data from initiator: ${data}`
+    })
+
+    peer.on('close', data => {
+      console.log('CLOSE')
+      emoji('init')
+      sys.alias.peer.key.textContent = `peer close connection`
+    })
+
+    // document.querySelector('#incoming').addEventListener('click', ev => {
+    //   ev.preventDefault()
+    //   initiator.send('hello world dialer')
+    // })
+
+    isEmpty(Peer.message.offer)
+      ? (
+          next("Peer.message.offer-false", false),
+          Peer.isEvents = false
+      )
+      : (
+          next("Peer.message.offer-true", false),
+          Peer.isEvents = false,
+          Peer.isOffer = true
+      )
+  }
+
+  function requestAnswerMessage() {
+    Peer.core.signal(JSON.stringify(Peer.message.offer))
+    Peer.isOffer = false
+  }
+
+  function requestConnectMessage() {
+    Peer.core.signal(JSON.stringify(Peer.message.answer))
+    Peer.isAnswer = false
+  }
+
+  function eventsClose() {
+    Peer.signal.close()
+    Peer.isClose = false
+  }
+
+  async function signalServer() {
+    let eventSource = new EventSource(`${Peer.location.signal}/${Peer.id}?recipient=${Peer.recipient}&initiator=${Peer.initiator}`);
+    eventSource.onmessage = function(event) {
+      try {
+        let res = JSON.parse(event.data)
+        switch (res.status)  {
+          case "peer save connect":
+            emoji('peer save connect'),
+            next("peer save connect", false)
+            Peer.isEvents = true
+            break
+          case "post: incoming message offer":
+            (isEmpty(Peer.core))
+              ? (
+                  emoji('incoming message offer'),
+                  Peer.message.offer = res.message,
+                  next("post: incoming message offer-events",false),
+                  Peer.isEvents = true
+              )
+              : (
+                  emoji('incoming message offer'),
+                  Peer.message.offer = res.message,
+                  next("post: incoming message offer-offer",false),
+                  Peer.isOffer = true
+              )
+            break
+          case "post: incoming message answer":
+            Peer.message.answer = res.message
+            emoji('incoming message answer'),
+            next("post: incoming message answer", false)
+            Peer.isAnswer = true
+            break
+          default:
+            break
+        }
+        sys.alias.peer.key.textContent = res.status
+      } catch (e) {
+        let error = e
+        console.log('error',error)
+      }
+    };
+    eventSource.onopen = function (event) {
+      let state = ''
+      switch (eventSource.readyState) {
+        case 0:
+          state = "CONNECTING"
+          break
+        case 1:
+          state = "OPEN"
+          break
+        case 2:
+          state = "CLOSED"
+          break
+        default:
+          break
+      }
+      console.log('events',  state)
+    };
+    eventSource.onerror = function(e) {
+      // console.log('error', e)
+    };
+    Peer.signal = eventSource
+    return false
+  }
+  signalServer().then((status)=>{ Peer.isReconnect = status})
+
+  function initFS() {
+      return new Promise( async (resolve, reject) => {
+        sys.alias.fs.key.textContent = "init FS start"
+        let idbfs = loaderFS({
+          wasmBinary:[   0,  97, 115, 109,   1,   0,   0,   0,   1,  97,  15,  96,   1, 127,   0,  96,   1, 127,   1, 127,  96,   5, 127, 127, 127, 127, 127,   0,  96,   6, 127, 127, 127, 127, 127, 127,   0,  96,   4, 127, 127, 127, 127,   0,  96,   2, 127, 127,   0,  96,   3, 127, 127, 127,   1, 127,  96,   0,   1, 127,  96,   3, 127, 127, 127,   0,  96,   0,   0,  96,   2, 127, 127,   1, 127,  96,   7, 127, 127, 127, 127, 127, 127, 127,   0,  96,   3, 127, 126, 127,   1, 126,  96,   4, 127, 127, 127, 127,   1, 127,  96,   4, 127, 127, 126, 126,   0,   2, 209,   2,  11,   3, 101, 110, 118,  21,  95, 101, 109,  98, 105, 110, 100,  95, 114, 101, 103, 105, 115, 116, 101, 114,  95, 118, 111, 105, 100,   0,   5,   3, 101, 110, 118,  21,  95, 101, 109,  98, 105, 110, 100,  95, 114, 101, 103, 105, 115, 116, 101, 114,  95,  98, 111, 111, 108,   0,   2,   3, 101, 110, 118,  27,  95, 101, 109,  98, 105, 110, 100,  95, 114, 101, 103, 105, 115, 116, 101, 114,  95, 115, 116, 100,  95, 115, 116, 114, 105, 110, 103,   0,   5,   3, 101, 110, 118,  28,  95, 101, 109,  98, 105, 110, 100,  95, 114, 101, 103, 105, 115, 116, 101, 114,  95, 115, 116, 100,  95, 119, 115, 116, 114, 105, 110, 103,   0,   8,   3, 101, 110, 118,  22,  95, 101, 109,  98, 105, 110, 100,  95, 114, 101, 103, 105, 115, 116, 101, 114,  95, 101, 109, 118,  97, 108,   0,   5,   3, 101, 110, 118,  24,  95, 101, 109,  98, 105, 110, 100,  95, 114, 101, 103, 105, 115, 116, 101, 114,  95, 105, 110, 116, 101, 103, 101, 114,   0,   2,   3, 101, 110, 118,  22,  95, 101, 109,  98, 105, 110, 100,  95, 114, 101, 103, 105, 115, 116, 101, 114,  95, 102, 108, 111,  97, 116,   0,   8,   3, 101, 110, 118,  28,  95, 101, 109,  98, 105, 110, 100,  95, 114, 101, 103, 105, 115, 116, 101, 114,  95, 109, 101, 109, 111, 114, 121,  95, 118, 105, 101, 119,   0,   8,   3, 101, 110, 118,  22, 101, 109, 115,  99, 114, 105, 112, 116, 101, 110,  95, 114, 101, 115, 105, 122, 101,  95, 104, 101,  97, 112,   0,   1,   3, 101, 110, 118,  21, 101, 109, 115,  99, 114, 105, 112, 116, 101, 110,  95, 109, 101, 109,  99, 112, 121,  95,  98, 105, 103,   0,   6,   3, 101, 110, 118,  23,  95, 101, 109,  98, 105, 110, 100,  95, 114, 101, 103, 105, 115, 116, 101, 114,  95,  98, 105, 103, 105, 110, 116,   0,  11,   3,  62,  61,   9,  10,   1,   1,   9,   0,   0,   0,   0,   0,   0,   1,   1,   0,   0,   6,   6,   6,   8,   4,   4,   4,  10,   4,   4,   8,   2,   3,   2,   2,   2,   3,   3,   3,   7,   1,   0,   1,   5,   7,   0,   1,   9,   5,   7,   7,   7,   1,   1,  10,   5,  13,  11,   3,   2,  14,   0,   9,   0,   9,   7,   4,   5,   1, 112,   1,  20,  20,   5,   7,   1,   1, 128,   2, 255, 255,   3,   6,  29,   5, 127,   1,  65, 176, 158, 192,   2,  11, 127,   1,  65,   0,  11, 127,   1,  65,   0,  11, 127,   1,  65,   0,  11, 127,   1,  65,   0,  11,   7, 170,   4,  29,   6, 109, 101, 109, 111, 114, 121,   2,   0,  17,  95,  95, 119,  97, 115, 109,  95,  99,  97, 108, 108,  95,  99, 116, 111, 114, 115,   0,  11,   4, 109,  97, 105, 110,   0,  12,  13,  95,  95, 103, 101, 116,  84, 121, 112, 101,  78,  97, 109, 101,   0,  13,  42,  95,  95, 101, 109,  98, 105, 110, 100,  95, 114, 101, 103, 105, 115, 116, 101, 114,  95, 110,  97, 116, 105, 118, 101,  95,  97, 110, 100,  95,  98, 117, 105, 108, 116, 105, 110,  95, 116, 121, 112, 101, 115,   0,  15,  25,  95,  95, 105, 110, 100, 105, 114, 101,  99, 116,  95, 102, 117, 110,  99, 116, 105, 111, 110,  95, 116,  97,  98, 108, 101,   1,   0,   6, 102, 102, 108, 117, 115, 104,   0,  58,   6, 109,  97, 108, 108, 111,  99,   0,  46,  16,  95,  95, 101, 114, 114, 110, 111,  95, 108, 111,  99,  97, 116, 105, 111, 110,   0,  45,   9, 115, 116,  97,  99, 107,  83,  97, 118, 101,   0,  50,  12, 115, 116,  97,  99, 107,  82, 101, 115, 116, 111, 114, 101,   0,  51,  10, 115, 116,  97,  99, 107,  65, 108, 108, 111,  99,   0,  52,  21, 101, 109, 115,  99, 114, 105, 112, 116, 101, 110,  95, 115, 116,  97,  99, 107,  95, 105, 110, 105, 116,   0,  53,  27, 101, 109, 115,  99, 114, 105, 112, 116, 101, 110,  95, 115, 116,  97,  99, 107,  95, 115, 101, 116,  95, 108, 105, 109, 105, 116, 115,   0,  54,  25, 101, 109, 115,  99, 114, 105, 112, 116, 101, 110,  95, 115, 116,  97,  99, 107,  95, 103, 101, 116,  95, 102, 114, 101, 101,   0,  55,  25, 101, 109, 115,  99, 114, 105, 112, 116, 101, 110,  95, 115, 116,  97,  99, 107,  95, 103, 101, 116,  95,  98,  97, 115, 101,   0,  56,  24, 101, 109, 115,  99, 114, 105, 112, 116, 101, 110,  95, 115, 116,  97,  99, 107,  95, 103, 101, 116,  95, 101, 110, 100,   0,  57,   4, 102, 114, 101, 101,   0,  47,  10, 100, 121, 110,  67,  97, 108, 108,  95, 105, 105,   0,  60,  10, 100, 121, 110,  67,  97, 108, 108,  95, 118, 105,   0,  61,  12, 100, 121, 110,  67,  97, 108, 108,  95, 105, 105, 105, 105,   0,  62,  15, 100, 121, 110,  67,  97, 108, 108,  95, 118, 105, 105, 105, 105, 105, 105,   0,  63,  14, 100, 121, 110,  67,  97, 108, 108,  95, 118, 105, 105, 105, 105, 105,   0,  64,  13, 100, 121, 110,  67,  97, 108, 108,  95, 118, 105, 105, 105, 105,   0,  65,  21,  97, 115, 121, 110,  99, 105, 102, 121,  95, 115, 116,  97, 114, 116,  95, 117, 110, 119, 105, 110, 100,   0,  67,  20,  97, 115, 121, 110,  99, 105, 102, 121,  95, 115, 116, 111, 112,  95, 117, 110, 119, 105, 110, 100,   0,  68,  21,  97, 115, 121, 110,  99, 105, 102, 121,  95, 115, 116,  97, 114, 116,  95, 114, 101, 119, 105, 110, 100,   0,  69,  20,  97, 115, 121, 110,  99, 105, 102, 121,  95, 115, 116, 111, 112,  95, 114, 101, 119, 105, 110, 100,   0,  70,  18,  97, 115, 121, 110,  99, 105, 102, 121,  95, 103, 101, 116,  95, 115, 116,  97, 116, 101,   0,  71,   9,  25,   1,   0,  65,   1,  11,  19,  22,  23,  25,  24,  24,  26,  25,  28,  44,  41,  30,  25,  43,  40,  31,  25,  42,  37,  34,  10, 221, 145,   1,  61, 102,   1,   1, 127,   2, 127,  35,   3,  65,   2,  70,   4,  64,  35,   4,  35,   4,  40,   2,   0,  65,   4, 107,  54,   2,   0,  35,   4,  40,   2,   0,  40,   2,   0,  33,   0,  11,  35,   3,  69,   4,  64,  16,  53,  11,  32,   0,  65,   0,  35,   3,  27,  69,   4,  64,  65, 160,  26,  65,   1,  17,   1,   0,  26,  65,   0,  35,   3,  65,   1,  70,  13,   1,  26,  11,  15,  11,  33,   0,  35,   4,  40,   2,   0,  32,   0,  54,   2,   0,  35,   4,  35,   4,  40,   2,   0,  65,   4, 106,  54,   2,   0,  11,   4,   0,  65,   0,  11, 225,   5,   1,   7, 127,  35,   3,  33,   6,  35,   0,  65,  16, 107,  34,   7,  36,   0,  32,   7,  32,   0,  54,   2,  12,  32,   7,  40,   2,  12,  16,  14,  33,   0,  35,   3,  32,   6,  71,   4,  64,   0,  11,  32,   0,  34,   2,  33,   5,   2, 127,   2, 127,   2,  64,  32,   2,  34,   1,  65,   3, 113,   4,  64,   3,  64,  32,   1,  45,   0,   0,  69,  13,   2,  32,   1,  65,   1, 106,  34,   1,  65,   3, 113,  13,   0,  11,  11,   3,  64,  32,   1,  33,   0,  32,   1,  65,   4, 106,  33,   1,  32,   0,  40,   2,   0,  34,   3,  65, 127, 115,  33,   4,  32,   4,  32,   3,  65, 129, 130, 132,   8, 107, 113,  65, 128, 129, 130, 132, 120, 113,  69,  13,   0,  11,  32,   0,  32,   5, 107,  32,   3,  65, 255,   1, 113,  69,  13,   1,  26,   3,  64,  32,   0,  45,   0,   1,  33,   3,  32,   0,  65,   1, 106,  34,   1,  33,   0,  32,   3,  13,   0,  11,  11,  32,   1,  32,   5, 107,  11,  65,   1, 106,  34,   1,  16,  46,  33,   0,  35,   3,  32,   6,  71,   4,  64,   0,  11,  32,   0,  11,   4,  64,   2,  64,  32,   1,  65, 128,   4,  79,   4,  64,  32,   0,  32,   2,  32,   1,  16,   9,  26,  35,   3,  32,   6,  71,   4,  64,   0,  11,  12,   1,  11,  32,   0,  32,   1, 106,  33,   4,   2,  64,  32,   0,  32,   2, 115,  65,   3, 113,  69,   4,  64,   2,  64,  32,   0,  65,   3, 113,  69,   4,  64,  32,   0,  33,   1,  12,   1,  11,  32,   1,  65,   1,  72,   4,  64,  32,   0,  33,   1,  12,   1,  11,  32,   0,  33,   1,   3,  64,  32,   1,  32,   2,  45,   0,   0,  58,   0,   0,  32,   2,  65,   1, 106,  33,   2,  32,   1,  65,   1, 106,  34,   1,  65,   3, 113,  69,  13,   1,  32,   1,  32,   4,  73,  13,   0,  11,  11,   2,  64,  32,   4,  65, 124, 113,  34,   5,  65, 192,   0,  73,  13,   0,  32,   5,  65,  64, 106,  34,   3,  32,   1,  73,  13,   0,   3,  64,  32,   1,  32,   2,  40,   2,   0,  54,   2,   0,  32,   1,  32,   2,  40,   2,   4,  54,   2,   4,  32,   1,  32,   2,  40,   2,   8,  54,   2,   8,  32,   1,  32,   2,  40,   2,  12,  54,   2,  12,  32,   1,  32,   2,  40,   2,  16,  54,   2,  16,  32,   1,  32,   2,  40,   2,  20,  54,   2,  20,  32,   1,  32,   2,  40,   2,  24,  54,   2,  24,  32,   1,  32,   2,  40,   2,  28,  54,   2,  28,  32,   1,  32,   2,  40,   2,  32,  54,   2,  32,  32,   1,  32,   2,  40,   2,  36,  54,   2,  36,  32,   1,  32,   2,  40,   2,  40,  54,   2,  40,  32,   1,  32,   2,  40,   2,  44,  54,   2,  44,  32,   1,  32,   2,  40,   2,  48,  54,   2,  48,  32,   1,  32,   2,  40,   2,  52,  54,   2,  52,  32,   1,  32,   2,  40,   2,  56,  54,   2,  56,  32,   1,  32,   2,  40,   2,  60,  54,   2,  60,  32,   2,  65,  64, 107,  33,   2,  32,   3,  32,   1,  65,  64, 107,  34,   1,  79,  13,   0,  11,  11,  32,   1,  32,   5,  79,  13,   1,   3,  64,  32,   1,  32,   2,  40,   2,   0,  54,   2,   0,  32,   2,  65,   4, 106,  33,   2,  32,   5,  32,   1,  65,   4, 106,  34,   1,  75,  13,   0,  11,  12,   1,  11,  32,   4,  65,   4,  73,   4,  64,  32,   0,  33,   1,  12,   1,  11,  32,   4,  65,   4, 107,  34,   3,  32,   0,  73,   4,  64,  32,   0,  33,   1,  12,   1,  11,  32,   0,  33,   1,   3,  64,  32,   1,  32,   2,  45,   0,   0,  58,   0,   0,  32,   1,  32,   2,  45,   0,   1,  58,   0,   1,  32,   1,  32,   2,  45,   0,   2,  58,   0,   2,  32,   1,  32,   2,  45,   0,   3,  58,   0,   3,  32,   2,  65,   4, 106,  33,   2,  32,   3,  32,   1,  65,   4, 106,  34,   1,  79,  13,   0,  11,  11,  32,   1,  32,   4,  73,   4,  64,   3,  64,  32,   1,  32,   2,  45,   0,   0,  58,   0,   0,  32,   2,  65,   1, 106,  33,   2,  32,   4,  32,   1,  65,   1, 106,  34,   1,  71,  13,   0,  11,  11,  11,   5,  65,   0,  33,   0,  11,  32,   7,  65,  16, 106,  36,   0,  32,   0,  11,  34,   1,   1, 127,  35,   0,  65,  16, 107,  34,   1,  32,   0,  54,   2,   8,  32,   1,  32,   1,  40,   2,   8,  40,   2,   4,  54,   2,  12,  32,   1,  40,   2,  12,  11, 195,   9,   1,   2, 127,  35,   3,  33,   1,  65, 140,  23,  65, 154,   9,  16,   0,  35,   3,  32,   1,  71,   4,  64,   0,  11,  65, 152,  23,  65, 185,   8,  65,   1,  65,   1,  65,   0,  16,   1,  35,   3,  32,   1,  71,   4,  64,   0,  11,  35,   0,  65,  16, 107,  34,   0,  36,   0,  32,   0,  65, 180,   8,  54,   2,  12,  65, 164,  23,  32,   0,  40,   2,  12,  65,   1,  65, 128, 127,  65, 255,   0,  16,   5,  35,   3,  32,   1,  71,   4,  64,   0,  11,  32,   0,  65,  16, 106,  36,   0,  35,   0,  65,  16, 107,  34,   0,  36,   0,  32,   0,  65, 173,   8,  54,   2,  12,  65, 188,  23,  32,   0,  40,   2,  12,  65,   1,  65, 128, 127,  65, 255,   0,  16,   5,  35,   3,  32,   1,  71,   4,  64,   0,  11,  32,   0,  65,  16, 106,  36,   0,  35,   0,  65,  16, 107,  34,   0,  36,   0,  32,   0,  65, 171,   8,  54,   2,  12,  65, 176,  23,  32,   0,  40,   2,  12,  65,   1,  65,   0,  65, 255,   1,  16,   5,  35,   3,  32,   1,  71,   4,  64,   0,  11,  32,   0,  65,  16, 106,  36,   0,  35,   0,  65,  16, 107,  34,   0,  36,   0,  32,   0,  65, 137,   8,  54,   2,  12,  65, 200,  23,  32,   0,  40,   2,  12,  65,   2,  65, 128, 128, 126,  65, 255, 255,   1,  16,   5,  35,   3,  32,   1,  71,   4,  64,   0,  11,  32,   0,  65,  16, 106,  36,   0,  35,   0,  65,  16, 107,  34,   0,  36,   0,  32,   0,  65, 128,   8,  54,   2,  12,  65, 212,  23,  32,   0,  40,   2,  12,  65,   2,  65,   0,  65, 255, 255,   3,  16,   5,  35,   3,  32,   1,  71,   4,  64,   0,  11,  32,   0,  65,  16, 106,  36,   0,  35,   0,  65,  16, 107,  34,   0,  36,   0,  32,   0,  65, 152,   8,  54,   2,  12,  65, 224,  23,  32,   0,  40,   2,  12,  65,   4,  65, 128, 128, 128, 128, 120,  65, 255, 255, 255, 255,   7,  16,   5,  35,   3,  32,   1,  71,   4,  64,   0,  11,  32,   0,  65,  16, 106,  36,   0,  35,   0,  65,  16, 107,  34,   0,  36,   0,  32,   0,  65, 143,   8,  54,   2,  12,  65, 236,  23,  32,   0,  40,   2,  12,  65,   4,  65,   0,  65, 127,  16,   5,  35,   3,  32,   1,  71,   4,  64,   0,  11,  32,   0,  65,  16, 106,  36,   0,  35,   0,  65,  16, 107,  34,   0,  36,   0,  32,   0,  65, 215,   8,  54,   2,  12,  65, 248,  23,  32,   0,  40,   2,  12,  65,   4,  65, 128, 128, 128, 128, 120,  65, 255, 255, 255, 255,   7,  16,   5,  35,   3,  32,   1,  71,   4,  64,   0,  11,  32,   0,  65,  16, 106,  36,   0,  35,   0,  65,  16, 107,  34,   0,  36,   0,  32,   0,  65, 206,   8,  54,   2,  12,  65, 132,  24,  32,   0,  40,   2,  12,  65,   4,  65,   0,  65, 127,  16,   5,  35,   3,  32,   1,  71,   4,  64,   0,  11,  32,   0,  65,  16, 106,  36,   0,  35,   0,  65,  16, 107,  34,   0,  36,   0,  32,   0,  65, 163,   8,  54,   2,  12,  65, 144,  24,  32,   0,  40,   2,  12,  66, 128, 128, 128, 128, 128, 128, 128, 128, 128, 127,  66, 255, 255, 255, 255, 255, 255, 255, 255, 255,   0,  16,  66,  35,   3,  32,   1,  71,   4,  64,   0,  11,  32,   0,  65,  16, 106,  36,   0,  35,   0,  65,  16, 107,  34,   0,  36,   0,  32,   0,  65, 162,   8,  54,   2,  12,  65, 156,  24,  32,   0,  40,   2,  12,  66,   0,  66, 127,  16,  66,  35,   3,  32,   1,  71,   4,  64,   0,  11,  32,   0,  65,  16, 106,  36,   0,  35,   0,  65,  16, 107,  34,   0,  36,   0,  32,   0,  65, 156,   8,  54,   2,  12,  65, 168,  24,  32,   0,  40,   2,  12,  65,   4,  16,   6,  35,   3,  32,   1,  71,   4,  64,   0,  11,  32,   0,  65,  16, 106,  36,   0,  35,   0,  65,  16, 107,  34,   0,  36,   0,  32,   0,  65, 147,   9,  54,   2,  12,  65, 180,  24,  32,   0,  40,   2,  12,  65,   8,  16,   6,  35,   3,  32,   1,  71,   4,  64,   0,  11,  32,   0,  65,  16, 106,  36,   0,  65, 236,  14,  65, 233,   8,  16,   2,  35,   3,  32,   1,  71,   4,  64,   0,  11,  65, 196,  15,  65, 212,  12,  16,   2,  35,   3,  32,   1,  71,   4,  64,   0,  11,  65, 156,  16,  65,   4,  65, 220,   8,  16,   3,  35,   3,  32,   1,  71,   4,  64,   0,  11,  65, 248,  16,  65,   2,  65, 245,   8,  16,   3,  35,   3,  32,   1,  71,   4,  64,   0,  11,  65, 212,  17,  65,   4,  65, 132,   9,  16,   3,  35,   3,  32,   1,  71,   4,  64,   0,  11,  65, 128,  18,  65, 190,   8,  16,   4,  35,   3,  32,   1,  71,   4,  64,   0,  11,  35,   0,  65,  16, 107,  34,   0,  36,   0,  32,   0,  65, 143,  12,  54,   2,  12,  65, 168,  18,  65,   0,  32,   0,  40,   2,  12,  16,   7,  35,   3,  32,   1,  71,   4,  64,   0,  11,  32,   0,  65,  16, 106,  36,   0,  65, 245,  12,  16,  16,  35,   3,  32,   1,  71,   4,  64,   0,  11,  65, 173,  12,  16,  17,  35,   3,  32,   1,  71,   4,  64,   0,  11,  65, 159,   9,  16,  18,  35,   3,  32,   1,  71,   4,  64,   0,  11,  65, 190,   9,  16,  19,  35,   3,  32,   1,  71,   4,  64,   0,  11,  65, 230,   9,  16,  20,  35,   3,  32,   1,  71,   4,  64,   0,  11,  65, 131,  10,  16,  21,  35,   3,  32,   1,  71,   4,  64,   0,  11,  35,   0,  65,  16, 107,  34,   0,  36,   0,  32,   0,  65, 154,  13,  54,   2,  12,  65, 192,  20,  65,   4,  32,   0,  40,   2,  12,  16,   7,  35,   3,  32,   1,  71,   4,  64,   0,  11,  32,   0,  65,  16, 106,  36,   0,  35,   0,  65,  16, 107,  34,   0,  36,   0,  32,   0,  65, 184,  13,  54,   2,  12,  65, 232,  20,  65,   5,  32,   0,  40,   2,  12,  16,   7,  35,   3,  32,   1,  71,   4,  64,   0,  11,  32,   0,  65,  16, 106,  36,   0,  65, 233,  10,  16,  16,  35,   3,  32,   1,  71,   4,  64,   0,  11,  65, 200,  10,  16,  17,  35,   3,  32,   1,  71,   4,  64,   0,  11,  65, 171,  11,  16,  18,  35,   3,  32,   1,  71,   4,  64,   0,  11,  65, 137,  11,  16,  19,  35,   3,  32,   1,  71,   4,  64,   0,  11,  65, 238,  11,  16,  20,  35,   3,  32,   1,  71,   4,  64,   0,  11,  65, 204,  11,  16,  21,  35,   3,  32,   1,  71,   4,  64,   0,  11,  35,   0,  65,  16, 107,  34,   0,  36,   0,  32,   0,  65, 169,  10,  54,   2,  12,  65, 144,  21,  65,   6,  32,   0,  40,   2,  12,  16,   7,  35,   3,  32,   1,  71,   4,  64,   0,  11,  32,   0,  65,  16, 106,  36,   0,  35,   0,  65,  16, 107,  34,   0,  36,   0,  32,   0,  65, 223,  13,  54,   2,  12,  65, 184,  21,  65,   7,  32,   0,  40,   2,  12,  16,   7,  35,   3,  32,   1,  71,   4,  64,   0,  11,  32,   0,  65,  16, 106,  36,   0,  11,  52,   1,   2, 127,  35,   3,  33,   2,  35,   0,  65,  16, 107,  34,   1,  36,   0,  32,   1,  32,   0,  54,   2,  12,  65, 208,  18,  65,   0,  32,   1,  40,   2,  12,  16,   7,  35,   3,  32,   2,  71,   4,  64,   0,  11,  32,   1,  65,  16, 106,  36,   0,  11,  52,   1,   2, 127,  35,   3,  33,   2,  35,   0,  65,  16, 107,  34,   1,  36,   0,  32,   1,  32,   0,  54,   2,  12,  65, 248,  18,  65,   1,  32,   1,  40,   2,  12,  16,   7,  35,   3,  32,   2,  71,   4,  64,   0,  11,  32,   1,  65,  16, 106,  36,   0,  11,  52,   1,   2, 127,  35,   3,  33,   2,  35,   0,  65,  16, 107,  34,   1,  36,   0,  32,   1,  32,   0,  54,   2,  12,  65, 160,  19,  65,   2,  32,   1,  40,   2,  12,  16,   7,  35,   3,  32,   2,  71,   4,  64,   0,  11,  32,   1,  65,  16, 106,  36,   0,  11,  52,   1,   2, 127,  35,   3,  33,   2,  35,   0,  65,  16, 107,  34,   1,  36,   0,  32,   1,  32,   0,  54,   2,  12,  65, 200,  19,  65,   3,  32,   1,  40,   2,  12,  16,   7,  35,   3,  32,   2,  71,   4,  64,   0,  11,  32,   1,  65,  16, 106,  36,   0,  11,  52,   1,   2, 127,  35,   3,  33,   2,  35,   0,  65,  16, 107,  34,   1,  36,   0,  32,   1,  32,   0,  54,   2,  12,  65, 240,  19,  65,   4,  32,   1,  40,   2,  12,  16,   7,  35,   3,  32,   2,  71,   4,  64,   0,  11,  32,   1,  65,  16, 106,  36,   0,  11,  52,   1,   2, 127,  35,   3,  33,   2,  35,   0,  65,  16, 107,  34,   1,  36,   0,  32,   1,  32,   0,  54,   2,  12,  65, 152,  20,  65,   5,  32,   1,  40,   2,  12,  16,   7,  35,   3,  32,   2,  71,   4,  64,   0,  11,  32,   1,  65,  16, 106,  36,   0,  11,  51,   1,   2, 127,  35,   3,  33,   2,  35,   0,  65,  16, 107,  34,   1,  36,   0,  32,   1,  32,   0,  54,   2,  12,  32,   1,  40,   2,  12,  33,   0,  16,  15,  35,   3,  32,   2,  71,   4,  64,   0,  11,  32,   1,  65,  16, 106,  36,   0,  32,   0,  11,   4,   0,  32,   0,  11,   3,   0,   1,  11,  21,   1,   1, 127,  35,   3,  33,   1,  32,   0,  16,  47,  35,   3,  32,   1,  71,   4,  64,   0,  11,  11,  27,   0,  35,   3,  33,   2,  32,   0,  32,   1,  65,   0,  16,  27,  33,   0,  35,   3,  32,   2,  71,   4,  64,   0,  11,  32,   0,  11, 137,   1,   1,   1, 127,  35,   3,  33,   3,  32,   2,  69,   4,  64,  32,   0,  40,   2,   4,  32,   1,  40,   2,   4,  70,  15,  11,  32,   0,  32,   1,  70,   4,  64,  65,   1,  15,  11,  32,   0,  16,  14,  33,   0,  35,   3,  32,   3,  71,   4,  64,   0,  11,  32,   1,  16,  14,  33,   1,  35,   3,  32,   3,  71,   4,  64,   0,  11,   2,  64,  32,   0,  45,   0,   0,  34,   2,  69,  32,   1,  45,   0,   0,  34,   3,  32,   2,  71, 114,  13,   0,   3,  64,  32,   1,  45,   0,   1,  33,   3,  32,   0,  45,   0,   1,  34,   2,  69,  13,   1,  32,   1,  65,   1, 106,  33,   1,  32,   0,  65,   1, 106,  33,   0,  32,   2,  32,   3,  70,  13,   0,  11,  11,  32,   2,  32,   3,  70,  11, 211,   6,   1,   7, 127,  35,   3,  65,   2,  70,   4,  64,  35,   4,  35,   4,  40,   2,   0,  65,  36, 107,  54,   2,   0,  35,   4,  40,   2,   0,  34,   5,  40,   2,   0,  33,   0,  32,   5,  40,   2,   4,  33,   1,  32,   5,  40,   2,   8,  33,   2,  32,   5,  40,   2,  12,  33,   3,  32,   5,  40,   2,  16,  33,   4,  32,   5,  40,   2,  20,  33,   7,  32,   5,  40,   2,  24,  33,   8,  32,   5,  40,   2,  28,  33,   9,  32,   5,  40,   2,  32,  33,   5,  11,   2, 127,  35,   3,  65,   2,  70,   4,  64,  35,   4,  35,   4,  40,   2,   0,  65,   4, 107,  54,   2,   0,  35,   4,  40,   2,   0,  40,   2,   0,  33,   6,  11,  35,   3,  69,   4,  64,  35,   0,  65,  64, 106,  34,   7,  36,   0,  32,   0,  32,   1,  65,   0,  16,  27,  33,   3,  65,   1,  33,   4,  11,   2,  64,  35,   3,  69,   4,  64,  32,   3,  13,   1,  65,   0,  33,   4,  32,   1,  69,  13,   1,  35,   0,  65,  64, 106,  34,   3,  36,   0,  32,   1,  40,   2,   0,  34,   4,  65,   4, 107,  40,   2,   0,  33,   9,  32,   4,  65,   8, 107,  40,   2,   0,  33,   8,  32,   3,  65,   0,  54,   2,  20,  32,   3,  65, 252,  21,  54,   2,  16,  32,   3,  32,   1,  54,   2,  12,  32,   3,  65, 172,  22,  54,   2,   8,  32,   3,  65,  24, 106,  34,   5,  65,  39,  16,  49,  32,   1,  32,   8, 106,  33,   1,  32,   9,  65, 172,  22,  65,   0,  16,  27,  33,   8,  65,   0,  33,   4,  11,   2,  64,  32,   8,  35,   3,  65,   2,  70, 114,   4,  64,  35,   3,  69,   4,  64,  32,   3,  65,   1,  54,   2,  56,  32,   9,  40,   2,   0,  40,   2,  20,  33,   8,  32,   3,  65,   8, 106,  33,   4,  11,  32,   6,  65,   0,  35,   3,  27,  69,   4,  64,  32,   9,  32,   4,  32,   1,  32,   1,  65,   1,  65,   0,  32,   8,  17,   3,   0,  65,   0,  35,   3,  65,   1,  70,  13,   4,  26,  11,  35,   3,  69,   4,  64,  32,   1,  65,   0,  32,   3,  40,   2,  32,  65,   1,  70,  27,  33,   4,  12,   2,  11,  11,  35,   3,  69,   4,  64,  32,   3,  65,   8, 106,  33,   8,  32,   9,  40,   2,   0,  40,   2,  24,  33,   5,  11,  32,   6,  65,   1,  70,  65,   1,  35,   3,  27,   4,  64,  32,   9,  32,   8,  32,   1,  65,   1,  65,   0,  32,   5,  17,   2,   0,  65,   1,  35,   3,  65,   1,  70,  13,   3,  26,  11,  35,   3,  69,   4,  64,   2,  64,   2,  64,  32,   3,  40,   2,  44,  34,   1,  14,   2,   0,   1,   3,  11,  32,   3,  40,   2,  28,  65,   0,  32,   3,  40,   2,  40,  65,   1,  70,  27,  65,   0,  32,   3,  40,   2,  36,  65,   1,  70,  27,  34,   1,  65,   0,  32,   3,  40,   2,  48,  65,   1,  70,  27,  33,   4,  12,   2,  11,  32,   3,  40,   2,  32,  65,   1,  71,  34,   1,   4,  64,  32,   3,  40,   2,  48,  34,   1,  13,   2,  32,   3,  40,   2,  36,  65,   1,  71,  34,   1,  13,   2,  32,   3,  40,   2,  40,  65,   1,  71,  34,   1,  13,   2,  11,  32,   3,  40,   2,  24,  33,   4,  11,  11,  35,   3,  69,   4,  64,  32,   3,  65,  64, 107,  36,   0,  32,   4,  34,   1,  69,  33,   3,  65,   0,  33,   4,  32,   3,  13,   1,  32,   7,  65,   8, 106,  65,   4, 114,  65,  52,  16,  49,  32,   7,  65,   1,  54,   2,  56,  32,   7,  65, 127,  54,   2,  20,  32,   7,  32,   0,  54,   2,  16,  32,   7,  32,   1,  54,   2,   8,  32,   2,  40,   2,   0,  33,   4,  32,   1,  40,   2,   0,  40,   2,  28,  33,   3,  32,   7,  65,   8, 106,  33,   0,  11,  32,   6,  65,   2,  70,  65,   1,  35,   3,  27,   4,  64,  32,   1,  32,   0,  32,   4,  65,   1,  32,   3,  17,   4,   0,  65,   2,  35,   3,  65,   1,  70,  13,   2,  26,  11,  35,   3,  69,   4,  64,  32,   7,  40,   2,  32,  34,   0,  65,   1,  70,   4,  64,  32,   2,  32,   7,  40,   2,  24,  54,   2,   0,  11,  32,   0,  65,   1,  70,  33,   4,  11,  11,  35,   3,  69,   4,  64,  32,   7,  65,  64, 107,  36,   0,  32,   4,  15,  11,   0,  11,  33,   6,  35,   4,  40,   2,   0,  32,   6,  54,   2,   0,  35,   4,  35,   4,  40,   2,   0,  65,   4, 106,  54,   2,   0,  35,   4,  40,   2,   0,  34,   6,  32,   0,  54,   2,   0,  32,   6,  32,   1,  54,   2,   4,  32,   6,  32,   2,  54,   2,   8,  32,   6,  32,   3,  54,   2,  12,  32,   6,  32,   4,  54,   2,  16,  32,   6,  32,   7,  54,   2,  20,  32,   6,  32,   8,  54,   2,  24,  32,   6,  32,   9,  54,   2,  28,  32,   6,  32,   5,  54,   2,  32,  35,   4,  35,   4,  40,   2,   0,  65,  36, 106,  54,   2,   0,  65,   0,  11,  93,   1,   1, 127,  32,   0,  40,   2,  16,  34,   3,  69,   4,  64,  32,   0,  65,   1,  54,   2,  36,  32,   0,  32,   2,  54,   2,  24,  32,   0,  32,   1,  54,   2,  16,  15,  11,   2,  64,  32,   1,  32,   3,  70,   4,  64,  32,   0,  40,   2,  24,  65,   2,  71,  13,   1,  32,   0,  32,   2,  54,   2,  24,  15,  11,  32,   0,  65,   1,  58,   0,  54,  32,   0,  65,   2,  54,   2,  24,  32,   0,  32,   0,  40,   2,  36,  65,   1, 106,  54,   2,  36,  11,  11,  55,   1,   1, 127,  35,   3,  33,   4,   2, 127,  32,   0,  32,   1,  40,   2,   8,  65,   0,  16,  27,  33,   0,  35,   3,  32,   4,  71,   4,  64,   0,  11,  32,   0,  11,   4,  64,  32,   1,  32,   2,  32,   3,  16,  29,  35,   3,  32,   4,  71,   4,  64,   0,  11,  11,  11, 128,   2,   1,   2, 127,  35,   3,  65,   2,  70,   4,  64,  35,   4,  35,   4,  40,   2,   0,  65,  20, 107,  54,   2,   0,  35,   4,  40,   2,   0,  34,   4,  40,   2,   0,  33,   0,  32,   4,  40,   2,   4,  33,   1,  32,   4,  40,   2,   8,  33,   2,  32,   4,  40,   2,  12,  33,   3,  32,   4,  40,   2,  16,  33,   4,  11,   2, 127,  35,   3,  65,   2,  70,   4,  64,  35,   4,  35,   4,  40,   2,   0,  65,   4, 107,  54,   2,   0,  35,   4,  40,   2,   0,  40,   2,   0,  33,   5,  11,  35,   3,  69,   4,  64,  32,   0,  32,   1,  40,   2,   8,  65,   0,  16,  27,   4,  64,  32,   1,  32,   2,  32,   3,  16,  29,  15,  11,  32,   0,  40,   2,   8,  34,   0,  40,   2,   0,  40,   2,  28,  33,   4,  11,  32,   5,  65,   0,  35,   3,  27,  69,   4,  64,  32,   0,  32,   1,  32,   2,  32,   3,  32,   4,  17,   4,   0,  65,   0,  35,   3,  65,   1,  70,  13,   1,  26,  11,  15,  11,  33,   5,  35,   4,  40,   2,   0,  32,   5,  54,   2,   0,  35,   4,  35,   4,  40,   2,   0,  65,   4, 106,  54,   2,   0,  35,   4,  40,   2,   0,  34,   5,  32,   0,  54,   2,   0,  32,   5,  32,   1,  54,   2,   4,  32,   5,  32,   2,  54,   2,   8,  32,   5,  32,   3,  54,   2,  12,  32,   5,  32,   4,  54,   2,  16,  35,   4,  35,   4,  40,   2,   0,  65,  20, 106,  54,   2,   0,  11, 165,   2,   1,   3, 127,  35,   3,  65,   2,  70,   4,  64,  35,   4,  35,   4,  40,   2,   0,  65,  20, 107,  54,   2,   0,  35,   4,  40,   2,   0,  34,   4,  40,   2,   0,  33,   0,  32,   4,  40,   2,   4,  33,   1,  32,   4,  40,   2,   8,  33,   2,  32,   4,  40,   2,  12,  33,   3,  32,   4,  40,   2,  16,  33,   4,  11,   2, 127,  35,   3,  65,   2,  70,   4,  64,  35,   4,  35,   4,  40,   2,   0,  65,   4, 107,  54,   2,   0,  35,   4,  40,   2,   0,  40,   2,   0,  33,   6,  11,  35,   3,  69,   4,  64,  32,   0,  40,   2,   4,  33,   5,   2, 127,  65,   0,  32,   2,  69,  13,   0,  26,  32,   5,  65,   8, 117,  34,   4,  32,   5,  65,   1, 113,  69,  13,   0,  26,  32,   2,  40,   2,   0,  32,   4,  16,  33,  11,  32,   2, 106,  33,   4,  32,   3,  65,   2,  32,   5,  65,   2, 113,  27,  33,   3,  32,   0,  40,   2,   0,  34,   0,  40,   2,   0,  40,   2,  28,  33,   2,  11,  32,   6,  65,   0,  35,   3,  27,  69,   4,  64,  32,   0,  32,   1,  32,   4,  32,   3,  32,   2,  17,   4,   0,  65,   0,  35,   3,  65,   1,  70,  13,   1,  26,  11,  15,  11,  33,   5,  35,   4,  40,   2,   0,  32,   5,  54,   2,   0,  35,   4,  35,   4,  40,   2,   0,  65,   4, 106,  54,   2,   0,  35,   4,  40,   2,   0,  34,   5,  32,   0,  54,   2,   0,  32,   5,  32,   1,  54,   2,   4,  32,   5,  32,   2,  54,   2,   8,  32,   5,  32,   3,  54,   2,  12,  32,   5,  32,   4,  54,   2,  16,  35,   4,  35,   4,  40,   2,   0,  65,  20, 106,  54,   2,   0,  11,  10,   0,  32,   0,  32,   1, 106,  40,   2,   0,  11, 255,   2,   1,   4, 127,  35,   3,  65,   2,  70,   4,  64,  35,   4,  35,   4,  40,   2,   0,  65,  28, 107,  54,   2,   0,  35,   4,  40,   2,   0,  34,   4,  40,   2,   0,  33,   0,  32,   4,  40,   2,   4,  33,   1,  32,   4,  40,   2,   8,  33,   2,  32,   4,  40,   2,  12,  33,   3,  32,   4,  40,   2,  16,  33,   6,  32,   4,  40,   2,  20,  33,   7,  32,   4,  40,   2,  24,  33,   4,  11,   2, 127,  35,   3,  65,   2,  70,   4,  64,  35,   4,  35,   4,  40,   2,   0,  65,   4, 107,  54,   2,   0,  35,   4,  40,   2,   0,  40,   2,   0,  33,   5,  11,  35,   3,  69,   4,  64,  32,   0,  32,   1,  40,   2,   8,  65,   0,  16,  27,   4,  64,  32,   1,  32,   2,  32,   3,  16,  29,  15,  11,  32,   0,  40,   2,  12,  33,   6,  32,   0,  65,  16, 106,  33,   7,  11,  32,   5,  65,   0,  35,   3,  27,  69,   4,  64,  32,   7,  32,   1,  32,   2,  32,   3,  16,  32,  65,   0,  35,   3,  65,   1,  70,  13,   1,  26,  11,  32,   4,  32,   6,  65,   2,  72,  35,   3,  27,  33,   4,   2,  64,  35,   3,  69,   4,  64,  32,   4,  13,   1,  32,   7,  32,   6,  65,   3, 116, 106,  33,   6,  32,   0,  65,  24, 106,  33,   0,  11,   3,  64,  32,   5,  65,   1,  70,  65,   1,  35,   3,  27,   4,  64,  32,   0,  32,   1,  32,   2,  32,   3,  16,  32,  65,   1,  35,   3,  65,   1,  70,  13,   3,  26,  11,  35,   3,  69,   4,  64,  32,   1,  45,   0,  54,  13,   2,  32,   6,  32,   0,  65,   8, 106,  34,   0,  75,  13,   1,  11,  11,  11,  15,  11,  33,   5,  35,   4,  40,   2,   0,  32,   5,  54,   2,   0,  35,   4,  35,   4,  40,   2,   0,  65,   4, 106,  54,   2,   0,  35,   4,  40,   2,   0,  34,   5,  32,   0,  54,   2,   0,  32,   5,  32,   1,  54,   2,   4,  32,   5,  32,   2,  54,   2,   8,  32,   5,  32,   3,  54,   2,  12,  32,   5,  32,   6,  54,   2,  16,  32,   5,  32,   7,  54,   2,  20,  32,   5,  32,   4,  54,   2,  24,  35,   4,  35,   4,  40,   2,   0,  65,  28, 106,  54,   2,   0,  11, 154,   1,   0,  32,   0,  65,   1,  58,   0,  53,   2,  64,  32,   0,  40,   2,   4,  32,   2,  71,  13,   0,  32,   0,  65,   1,  58,   0,  52,   2,  64,  32,   0,  40,   2,  16,  34,   2,  69,   4,  64,  32,   0,  65,   1,  54,   2,  36,  32,   0,  32,   3,  54,   2,  24,  32,   0,  32,   1,  54,   2,  16,  32,   0,  40,   2,  48,  65,   1,  71,  13,   2,  32,   3,  65,   1,  70,  13,   1,  12,   2,  11,  32,   1,  32,   2,  70,   4,  64,  32,   0,  40,   2,  24,  34,   2,  65,   2,  70,   4,  64,  32,   0,  32,   3,  54,   2,  24,  32,   3,  33,   2,  11,  32,   0,  40,   2,  48,  65,   1,  71,  13,   2,  32,   2,  65,   1,  70,  13,   1,  12,   2,  11,  32,   0,  32,   0,  40,   2,  36,  65,   1, 106,  54,   2,  36,  11,  32,   0,  65,   1,  58,   0,  54,  11,  11,  32,   0,   2,  64,  32,   0,  40,   2,   4,  32,   1,  71,  13,   0,  32,   0,  40,   2,  28,  65,   1,  70,  13,   0,  32,   0,  32,   2,  54,   2,  28,  11,  11, 186,   8,   1,   6, 127,  35,   3,  65,   2,  70,   4,  64,  35,   4,  35,   4,  40,   2,   0,  65,  40, 107,  54,   2,   0,  35,   4,  40,   2,   0,  34,   7,  40,   2,   0,  33,   0,  32,   7,  40,   2,   4,  33,   1,  32,   7,  40,   2,   8,  33,   2,  32,   7,  40,   2,  12,  33,   3,  32,   7,  40,   2,  16,  33,   4,  32,   7,  40,   2,  20,  33,   5,  32,   7,  40,   2,  24,  33,   8,  32,   7,  40,   2,  28,  33,   9,  32,   7,  40,   2,  32,  33,  10,  32,   7,  40,   2,  36,  33,   7,  11,   2, 127,  35,   3,  65,   2,  70,   4,  64,  35,   4,  35,   4,  40,   2,   0,  65,   4, 107,  54,   2,   0,  35,   4,  40,   2,   0,  40,   2,   0,  33,   6,  11,  35,   3,  69,   4,  64,  32,   0,  32,   1,  40,   2,   8,  32,   4,  16,  27,   4,  64,  32,   1,  32,   2,  32,   3,  16,  36,  15,  11,  32,   0,  32,   1,  40,   2,   0,  32,   4,  16,  27,  33,   9,  11,   2,  64,  32,   9,  35,   3,  65,   2,  70, 114,   4,  64,   2, 127,  35,   3,  69,   4,  64,   2,  64,  32,   1,  40,   2,  16,  32,   2,  71,   4,  64,  32,   1,  40,   2,  20,  32,   2,  71,  34,   9,  13,   1,  11,  32,   3,  65,   1,  71,  13,   4,  32,   1,  65,   1,  54,   2,  32,  15,  11,  32,   1,  32,   3,  54,   2,  32,  32,   1,  40,   2,  44,  65,   4,  71,  33,   3,  11,  32,   3,  35,   3,  65,   2,  70, 114,  11,   4,  64,  35,   3,  69,   4,  64,  32,   0,  40,   2,  12,  65,   3, 116,  34,   3,  32,   0,  65,  16, 106,  34,   5, 106,  33,   7,  32,   1,  33,   9,  11,   2, 127,   2,  64,   3,  64,   2,  64,  35,   3,  69,   4,  64,  32,   5,  32,   7,  79,  34,   3,  13,   1,  32,   1,  65,   0,  59,   1,  52,  11,  32,   6,  65,   0,  35,   3,  27,  69,   4,  64,  32,   5,  32,   1,  32,   2,  32,   2,  65,   1,  32,   4,  16,  38,  65,   0,  35,   3,  65,   1,  70,  13,   8,  26,  11,  35,   3,  69,   4,  64,  32,   1,  45,   0,  54,  34,   3,  13,   1,   2,  64,  32,   1,  45,   0,  53,  69,  34,   3,  13,   0,  32,   1,  45,   0,  52,   4,  64,  65,   1,  33,   3,  32,   1,  40,   2,  24,  65,   1,  70,  34,   8,  13,   5,  65,   1,  33,  10,  65,   1,  33,   8,  32,   0,  45,   0,   8,  65,   2, 113,  13,   1,  12,   5,  11,  65,   1,  33,  10,  32,   8,  33,   3,  32,   0,  45,   0,   8,  65,   1, 113,  69,  13,   4,  11,  32,   5,  65,   8, 106,  33,   5,  12,   2,  11,  11,  11,  35,   3,  69,   4,  64,  32,   8,  33,   3,  65,   4,  34,   0,  32,  10,  69,  34,   4,  13,   2,  26,  11,  11,  32,   0,  65,   3,  35,   3,  27,  11,  33,   0,  35,   3,  69,   4,  64,  32,   9,  32,   0,  54,   2,  44,  32,   3,  65,   1, 113,  34,   0,  13,   3,  11,  11,  35,   3,  69,   4,  64,  32,   1,  32,   2,  54,   2,  20,  32,   1,  32,   1,  40,   2,  40,  65,   1, 106,  54,   2,  40,  32,   1,  40,   2,  36,  65,   1,  71,  13,   2,  32,   1,  40,   2,  24,  65,   2,  71,  13,   2,  32,   1,  65,   1,  58,   0,  54,  15,  11,  11,  35,   3,  69,   4,  64,  32,   0,  65,  16, 106,  33,   5,  32,   0,  40,   2,  12,  33,   8,  11,  32,   6,  65,   1,  70,  65,   1,  35,   3,  27,   4,  64,  32,   5,  32,   1,  32,   2,  32,   3,  32,   4,  16,  39,  65,   1,  35,   3,  65,   1,  70,  13,   2,  26,  11,  35,   3,  69,   4,  64,  32,   8,  65,   2,  72,  13,   1,  32,   8,  65,   3, 116,  32,   5, 106,  33,   8,  32,   0,  65,  24, 106,  33,   5,  32,   0,  40,   2,   8,  34,   0,  65,   2, 113,  69,  33,   9,  11,   2,  64,  35,   3,  69,   4,  64,  32,   9,   4,  64,  32,   1,  40,   2,  36,  65,   1,  71,  13,   2,  11,  11,   3,  64,  35,   3,  69,   4,  64,  32,   1,  45,   0,  54,  34,   0,  13,   3,  11,  32,   6,  65,   2,  70,  65,   1,  35,   3,  27,   4,  64,  32,   5,  32,   1,  32,   2,  32,   3,  32,   4,  16,  39,  65,   2,  35,   3,  65,   1,  70,  13,   4,  26,  11,  35,   3,  69,   4,  64,  32,   8,  32,   5,  65,   8, 106,  34,   5,  75,  34,   0,  13,   1,  11,  11,  35,   3,  69,  13,   1,  11,  35,   3,  65,   2,  70,  32,   0,  32,   0,  65,   1, 113,  69,  35,   3,  27, 114,   4,  64,   3,  64,  35,   3,  69,   4,  64,  32,   1,  45,   0,  54,  13,   3,  32,   1,  40,   2,  36,  65,   1,  70,  13,   3,  11,  32,   6,  65,   3,  70,  65,   1,  35,   3,  27,   4,  64,  32,   5,  32,   1,  32,   2,  32,   3,  32,   4,  16,  39,  65,   3,  35,   3,  65,   1,  70,  13,   4,  26,  11,  35,   3,  69,   4,  64,  32,   8,  32,   5,  65,   8, 106,  34,   5,  75,  13,   1,  11,  11,  35,   3,  69,  13,   1,  11,   3,  64,  35,   3,  69,   4,  64,  32,   1,  45,   0,  54,  13,   2,  32,   1,  40,   2,  36,  65,   1,  70,   4,  64,  32,   1,  40,   2,  24,  65,   1,  70,  13,   3,  11,  11,  32,   6,  65,   4,  70,  65,   1,  35,   3,  27,   4,  64,  32,   5,  32,   1,  32,   2,  32,   3,  32,   4,  16,  39,  65,   4,  35,   3,  65,   1,  70,  13,   3,  26,  11,  35,   3,  69,   4,  64,  32,   8,  32,   5,  65,   8, 106,  34,   5,  75,  13,   1,  11,  11,  11,  15,  11,  33,   6,  35,   4,  40,   2,   0,  32,   6,  54,   2,   0,  35,   4,  35,   4,  40,   2,   0,  65,   4, 106,  54,   2,   0,  35,   4,  40,   2,   0,  34,   6,  32,   0,  54,   2,   0,  32,   6,  32,   1,  54,   2,   4,  32,   6,  32,   2,  54,   2,   8,  32,   6,  32,   3,  54,   2,  12,  32,   6,  32,   4,  54,   2,  16,  32,   6,  32,   5,  54,   2,  20,  32,   6,  32,   8,  54,   2,  24,  32,   6,  32,   9,  54,   2,  28,  32,   6,  32,  10,  54,   2,  32,  32,   6,  32,   7,  54,   2,  36,  35,   4,  35,   4,  40,   2,   0,  65,  40, 106,  54,   2,   0,  11, 186,   2,   1,   3, 127,  35,   3,  65,   2,  70,   4,  64,  35,   4,  35,   4,  40,   2,   0,  65,  28, 107,  54,   2,   0,  35,   4,  40,   2,   0,  34,   6,  40,   2,   0,  33,   0,  32,   6,  40,   2,   4,  33,   1,  32,   6,  40,   2,   8,  33,   2,  32,   6,  40,   2,  12,  33,   3,  32,   6,  40,   2,  16,  33,   4,  32,   6,  40,   2,  20,  33,   5,  32,   6,  40,   2,  24,  33,   6,  11,   2, 127,  35,   3,  65,   2,  70,   4,  64,  35,   4,  35,   4,  40,   2,   0,  65,   4, 107,  54,   2,   0,  35,   4,  40,   2,   0,  40,   2,   0,  33,   8,  11,  35,   3,  69,   4,  64,  32,   0,  40,   2,   4,  34,   6,  65,   8, 117,  33,   7,  32,   6,  65,   1, 113,   4, 127,  32,   3,  40,   2,   0,  32,   7,  16,  33,   5,  32,   7,  11,  32,   3, 106,  33,   3,  32,   4,  65,   2,  32,   6,  65,   2, 113,  27,  33,   4,  32,   0,  40,   2,   0,  34,   0,  40,   2,   0,  40,   2,  20,  33,   6,  11,  32,   8,  65,   0,  35,   3,  27,  69,   4,  64,  32,   0,  32,   1,  32,   2,  32,   3,  32,   4,  32,   5,  32,   6,  17,   3,   0,  65,   0,  35,   3,  65,   1,  70,  13,   1,  26,  11,  15,  11,  33,   7,  35,   4,  40,   2,   0,  32,   7,  54,   2,   0,  35,   4,  35,   4,  40,   2,   0,  65,   4, 106,  54,   2,   0,  35,   4,  40,   2,   0,  34,   7,  32,   0,  54,   2,   0,  32,   7,  32,   1,  54,   2,   4,  32,   7,  32,   2,  54,   2,   8,  32,   7,  32,   3,  54,   2,  12,  32,   7,  32,   4,  54,   2,  16,  32,   7,  32,   5,  54,   2,  20,  32,   7,  32,   6,  54,   2,  24,  35,   4,  35,   4,  40,   2,   0,  65,  28, 106,  54,   2,   0,  11, 170,   2,   1,   3, 127,  35,   3,  65,   2,  70,   4,  64,  35,   4,  35,   4,  40,   2,   0,  65,  24, 107,  54,   2,   0,  35,   4,  40,   2,   0,  34,   5,  40,   2,   0,  33,   0,  32,   5,  40,   2,   4,  33,   1,  32,   5,  40,   2,   8,  33,   2,  32,   5,  40,   2,  12,  33,   3,  32,   5,  40,   2,  16,  33,   4,  32,   5,  40,   2,  20,  33,   5,  11,   2, 127,  35,   3,  65,   2,  70,   4,  64,  35,   4,  35,   4,  40,   2,   0,  65,   4, 107,  54,   2,   0,  35,   4,  40,   2,   0,  40,   2,   0,  33,   7,  11,  35,   3,  69,   4,  64,  32,   0,  40,   2,   4,  34,   5,  65,   8, 117,  33,   6,  32,   5,  65,   1, 113,   4, 127,  32,   2,  40,   2,   0,  32,   6,  16,  33,   5,  32,   6,  11,  32,   2, 106,  33,   2,  32,   3,  65,   2,  32,   5,  65,   2, 113,  27,  33,   3,  32,   0,  40,   2,   0,  34,   0,  40,   2,   0,  40,   2,  24,  33,   5,  11,  32,   7,  65,   0,  35,   3,  27,  69,   4,  64,  32,   0,  32,   1,  32,   2,  32,   3,  32,   4,  32,   5,  17,   2,   0,  65,   0,  35,   3,  65,   1,  70,  13,   1,  26,  11,  15,  11,  33,   6,  35,   4,  40,   2,   0,  32,   6,  54,   2,   0,  35,   4,  35,   4,  40,   2,   0,  65,   4, 106,  54,   2,   0,  35,   4,  40,   2,   0,  34,   6,  32,   0,  54,   2,   0,  32,   6,  32,   1,  54,   2,   4,  32,   6,  32,   2,  54,   2,   8,  32,   6,  32,   3,  54,   2,  12,  32,   6,  32,   4,  54,   2,  16,  32,   6,  32,   5,  54,   2,  20,  35,   4,  35,   4,  40,   2,   0,  65,  24, 106,  54,   2,   0,  11, 156,   4,   1,   2, 127,  35,   3,  65,   2,  70,   4,  64,  35,   4,  35,   4,  40,   2,   0,  65,  24, 107,  54,   2,   0,  35,   4,  40,   2,   0,  34,   5,  40,   2,   0,  33,   0,  32,   5,  40,   2,   4,  33,   1,  32,   5,  40,   2,   8,  33,   2,  32,   5,  40,   2,  12,  33,   3,  32,   5,  40,   2,  16,  33,   4,  32,   5,  40,   2,  20,  33,   5,  11,   2, 127,  35,   3,  65,   2,  70,   4,  64,  35,   4,  35,   4,  40,   2,   0,  65,   4, 107,  54,   2,   0,  35,   4,  40,   2,   0,  40,   2,   0,  33,   6,  11,  35,   3,  69,   4,  64,  32,   0,  32,   1,  40,   2,   8,  32,   4,  16,  27,   4,  64,  32,   1,  32,   2,  32,   3,  16,  36,  15,  11,  32,   0,  32,   1,  40,   2,   0,  32,   4,  16,  27,  33,   5,  11,   2,  64,  32,   5,  35,   3,  65,   2,  70, 114,   4,  64,  35,   3,  69,   4,  64,   2,  64,  32,   1,  40,   2,  16,  32,   2,  71,   4,  64,  32,   1,  40,   2,  20,  32,   2,  71,  34,   5,  13,   1,  11,  32,   3,  65,   1,  71,  13,   3,  32,   1,  65,   1,  54,   2,  32,  15,  11,  32,   1,  32,   3,  54,   2,  32,  32,   1,  40,   2,  44,  65,   4,  70,  33,   3,  11,   2,  64,  35,   3,  69,   4,  64,  32,   3,  13,   1,  32,   1,  65,   0,  59,   1,  52,  32,   0,  40,   2,   8,  34,   0,  40,   2,   0,  40,   2,  20,  33,   3,  11,  32,   6,  65,   0,  35,   3,  27,  69,   4,  64,  32,   0,  32,   1,  32,   2,  32,   2,  65,   1,  32,   4,  32,   3,  17,   3,   0,  65,   0,  35,   3,  65,   1,  70,  13,   4,  26,  11,  35,   3,  69,   4,  64,  32,   1,  45,   0,  53,  34,   0,   4,  64,  32,   1,  65,   3,  54,   2,  44,  32,   1,  45,   0,  52,  69,  34,   0,  13,   2,  12,   4,  11,  32,   1,  65,   4,  54,   2,  44,  11,  11,  35,   3,  69,   4,  64,  32,   1,  32,   2,  54,   2,  20,  32,   1,  32,   1,  40,   2,  40,  65,   1, 106,  54,   2,  40,  32,   1,  40,   2,  36,  65,   1,  71,  13,   2,  32,   1,  40,   2,  24,  65,   2,  71,  13,   2,  32,   1,  65,   1,  58,   0,  54,  15,  11,  11,  35,   3,  69,   4,  64,  32,   0,  40,   2,   8,  34,   0,  40,   2,   0,  40,   2,  24,  33,   5,  11,  32,   6,  65,   1,  70,  65,   1,  35,   3,  27,   4,  64,  32,   0,  32,   1,  32,   2,  32,   3,  32,   4,  32,   5,  17,   2,   0,  65,   1,  35,   3,  65,   1,  70,  13,   2,  26,  11,  11,  15,  11,  33,   6,  35,   4,  40,   2,   0,  32,   6,  54,   2,   0,  35,   4,  35,   4,  40,   2,   0,  65,   4, 106,  54,   2,   0,  35,   4,  40,   2,   0,  34,   6,  32,   0,  54,   2,   0,  32,   6,  32,   1,  54,   2,   4,  32,   6,  32,   2,  54,   2,   8,  32,   6,  32,   3,  54,   2,  12,  32,   6,  32,   4,  54,   2,  16,  32,   6,  32,   5,  54,   2,  20,  35,   4,  35,   4,  40,   2,   0,  65,  24, 106,  54,   2,   0,  11, 189,   1,   1,   2, 127,  35,   3,  33,   5,   2, 127,  32,   0,  32,   1,  40,   2,   8,  32,   4,  16,  27,  33,   6,  35,   3,  32,   5,  71,   4,  64,   0,  11,  32,   6,  11,   4,  64,  32,   1,  32,   2,  32,   3,  16,  36,  35,   3,  32,   5,  71,   4,  64,   0,  11,  15,  11,  32,   0,  32,   1,  40,   2,   0,  32,   4,  16,  27,  33,   0,  35,   3,  32,   5,  71,   4,  64,   0,  11,   2,  64,  32,   0,  69,  13,   0,   2,  64,  32,   2,  32,   1,  40,   2,  16,  71,   4,  64,  32,   2,  32,   1,  40,   2,  20,  71,  13,   1,  11,  32,   3,  65,   1,  71,  13,   1,  32,   1,  65,   1,  54,   2,  32,  15,  11,  32,   1,  32,   2,  54,   2,  20,  32,   1,  32,   3,  54,   2,  32,  32,   1,  32,   1,  40,   2,  40,  65,   1, 106,  54,   2,  40,   2,  64,  32,   1,  40,   2,  36,  65,   1,  71,  13,   0,  32,   1,  40,   2,  24,  65,   2,  71,  13,   0,  32,   1,  65,   1,  58,   0,  54,  11,  32,   1,  65,   4,  54,   2,  44,  11,  11, 135,   5,   1,   8, 127,  35,   3,  65,   2,  70,   4,  64,  35,   4,  35,   4,  40,   2,   0,  65,  52, 107,  54,   2,   0,  35,   4,  40,   2,   0,  34,   6,  40,   2,   0,  33,   0,  32,   6,  40,   2,   4,  33,   1,  32,   6,  40,   2,   8,  33,   2,  32,   6,  40,   2,  12,  33,   3,  32,   6,  40,   2,  16,  33,   4,  32,   6,  40,   2,  20,  33,   5,  32,   6,  40,   2,  24,  33,   8,  32,   6,  40,   2,  28,  33,   9,  32,   6,  40,   2,  32,  33,  10,  32,   6,  40,   2,  36,  33,  11,  32,   6,  40,   2,  40,  33,  12,  32,   6,  40,   2,  44,  33,  13,  32,   6,  40,   2,  48,  33,   6,  11,   2, 127,  35,   3,  65,   2,  70,   4,  64,  35,   4,  35,   4,  40,   2,   0,  65,   4, 107,  54,   2,   0,  35,   4,  40,   2,   0,  40,   2,   0,  33,   7,  11,  35,   3,  69,   4,  64,  32,   0,  32,   1,  40,   2,   8,  32,   5,  16,  27,   4,  64,  32,   1,  32,   2,  32,   3,  32,   4,  16,  35,  15,  11,  32,   1,  45,   0,  53,  33,   9,  32,   0,  40,   2,  12,  33,   8,  32,   1,  65,   0,  58,   0,  53,  32,   1,  45,   0,  52,  33,  10,  32,   1,  65,   0,  58,   0,  52,  32,   0,  65,  16, 106,  33,  11,  11,  32,   7,  65,   0,  35,   3,  27,  69,   4,  64,  32,  11,  32,   1,  32,   2,  32,   3,  32,   4,  32,   5,  16,  38,  65,   0,  35,   3,  65,   1,  70,  13,   1,  26,  11,  35,   3,  69,   4,  64,  32,   1,  45,   0,  52,  34,  12,  32,  10, 114,  33,  10,  32,   9,  32,   1,  45,   0,  53,  34,  13, 114,  33,   9,  32,   8,  65,   2,  72,  33,   6,  11,   2,  64,  35,   3,  69,   4,  64,  32,   6,  13,   1,  32,  11,  32,   8,  65,   3, 116, 106,  33,  11,  32,   0,  65,  24, 106,  33,   8,  11,   3,  64,  35,   3,  69,   4,  64,  32,   1,  45,   0,  54,  13,   2,   2,  64,  32,  12,   4,  64,  32,   1,  40,   2,  24,  65,   1,  70,  13,   4,  32,   0,  45,   0,   8,  65,   2, 113,  13,   1,  12,   4,  11,  32,  13,  69,  13,   0,  32,   0,  45,   0,   8,  65,   1, 113,  69,  13,   3,  11,  32,   1,  65,   0,  59,   1,  52,  11,  32,   7,  65,   1,  70,  65,   1,  35,   3,  27,   4,  64,  32,   8,  32,   1,  32,   2,  32,   3,  32,   4,  32,   5,  16,  38,  65,   1,  35,   3,  65,   1,  70,  13,   3,  26,  11,  35,   3,  69,   4,  64,  32,   9,  32,   1,  45,   0,  53,  34,  13, 114,  33,   9,  32,   1,  45,   0,  52,  34,  12,  32,  10, 114,  33,  10,  32,  11,  32,   8,  65,   8, 106,  34,   8,  75,  13,   1,  11,  11,  11,  35,   3,  69,   4,  64,  32,   1,  32,   9,  65, 255,   1, 113,  65,   0,  71,  58,   0,  53,  32,   1,  32,  10,  65, 255,   1, 113,  65,   0,  71,  58,   0,  52,  11,  15,  11,  33,   7,  35,   4,  40,   2,   0,  32,   7,  54,   2,   0,  35,   4,  35,   4,  40,   2,   0,  65,   4, 106,  54,   2,   0,  35,   4,  40,   2,   0,  34,   7,  32,   0,  54,   2,   0,  32,   7,  32,   1,  54,   2,   4,  32,   7,  32,   2,  54,   2,   8,  32,   7,  32,   3,  54,   2,  12,  32,   7,  32,   4,  54,   2,  16,  32,   7,  32,   5,  54,   2,  20,  32,   7,  32,   8,  54,   2,  24,  32,   7,  32,   9,  54,   2,  28,  32,   7,  32,  10,  54,   2,  32,  32,   7,  32,  11,  54,   2,  36,  32,   7,  32,  12,  54,   2,  40,  32,   7,  32,  13,  54,   2,  44,  32,   7,  32,   6,  54,   2,  48,  35,   4,  35,   4,  40,   2,   0,  65,  52, 106,  54,   2,   0,  11, 162,   2,   1,   2, 127,  35,   3,  65,   2,  70,   4,  64,  35,   4,  35,   4,  40,   2,   0,  65,  28, 107,  54,   2,   0,  35,   4,  40,   2,   0,  34,   6,  40,   2,   0,  33,   0,  32,   6,  40,   2,   4,  33,   1,  32,   6,  40,   2,   8,  33,   2,  32,   6,  40,   2,  12,  33,   3,  32,   6,  40,   2,  16,  33,   4,  32,   6,  40,   2,  20,  33,   5,  32,   6,  40,   2,  24,  33,   6,  11,   2, 127,  35,   3,  65,   2,  70,   4,  64,  35,   4,  35,   4,  40,   2,   0,  65,   4, 107,  54,   2,   0,  35,   4,  40,   2,   0,  40,   2,   0,  33,   7,  11,  35,   3,  69,   4,  64,  32,   0,  32,   1,  40,   2,   8,  32,   5,  16,  27,   4,  64,  32,   1,  32,   2,  32,   3,  32,   4,  16,  35,  15,  11,  32,   0,  40,   2,   8,  34,   0,  40,   2,   0,  40,   2,  20,  33,   6,  11,  32,   7,  65,   0,  35,   3,  27,  69,   4,  64,  32,   0,  32,   1,  32,   2,  32,   3,  32,   4,  32,   5,  32,   6,  17,   3,   0,  65,   0,  35,   3,  65,   1,  70,  13,   1,  26,  11,  15,  11,  33,   7,  35,   4,  40,   2,   0,  32,   7,  54,   2,   0,  35,   4,  35,   4,  40,   2,   0,  65,   4, 106,  54,   2,   0,  35,   4,  40,   2,   0,  34,   7,  32,   0,  54,   2,   0,  32,   7,  32,   1,  54,   2,   4,  32,   7,  32,   2,  54,   2,   8,  32,   7,  32,   3,  54,   2,  12,  32,   7,  32,   4,  54,   2,  16,  32,   7,  32,   5,  54,   2,  20,  32,   7,  32,   6,  54,   2,  24,  35,   4,  35,   4,  40,   2,   0,  65,  28, 106,  54,   2,   0,  11,  57,   1,   1, 127,  35,   3,  33,   6,   2, 127,  32,   0,  32,   1,  40,   2,   8,  32,   5,  16,  27,  33,   0,  35,   3,  32,   6,  71,   4,  64,   0,  11,  32,   0,  11,   4,  64,  32,   1,  32,   2,  32,   3,  32,   4,  16,  35,  35,   3,  32,   6,  71,   4,  64,   0,  11,  11,  11,   5,   0,  65, 164,  26,  11, 250,  46,   1,  12, 127,  35,   3,  33,  10,  35,   0,  65,  16, 107,  34,  12,  36,   0,   2,  64,   2,  64,   2,  64,   2,  64,   2,  64,   2,  64,   2,  64,   2,  64,   2,  64,   2,  64,   2,  64,   2,  64,  32,   0,  65, 244,   1,  77,   4,  64,  65, 168,  26,  40,   2,   0,  34,   8,  65,  16,  32,   0,  65,  11, 106,  65, 120, 113,  32,   0,  65,  11,  73,  27,  34,   7,  65,   3, 118,  34,   2, 118,  34,   1,  65,   3, 113,   4,  64,  32,   2,  32,   1,  65, 127, 115,  65,   1, 113, 106,  34,   4,  65,   3, 116,  34,   1,  65, 216,  26, 106,  40,   2,   0,  34,   3,  65,   8, 106,  33,   0,   2,  64,  32,   3,  40,   2,   8,  34,   2,  32,   1,  65, 208,  26, 106,  34,   1,  70,   4,  64,  65, 168,  26,  32,   8,  65, 126,  32,   4, 119, 113,  54,   2,   0,  12,   1,  11,  32,   2,  32,   1,  54,   2,  12,  32,   1,  32,   2,  54,   2,   8,  11,  32,   3,  32,   4,  65,   3, 116,  34,   1,  65,   3, 114,  54,   2,   4,  32,   1,  32,   3, 106,  34,   1,  40,   2,   4,  65,   1, 114,  33,   2,  32,   1,  32,   2,  54,   2,   4,  12,  13,  11,  65, 176,  26,  40,   2,   0,  34,  11,  32,   7,  79,  13,   1,  32,   1,   4,  64,  65,   0,  65,   2,  32,   2, 116,  34,   0, 107,  33,   5,  65,   0,  32,   0,  32,   5, 114,  32,   1,  32,   2, 116, 113,  34,   0, 107,  33,   2,  32,   0,  32,   2, 113,  65,   1, 107,  34,   0,  65,  12, 118,  65,  16, 113,  33,   2,  32,   2,  32,   0,  32,   2, 118,  34,   1,  65,   5, 118,  65,   8, 113,  34,   0, 114,  33,   2,  32,   2,  32,   1,  32,   0, 118,  34,   1,  65,   2, 118,  65,   4, 113,  34,   0, 114,  33,   2,  32,   2,  32,   1,  32,   0, 118,  34,   1,  65,   1, 118,  65,   2, 113,  34,   0, 114,  33,   2,  32,   2,  32,   1,  32,   0, 118,  34,   1,  65,   1, 118,  65,   1, 113,  34,   0, 114,  33,   2,  32,   2,  32,   1,  32,   0, 118, 106,  34,   4,  65,   3, 116,  34,   0,  65, 216,  26, 106,  40,   2,   0,  34,   3,  40,   2,   8,  33,   1,   2,  64,  32,   1,  32,   0,  65, 208,  26, 106,  34,   0,  70,   4,  64,  65, 168,  26,  32,   8,  65, 126,  32,   4, 119, 113,  34,   8,  54,   2,   0,  12,   1,  11,  32,   1,  32,   0,  54,   2,  12,  32,   0,  32,   1,  54,   2,   8,  11,  32,   3,  65,   8, 106,  33,   0,  32,   3,  32,   7,  65,   3, 114,  54,   2,   4,  32,   3,  32,   7, 106,  34,   2,  32,   4,  65,   3, 116,  34,   1,  32,   7, 107,  34,   4,  65,   1, 114,  54,   2,   4,  32,   1,  32,   3, 106,  32,   4,  54,   2,   0,  32,  11,   4,  64,  32,  11,  65,   3, 118,  34,   1,  65,   3, 116,  65, 208,  26, 106,  33,   5,  65, 188,  26,  40,   2,   0,  33,   3,   2, 127,  32,   8,  65,   1,  32,   1, 116,  34,   1, 113,  69,   4,  64,  65, 168,  26,  32,   1,  32,   8, 114,  54,   2,   0,  32,   5,  12,   1,  11,  32,   5,  40,   2,   8,  11,  33,   1,  32,   5,  32,   3,  54,   2,   8,  32,   1,  32,   3,  54,   2,  12,  32,   3,  32,   5,  54,   2,  12,  32,   3,  32,   1,  54,   2,   8,  11,  65, 188,  26,  32,   2,  54,   2,   0,  65, 176,  26,  32,   4,  54,   2,   0,  12,  13,  11,  65, 172,  26,  40,   2,   0,  34,   6,  69,  13,   1,  32,   6,  65,   0,  32,   6, 107, 113,  65,   1, 107,  34,   0,  65,  12, 118,  65,  16, 113,  33,   2,  32,   2,  32,   0,  32,   2, 118,  34,   1,  65,   5, 118,  65,   8, 113,  34,   0, 114,  33,   2,  32,   2,  32,   1,  32,   0, 118,  34,   1,  65,   2, 118,  65,   4, 113,  34,   0, 114,  33,   2,  32,   2,  32,   1,  32,   0, 118,  34,   1,  65,   1, 118,  65,   2, 113,  34,   0, 114,  33,   2,  32,   2,  32,   1,  32,   0, 118,  34,   1,  65,   1, 118,  65,   1, 113,  34,   0, 114,  33,   2,  32,   2,  32,   1,  32,   0, 118, 106,  65,   2, 116,  65, 216,  28, 106,  40,   2,   0,  34,   1,  40,   2,   4,  65, 120, 113,  32,   7, 107,  33,   4,  32,   1,  33,   2,   3,  64,   2,  64,  32,   2,  40,   2,  16,  34,   0,  69,   4,  64,  32,   2,  40,   2,  20,  34,   0,  69,  13,   1,  11,  32,   0,  40,   2,   4,  65, 120, 113,  32,   7, 107,  34,   2,  32,   4,  32,   2,  32,   4,  73,  34,   2,  27,  33,   4,  32,   0,  32,   1,  32,   2,  27,  33,   1,  32,   0,  33,   2,  12,   1,  11,  11,  32,   1,  32,   7, 106,  34,   9,  32,   1,  77,  13,   2,  32,   1,  40,   2,  24,  33,  10,  32,   1,  40,   2,  12,  34,   3,  32,   1,  71,   4,  64,  32,   1,  40,   2,   8,  34,   0,  65, 184,  26,  40,   2,   0,  73,  26,  32,   0,  32,   3,  54,   2,  12,  32,   3,  32,   0,  54,   2,   8,  12,  12,  11,  32,   1,  65,  20, 106,  34,   2,  40,   2,   0,  34,   0,  69,   4,  64,  32,   1,  40,   2,  16,  34,   0,  69,  13,   4,  32,   1,  65,  16, 106,  33,   2,  11,   3,  64,  32,   2,  33,   5,  32,   0,  33,   3,  32,   0,  65,  20, 106,  34,   2,  40,   2,   0,  34,   0,  13,   0,  32,   3,  65,  16, 106,  33,   2,  32,   3,  40,   2,  16,  34,   0,  13,   0,  11,  32,   5,  65,   0,  54,   2,   0,  12,  11,  11,  65, 127,  33,   7,  32,   0,  65, 191, 127,  75,  13,   0,  32,   0,  65,  11, 106,  34,   0,  65, 120, 113,  33,   7,  65, 172,  26,  40,   2,   0,  34,   9,  69,  13,   0,  65,   0,  32,   7, 107,  33,   4,   2,  64,   2,  64,   2,  64,   2, 127,  65,   0,  32,   7,  65, 128,   2,  73,  13,   0,  26,  65,  31,  32,   7,  65, 255, 255, 255,   7,  75,  13,   0,  26,  32,   0,  65,   8, 118,  34,   0,  65, 128, 254,  63, 106,  65,  16, 118,  65,   8, 113,  33,   2,  32,   0,  32,   2, 116,  34,   0,  65, 128, 224,  31, 106,  65,  16, 118,  65,   4, 113,  33,   1,  32,   0,  32,   1, 116,  34,   0,  32,   0,  65, 128, 128,  15, 106,  65,  16, 118,  65,   2, 113,  34,   0, 116,  65,  15, 118,  32,   1,  32,   2, 114,  32,   0, 114, 107,  34,   0,  65,   1, 116,  33,   2,  32,   2,  32,   7,  32,   0,  65,  21, 106, 118,  65,   1, 113, 114,  65,  28, 106,  11,  34,   8,  65,   2, 116,  65, 216,  28, 106,  40,   2,   0,  34,   2,  69,   4,  64,  65,   0,  33,   0,  12,   1,  11,  65,   0,  33,   0,  32,   7,  65,   0,  65,  25,  32,   8,  65,   1, 118, 107,  32,   8,  65,  31,  70,  27, 116,  33,   1,   3,  64,   2,  64,  32,   4,  32,   2,  40,   2,   4,  65, 120, 113,  32,   7, 107,  34,   5,  77,  13,   0,  32,   2,  33,   3,  32,   5,  34,   4,  13,   0,  65,   0,  33,   4,  32,   2,  33,   0,  12,   3,  11,  32,   0,  32,   2,  40,   2,  20,  34,   5,  32,   5,  32,   1,  65,  29, 118,  65,   4, 113,  32,   2, 106,  40,   2,  16,  34,   2,  70,  27,  32,   0,  32,   5,  27,  33,   0,  32,   1,  65,   1, 116,  33,   1,  32,   2,  13,   0,  11,  11,  32,   0,  32,   3, 114,  69,   4,  64,  65,   0,  33,   3,  65,   0,  65,   2,  32,   8, 116,  34,   0, 107,  33,   2,  32,   9,  32,   0,  32,   2, 114, 113,  34,   0,  69,  13,   3,  65,   0,  32,   0, 107,  32,   0, 113,  65,   1, 107,  34,   0,  65,  12, 118,  65,  16, 113,  33,   2,  32,   2,  32,   0,  32,   2, 118,  34,   1,  65,   5, 118,  65,   8, 113,  34,   0, 114,  33,   2,  32,   2,  32,   1,  32,   0, 118,  34,   1,  65,   2, 118,  65,   4, 113,  34,   0, 114,  33,   2,  32,   2,  32,   1,  32,   0, 118,  34,   1,  65,   1, 118,  65,   2, 113,  34,   0, 114,  33,   2,  32,   2,  32,   1,  32,   0, 118,  34,   1,  65,   1, 118,  65,   1, 113,  34,   0, 114,  33,   2,  32,   2,  32,   1,  32,   0, 118, 106,  65,   2, 116,  65, 216,  28, 106,  40,   2,   0,  33,   0,  11,  32,   0,  69,  13,   1,  11,   3,  64,  32,   4,  32,   0,  40,   2,   4,  65, 120, 113,  32,   7, 107,  34,   1,  75,  33,   2,  32,   1,  32,   4,  32,   2,  27,  33,   4,  32,   0,  32,   3,  32,   2,  27,  33,   3,  32,   0,  40,   2,  16,  34,   1,   4, 127,  32,   1,   5,  32,   0,  40,   2,  20,  11,  34,   0,  13,   0,  11,  11,  32,   3,  69,  13,   0,  32,   4,  65, 176,  26,  40,   2,   0,  32,   7, 107,  79,  13,   0,  32,   3,  32,   7, 106,  34,   6,  32,   3,  77,  13,   1,  32,   3,  40,   2,  24,  33,   8,  32,   3,  32,   3,  40,   2,  12,  34,   1,  71,   4,  64,  32,   3,  40,   2,   8,  34,   0,  65, 184,  26,  40,   2,   0,  73,  26,  32,   0,  32,   1,  54,   2,  12,  32,   1,  32,   0,  54,   2,   8,  12,  10,  11,  32,   3,  65,  20, 106,  34,   2,  40,   2,   0,  34,   0,  69,   4,  64,  32,   3,  40,   2,  16,  34,   0,  69,  13,   4,  32,   3,  65,  16, 106,  33,   2,  11,   3,  64,  32,   2,  33,   5,  32,   0,  33,   1,  32,   0,  65,  20, 106,  34,   2,  40,   2,   0,  34,   0,  13,   0,  32,   1,  65,  16, 106,  33,   2,  32,   1,  40,   2,  16,  34,   0,  13,   0,  11,  32,   5,  65,   0,  54,   2,   0,  12,   9,  11,  32,   7,  65, 176,  26,  40,   2,   0,  34,   2,  77,   4,  64,  65, 188,  26,  40,   2,   0,  33,   4,   2,  64,  32,   2,  32,   7, 107,  34,   1,  65,  16,  79,   4,  64,  65, 176,  26,  32,   1,  54,   2,   0,  65, 188,  26,  32,   4,  32,   7, 106,  34,   0,  54,   2,   0,  32,   0,  32,   1,  65,   1, 114,  54,   2,   4,  32,   2,  32,   4, 106,  32,   1,  54,   2,   0,  32,   4,  32,   7,  65,   3, 114,  54,   2,   4,  12,   1,  11,  65, 188,  26,  65,   0,  54,   2,   0,  65, 176,  26,  65,   0,  54,   2,   0,  32,   4,  32,   2,  65,   3, 114,  54,   2,   4,  32,   2,  32,   4, 106,  34,   0,  40,   2,   4,  65,   1, 114,  33,   2,  32,   0,  32,   2,  54,   2,   4,  11,  32,   4,  65,   8, 106,  33,   0,  12,  11,  11,  32,   7,  65, 180,  26,  40,   2,   0,  34,   6,  73,   4,  64,  65, 180,  26,  32,   6,  32,   7, 107,  34,   1,  54,   2,   0,  65, 192,  26,  32,   7,  65, 192,  26,  40,   2,   0,  34,   2, 106,  34,   0,  54,   2,   0,  32,   0,  32,   1,  65,   1, 114,  54,   2,   4,  32,   2,  32,   7,  65,   3, 114,  54,   2,   4,  32,   2,  65,   8, 106,  33,   0,  12,  11,  11,  65,   0,  33,   0,  32,   7,  65,  47, 106,  34,   9,  33,   2,  32,   7,  65,   0,   2, 127,  65, 128,  30,  40,   2,   0,   4,  64,  65, 136,  30,  40,   2,   0,  12,   1,  11,  65, 140,  30,  66, 127,  55,   2,   0,  65, 132,  30,  66, 128, 160, 128, 128, 128, 128,   4,  55,   2,   0,  65, 128,  30,  32,  12,  65,  12, 106,  65, 112, 113,  65, 216, 170, 213, 170,   5, 115,  54,   2,   0,  65, 148,  30,  65,   0,  54,   2,   0,  65, 228,  29,  65,   0,  54,   2,   0,  65, 128,  32,  11,  34,   1, 107,  34,   5,  32,   1,  32,   2, 106,  34,   8, 113,  34,   2,  79,  13,  10,  65, 224,  29,  40,   2,   0,  34,   3,   4,  64,  65, 216,  29,  40,   2,   0,  34,   4,  32,   2, 106,  34,   1,  32,   4,  77,  33,   4,  32,   4,  32,   1,  32,   3,  75, 114,  13,  11,  11,  65, 228,  29,  45,   0,   0,  65,   4, 113,  13,   5,   2,  64,   2,  64,  65, 192,  26,  40,   2,   0,  34,   4,   4,  64,  65, 232,  29,  33,   0,   3,  64,  32,   4,  32,   0,  40,   2,   0,  34,   1,  79,   4,  64,  32,   4,  32,   0,  40,   2,   4,  32,   1, 106,  73,  13,   3,  11,  32,   0,  40,   2,   8,  34,   0,  13,   0,  11,  11,  65,   0,  16,  48,  33,   0,  35,   3,  32,  10,  71,   4,  64,   0,  11,  32,   0,  34,   1,  65, 127,  70,  13,   6,  32,   2,  33,   8,  32,   1,  65, 132,  30,  40,   2,   0,  34,   4,  65,   1, 107,  34,   0, 113,   4,  64,  32,   2,  32,   1, 107,  32,   0,  32,   1, 106,  65,   0,  32,   4, 107, 113, 106,  33,   8,  11,  32,   8,  65, 254, 255, 255, 255,   7,  75,  32,   7,  32,   8,  79, 114,  13,   6,  65, 224,  29,  40,   2,   0,  34,   3,   4,  64,  32,   8,  65, 216,  29,  40,   2,   0,  34,   4, 106,  34,   0,  32,   4,  77,  33,   5,  32,   5,  32,   0,  32,   3,  75, 114,  13,   7,  11,  32,   8,  16,  48,  33,   0,  35,   3,  32,  10,  71,   4,  64,   0,  11,  32,   0,  32,   1,  71,  13,   1,  12,   8,  11,  32,   5,  32,   8,  32,   6, 107, 113,  34,   8,  65, 254, 255, 255, 255,   7,  75,  13,   5,  32,   8,  16,  48,  33,   1,  35,   3,  32,  10,  71,   4,  64,   0,  11,  32,   1,  32,   0,  40,   2,   4,  32,   0,  40,   2,   0, 106,  70,  13,   4,  32,   1,  33,   0,  11,  32,   0,  65, 127,  70,  32,   8,  32,   7,  65,  48, 106,  79, 114,  69,   4,  64,  65, 136,  30,  40,   2,   0,  34,   1,  32,   9,  32,   8, 107, 106,  33,   5,  32,   5,  65,   0,  32,   1, 107, 113,  34,   1,  65, 254, 255, 255, 255,   7,  75,   4,  64,  32,   0,  33,   1,  12,   8,  11,   2, 127,  32,   1,  16,  48,  33,   5,  35,   3,  32,  10,  71,   4,  64,   0,  11,  32,   5,  65, 127,  71,  11,   4,  64,  32,   1,  32,   8, 106,  33,   8,  32,   0,  33,   1,  12,   8,  11,  65,   0,  32,   8, 107,  16,  48,  26,  35,   3,  32,  10,  71,   4,  64,   0,  11,  12,   5,  11,  32,   0,  33,   1,  32,   0,  65, 127,  71,  13,   6,  12,   4,  11,   0,  11,  65,   0,  33,   3,  12,   7,  11,  65,   0,  33,   1,  12,   5,  11,  32,   1,  65, 127,  71,  13,   2,  11,  65, 228,  29,  65, 228,  29,  40,   2,   0,  65,   4, 114,  54,   2,   0,  11,  32,   2,  65, 254, 255, 255, 255,   7,  75,  13,   1,  32,   2,  16,  48,  33,   0,  35,   3,  32,  10,  71,   4,  64,   0,  11,  32,   0,  34,   1,  65, 127,  70,  33,   5,  65,   0,  16,  48,  33,   0,  35,   3,  32,  10,  71,   4,  64,   0,  11,  32,   5,  32,   0,  65, 127,  70, 114,  32,   0,  32,   1,  77, 114,  13,   1,  32,   0,  32,   1, 107,  34,   8,  32,   7,  65,  40, 106,  77,  13,   1,  11,  65, 216,  29,  32,   8,  65, 216,  29,  40,   2,   0, 106,  34,   0,  54,   2,   0,  65, 220,  29,  40,   2,   0,  32,   0,  73,   4,  64,  65, 220,  29,  32,   0,  54,   2,   0,  11,   2,  64,   2,  64,   2,  64,  65, 192,  26,  40,   2,   0,  34,   5,   4,  64,  65, 232,  29,  33,   0,   3,  64,  32,   0,  40,   2,   4,  34,   2,  32,   0,  40,   2,   0,  34,   4, 106,  32,   1,  70,  13,   2,  32,   0,  40,   2,   8,  34,   0,  13,   0,  11,  12,   2,  11,  32,   1,  65, 184,  26,  40,   2,   0,  34,   0,  79,  33,   2,  32,   0,  65,   0,  32,   2,  27,  69,   4,  64,  65, 184,  26,  32,   1,  54,   2,   0,  11,  65,   0,  33,   0,  65, 236,  29,  32,   8,  54,   2,   0,  65, 232,  29,  32,   1,  54,   2,   0,  65, 200,  26,  65, 127,  54,   2,   0,  65, 204,  26,  65, 128,  30,  40,   2,   0,  54,   2,   0,  65, 244,  29,  65,   0,  54,   2,   0,   3,  64,  32,   0,  65,   3, 116,  34,   4,  65, 216,  26, 106,  32,   4,  65, 208,  26, 106,  34,   2,  54,   2,   0,  32,   4,  65, 220,  26, 106,  32,   2,  54,   2,   0,  32,   0,  65,   1, 106,  34,   0,  65,  32,  71,  13,   0,  11,  65, 192,  26,  32,   1,  65, 120,  32,   1, 107,  65,   7, 113,  65,   0,  32,   1,  65,   8, 106,  65,   7, 113,  27,  34,   0, 106,  34,   2,  54,   2,   0,  65, 180,  26,  32,   8,  32,   0, 107,  65,  40, 107,  34,   0,  54,   2,   0,  32,   2,  32,   0,  65,   1, 114,  54,   2,   4,  32,   1,  32,   8, 106,  65,  36, 107,  65,  40,  54,   2,   0,  65, 196,  26,  65, 144,  30,  40,   2,   0,  54,   2,   0,  12,   2,  11,  32,   0,  45,   0,  12,  65,   8, 113,  32,   4,  32,   5,  75, 114,  32,   1,  32,   5,  77, 114,  13,   0,  32,   0,  32,   2,  32,   8, 106,  54,   2,   4,  65, 192,  26,  32,   5,  65, 120,  32,   5, 107,  65,   7, 113,  65,   0,  32,   5,  65,   8, 106,  65,   7, 113,  27,  34,   0, 106,  34,   2,  54,   2,   0,  65, 180,  26,  32,   8,  65, 180,  26,  40,   2,   0, 106,  34,   1,  32,   0, 107,  34,   0,  54,   2,   0,  32,   2,  32,   0,  65,   1, 114,  54,   2,   4,  32,   1,  32,   5, 106,  65,  40,  54,   2,   4,  65, 196,  26,  65, 144,  30,  40,   2,   0,  54,   2,   0,  12,   1,  11,  32,   1,  65, 184,  26,  40,   2,   0,  73,   4,  64,  65, 184,  26,  32,   1,  54,   2,   0,  11,  32,   1,  32,   8, 106,  33,   3,  65, 232,  29,  33,   0,   2,  64,   2,  64,   2,  64,   2,  64,   2,  64,   2,  64,   3,  64,  32,   3,  32,   0,  40,   2,   0,  71,   4,  64,  32,   0,  40,   2,   8,  34,   0,  13,   1,  12,   2,  11,  11,  32,   0,  45,   0,  12,  65,   8, 113,  69,  13,   1,  11,  65, 232,  29,  33,   0,   3,  64,  32,   5,  32,   0,  40,   2,   0,  34,   2,  79,   4,  64,  32,   0,  40,   2,   4,  32,   2, 106,  34,   4,  32,   5,  75,  13,   3,  11,  32,   0,  40,   2,   8,  33,   0,  12,   0,  11,   0,  11,  32,   0,  32,   1,  54,   2,   0,  32,   0,  32,   8,  32,   0,  40,   2,   4, 106,  54,   2,   4,  32,   1,  65, 120,  32,   1, 107,  65,   7, 113,  65,   0,  32,   1,  65,   8, 106,  65,   7, 113,  27, 106,  34,   9,  32,   7,  65,   3, 114,  54,   2,   4,  32,   3,  65, 120,  32,   3, 107,  65,   7, 113,  65,   0,  32,   3,  65,   8, 106,  65,   7, 113,  27, 106,  34,   3,  32,   7,  32,   9, 106,  34,   6, 107,  33,   2,  32,   3,  32,   5,  70,   4,  64,  65, 192,  26,  32,   6,  54,   2,   0,  65, 180,  26,  32,   2,  65, 180,  26,  40,   2,   0, 106,  34,   0,  54,   2,   0,  32,   6,  32,   0,  65,   1, 114,  54,   2,   4,  12,   3,  11,  32,   3,  65, 188,  26,  40,   2,   0,  70,   4,  64,  65, 188,  26,  32,   6,  54,   2,   0,  65, 176,  26,  32,   2,  65, 176,  26,  40,   2,   0, 106,  34,   0,  54,   2,   0,  32,   6,  32,   0,  65,   1, 114,  54,   2,   4,  32,   0,  32,   6, 106,  32,   0,  54,   2,   0,  12,   3,  11,  32,   3,  40,   2,   4,  34,   0,  65,   3, 113,  65,   1,  70,   4,  64,  32,   0,  65, 120, 113,  33,   8,   2,  64,  32,   0,  65, 255,   1,  77,   4,  64,  32,   3,  40,   2,   8,  34,   4,  32,   0,  65,   3, 118,  34,   0,  65,   3, 116,  65, 208,  26, 106,  70,  26,  32,   4,  32,   3,  40,   2,  12,  34,   1,  70,   4,  64,  65, 168,  26,  65, 168,  26,  40,   2,   0,  65, 126,  32,   0, 119, 113,  54,   2,   0,  12,   2,  11,  32,   4,  32,   1,  54,   2,  12,  32,   1,  32,   4,  54,   2,   8,  12,   1,  11,  32,   3,  40,   2,  24,  33,   7,   2,  64,  32,   3,  32,   3,  40,   2,  12,  34,   1,  71,   4,  64,  32,   3,  40,   2,   8,  34,   0,  32,   1,  54,   2,  12,  32,   1,  32,   0,  54,   2,   8,  12,   1,  11,   2,  64,  32,   3,  65,  20, 106,  34,   0,  40,   2,   0,  34,   4,  13,   0,  32,   3,  65,  16, 106,  34,   0,  40,   2,   0,  34,   4,  13,   0,  65,   0,  33,   1,  12,   1,  11,   3,  64,  32,   0,  33,   5,  32,   4,  34,   1,  65,  20, 106,  34,   0,  40,   2,   0,  34,   4,  13,   0,  32,   1,  65,  16, 106,  33,   0,  32,   1,  40,   2,  16,  34,   4,  13,   0,  11,  32,   5,  65,   0,  54,   2,   0,  11,  32,   7,  69,  13,   0,   2,  64,  32,   3,  32,   3,  40,   2,  28,  34,   4,  65,   2, 116,  65, 216,  28, 106,  34,   0,  40,   2,   0,  70,   4,  64,  32,   0,  32,   1,  54,   2,   0,  32,   1,  13,   1,  65, 172,  26,  65, 172,  26,  40,   2,   0,  65, 126,  32,   4, 119, 113,  54,   2,   0,  12,   2,  11,  32,   7,  65,  16,  65,  20,  32,   3,  32,   7,  40,   2,  16,  70,  27, 106,  32,   1,  54,   2,   0,  32,   1,  69,  13,   1,  11,  32,   1,  32,   7,  54,   2,  24,  32,   3,  40,   2,  16,  34,   0,   4,  64,  32,   1,  32,   0,  54,   2,  16,  32,   0,  32,   1,  54,   2,  24,  11,  32,   3,  40,   2,  20,  34,   0,  69,  13,   0,  32,   1,  32,   0,  54,   2,  20,  32,   0,  32,   1,  54,   2,  24,  11,  32,   3,  32,   8, 106,  33,   3,  32,   2,  32,   8, 106,  33,   2,  11,  32,   3,  32,   3,  40,   2,   4,  65, 126, 113,  54,   2,   4,  32,   6,  32,   2,  65,   1, 114,  54,   2,   4,  32,   2,  32,   6, 106,  32,   2,  54,   2,   0,  32,   2,  65, 255,   1,  77,   4,  64,  32,   2,  65,   3, 118,  34,   0,  65,   3, 116,  65, 208,  26, 106,  33,   2,   2, 127,  65,   1,  32,   0, 116,  34,   0,  65, 168,  26,  40,   2,   0,  34,   1, 113,  69,   4,  64,  65, 168,  26,  32,   0,  32,   1, 114,  54,   2,   0,  32,   2,  12,   1,  11,  32,   2,  40,   2,   8,  11,  33,   0,  32,   2,  32,   6,  54,   2,   8,  32,   0,  32,   6,  54,   2,  12,  32,   6,  32,   2,  54,   2,  12,  32,   6,  32,   0,  54,   2,   8,  12,   3,  11,  65,  31,  33,   0,  32,   2,  65, 255, 255, 255,   7,  77,   4,  64,  32,   2,  65,   8, 118,  34,   0,  65, 128, 254,  63, 106,  65,  16, 118,  65,   8, 113,  33,   4,  32,   0,  32,   4, 116,  34,   0,  65, 128, 224,  31, 106,  65,  16, 118,  65,   4, 113,  33,   1,  32,   0,  32,   1, 116,  34,   0,  32,   0,  65, 128, 128,  15, 106,  65,  16, 118,  65,   2, 113,  34,   0, 116,  65,  15, 118,  32,   1,  32,   4, 114,  32,   0, 114, 107,  34,   0,  65,   1, 116,  33,   1,  32,   1,  32,   2,  32,   0,  65,  21, 106, 118,  65,   1, 113, 114,  65,  28, 106,  33,   0,  11,  32,   6,  32,   0,  54,   2,  28,  32,   6,  66,   0,  55,   2,  16,  32,   0,  65,   2, 116,  65, 216,  28, 106,  33,   3,   2,  64,  65,   1,  32,   0, 116,  34,   1,  65, 172,  26,  40,   2,   0,  34,   4, 113,  69,   4,  64,  65, 172,  26,  32,   1,  32,   4, 114,  54,   2,   0,  32,   3,  32,   6,  54,   2,   0,  32,   6,  32,   3,  54,   2,  24,  12,   1,  11,  32,   2,  65,   0,  65,  25,  32,   0,  65,   1, 118, 107,  32,   0,  65,  31,  70,  27, 116,  33,   0,  32,   3,  40,   2,   0,  33,   1,   3,  64,  32,   1,  33,   4,  32,   1,  40,   2,   4,  65, 120, 113,  32,   2,  70,  13,   3,  32,   0,  65,  29, 118,  33,   1,  32,   0,  65,   1, 116,  33,   0,  32,   4,  32,   1,  65,   4, 113, 106,  34,   3,  40,   2,  16,  34,   1,  13,   0,  11,  32,   3,  32,   6,  54,   2,  16,  32,   6,  32,   4,  54,   2,  24,  11,  32,   6,  32,   6,  54,   2,  12,  32,   6,  32,   6,  54,   2,   8,  12,   2,  11,  65, 192,  26,  32,   1,  65, 120,  32,   1, 107,  65,   7, 113,  65,   0,  32,   1,  65,   8, 106,  65,   7, 113,  27,  34,   0, 106,  34,   2,  54,   2,   0,  65, 180,  26,  32,   8,  32,   0, 107,  65,  40, 107,  34,   0,  54,   2,   0,  32,   2,  32,   0,  65,   1, 114,  54,   2,   4,  32,   3,  65,  36, 107,  65,  40,  54,   2,   0,  65, 196,  26,  65, 144,  30,  40,   2,   0,  54,   2,   0,  32,   5,  32,   4,  65,  39,  32,   4, 107,  65,   7, 113,  65,   0,  32,   4,  65,  39, 107,  65,   7, 113,  27, 106,  65,  47, 107,  34,   0,  32,   5,  65,  16, 106,  32,   0,  75,  27,  34,   2,  65,  27,  54,   2,   4,  32,   2,  65, 240,  29,  41,   2,   0,  55,   2,  16,  32,   2,  65, 232,  29,  41,   2,   0,  55,   2,   8,  65, 240,  29,  32,   2,  65,   8, 106,  54,   2,   0,  65, 236,  29,  32,   8,  54,   2,   0,  65, 232,  29,  32,   1,  54,   2,   0,  65, 244,  29,  65,   0,  54,   2,   0,  32,   2,  65,  24, 106,  33,   0,   3,  64,  32,   0,  65,   7,  54,   2,   4,  32,   0,  65,   8, 106,  33,   1,  32,   0,  65,   4, 106,  33,   0,  32,   1,  32,   4,  73,  13,   0,  11,  32,   2,  32,   5,  70,  13,   3,  32,   2,  32,   2,  40,   2,   4,  65, 126, 113,  54,   2,   4,  32,   5,  32,   2,  32,   5, 107,  34,   3,  65,   1, 114,  54,   2,   4,  32,   2,  32,   3,  54,   2,   0,  32,   3,  65, 255,   1,  77,   4,  64,  32,   3,  65,   3, 118,  34,   0,  65,   3, 116,  65, 208,  26, 106,  33,   2,   2, 127,  65,   1,  32,   0, 116,  34,   0,  65, 168,  26,  40,   2,   0,  34,   1, 113,  69,   4,  64,  65, 168,  26,  32,   0,  32,   1, 114,  54,   2,   0,  32,   2,  12,   1,  11,  32,   2,  40,   2,   8,  11,  33,   0,  32,   2,  32,   5,  54,   2,   8,  32,   0,  32,   5,  54,   2,  12,  32,   5,  32,   2,  54,   2,  12,  32,   5,  32,   0,  54,   2,   8,  12,   4,  11,  65,  31,  33,   0,  32,   5,  66,   0,  55,   2,  16,  32,   3,  65, 255, 255, 255,   7,  77,   4,  64,  32,   3,  65,   8, 118,  34,   0,  65, 128, 254,  63, 106,  65,  16, 118,  65,   8, 113,  33,   2,  32,   0,  32,   2, 116,  34,   0,  65, 128, 224,  31, 106,  65,  16, 118,  65,   4, 113,  33,   1,  32,   0,  32,   1, 116,  34,   0,  32,   0,  65, 128, 128,  15, 106,  65,  16, 118,  65,   2, 113,  34,   0, 116,  65,  15, 118,  32,   1,  32,   2, 114,  32,   0, 114, 107,  34,   0,  65,   1, 116,  33,   2,  32,   2,  32,   3,  32,   0,  65,  21, 106, 118,  65,   1, 113, 114,  65,  28, 106,  33,   0,  11,  32,   5,  32,   0,  54,   2,  28,  32,   0,  65,   2, 116,  65, 216,  28, 106,  33,   4,   2,  64,  65, 172,  26,  40,   2,   0,  34,   2,  65,   1,  32,   0, 116,  34,   1, 113,  69,   4,  64,  65, 172,  26,  32,   1,  32,   2, 114,  54,   2,   0,  32,   4,  32,   5,  54,   2,   0,  32,   5,  32,   4,  54,   2,  24,  12,   1,  11,  32,   3,  65,   0,  65,  25,  32,   0,  65,   1, 118, 107,  32,   0,  65,  31,  70,  27, 116,  33,   0,  32,   4,  40,   2,   0,  33,   1,   3,  64,  32,   1,  33,   2,  32,   3,  32,   1,  40,   2,   4,  65, 120, 113,  70,  13,   4,  32,   0,  65,  29, 118,  33,   1,  32,   0,  65,   1, 116,  33,   0,  32,   1,  65,   4, 113,  32,   2, 106,  34,   4,  40,   2,  16,  34,   1,  13,   0,  11,  32,   4,  32,   5,  54,   2,  16,  32,   5,  32,   2,  54,   2,  24,  11,  32,   5,  32,   5,  54,   2,  12,  32,   5,  32,   5,  54,   2,   8,  12,   3,  11,  32,   4,  40,   2,   8,  34,   0,  32,   6,  54,   2,  12,  32,   4,  32,   6,  54,   2,   8,  32,   6,  65,   0,  54,   2,  24,  32,   6,  32,   4,  54,   2,  12,  32,   6,  32,   0,  54,   2,   8,  11,  32,   9,  65,   8, 106,  33,   0,  12,   5,  11,  32,   2,  40,   2,   8,  34,   0,  32,   5,  54,   2,  12,  32,   2,  32,   5,  54,   2,   8,  32,   5,  65,   0,  54,   2,  24,  32,   5,  32,   2,  54,   2,  12,  32,   5,  32,   0,  54,   2,   8,  11,  32,   7,  65, 180,  26,  40,   2,   0,  34,   0,  79,  13,   0,  65, 180,  26,  32,   0,  32,   7, 107,  34,   1,  54,   2,   0,  65, 192,  26,  32,   7,  65, 192,  26,  40,   2,   0,  34,   2, 106,  34,   0,  54,   2,   0,  32,   0,  32,   1,  65,   1, 114,  54,   2,   4,  32,   2,  32,   7,  65,   3, 114,  54,   2,   4,  32,   2,  65,   8, 106,  33,   0,  12,   3,  11,  65, 164,  26,  65,  48,  54,   2,   0,  65,   0,  33,   0,  12,   2,  11,   2,  64,  32,   8,  69,  13,   0,   2,  64,  32,   3,  32,   3,  40,   2,  28,  34,   2,  65,   2, 116,  65, 216,  28, 106,  34,   0,  40,   2,   0,  70,   4,  64,  32,   0,  32,   1,  54,   2,   0,  32,   1,  13,   1,  65, 172,  26,  32,   9,  65, 126,  32,   2, 119, 113,  34,   9,  54,   2,   0,  12,   2,  11,  32,   8,  65,  16,  65,  20,  32,   3,  32,   8,  40,   2,  16,  70,  27, 106,  32,   1,  54,   2,   0,  32,   1,  69,  13,   1,  11,  32,   1,  32,   8,  54,   2,  24,  32,   3,  40,   2,  16,  34,   0,   4,  64,  32,   1,  32,   0,  54,   2,  16,  32,   0,  32,   1,  54,   2,  24,  11,  32,   3,  40,   2,  20,  34,   0,  69,  13,   0,  32,   1,  32,   0,  54,   2,  20,  32,   0,  32,   1,  54,   2,  24,  11,   2,  64,  32,   4,  65,  15,  77,   4,  64,  32,   3,  32,   4,  32,   7, 106,  34,   0,  65,   3, 114,  54,   2,   4,  32,   0,  32,   3, 106,  34,   0,  40,   2,   4,  65,   1, 114,  33,   2,  32,   0,  32,   2,  54,   2,   4,  12,   1,  11,  32,   3,  32,   7,  65,   3, 114,  54,   2,   4,  32,   6,  32,   4,  65,   1, 114,  54,   2,   4,  32,   4,  32,   6, 106,  32,   4,  54,   2,   0,  32,   4,  65, 255,   1,  77,   4,  64,  32,   4,  65,   3, 118,  34,   0,  65,   3, 116,  65, 208,  26, 106,  33,   2,   2, 127,  65,   1,  32,   0, 116,  34,   0,  65, 168,  26,  40,   2,   0,  34,   1, 113,  69,   4,  64,  65, 168,  26,  32,   0,  32,   1, 114,  54,   2,   0,  32,   2,  12,   1,  11,  32,   2,  40,   2,   8,  11,  33,   0,  32,   2,  32,   6,  54,   2,   8,  32,   0,  32,   6,  54,   2,  12,  32,   6,  32,   2,  54,   2,  12,  32,   6,  32,   0,  54,   2,   8,  12,   1,  11,  65,  31,  33,   0,  32,   4,  65, 255, 255, 255,   7,  77,   4,  64,  32,   4,  65,   8, 118,  34,   0,  65, 128, 254,  63, 106,  65,  16, 118,  65,   8, 113,  33,   2,  32,   0,  32,   2, 116,  34,   0,  65, 128, 224,  31, 106,  65,  16, 118,  65,   4, 113,  33,   1,  32,   0,  32,   1, 116,  34,   0,  32,   0,  65, 128, 128,  15, 106,  65,  16, 118,  65,   2, 113,  34,   0, 116,  65,  15, 118,  32,   1,  32,   2, 114,  32,   0, 114, 107,  34,   0,  65,   1, 116,  33,   2,  32,   2,  32,   4,  32,   0,  65,  21, 106, 118,  65,   1, 113, 114,  65,  28, 106,  33,   0,  11,  32,   6,  32,   0,  54,   2,  28,  32,   6,  66,   0,  55,   2,  16,  32,   0,  65,   2, 116,  65, 216,  28, 106,  33,   1,   2,  64,   2,  64,  32,   9,  65,   1,  32,   0, 116,  34,   2, 113,  69,   4,  64,  65, 172,  26,  32,   2,  32,   9, 114,  54,   2,   0,  32,   1,  32,   6,  54,   2,   0,  12,   1,  11,  32,   4,  65,   0,  65,  25,  32,   0,  65,   1, 118, 107,  32,   0,  65,  31,  70,  27, 116,  33,   0,  32,   1,  40,   2,   0,  33,   7,   3,  64,  32,   4,  32,   7,  34,   1,  40,   2,   4,  65, 120, 113,  70,  13,   2,  32,   0,  65,  29, 118,  33,   2,  32,   0,  65,   1, 116,  33,   0,  32,   1,  32,   2,  65,   4, 113, 106,  34,   2,  40,   2,  16,  34,   7,  13,   0,  11,  32,   2,  32,   6,  54,   2,  16,  11,  32,   6,  32,   1,  54,   2,  24,  32,   6,  32,   6,  54,   2,  12,  32,   6,  32,   6,  54,   2,   8,  12,   1,  11,  32,   1,  40,   2,   8,  34,   0,  32,   6,  54,   2,  12,  32,   1,  32,   6,  54,   2,   8,  32,   6,  65,   0,  54,   2,  24,  32,   6,  32,   1,  54,   2,  12,  32,   6,  32,   0,  54,   2,   8,  11,  32,   3,  65,   8, 106,  33,   0,  12,   1,  11,   2,  64,  32,  10,  69,  13,   0,   2,  64,  32,   1,  40,   2,  28,  34,   2,  65,   2, 116,  65, 216,  28, 106,  34,   0,  40,   2,   0,  32,   1,  70,   4,  64,  32,   0,  32,   3,  54,   2,   0,  32,   3,  13,   1,  65, 172,  26,  32,   6,  65, 126,  32,   2, 119, 113,  54,   2,   0,  12,   2,  11,  32,  10,  65,  16,  65,  20,  32,   1,  32,  10,  40,   2,  16,  70,  27, 106,  32,   3,  54,   2,   0,  32,   3,  69,  13,   1,  11,  32,   3,  32,  10,  54,   2,  24,  32,   1,  40,   2,  16,  34,   0,   4,  64,  32,   3,  32,   0,  54,   2,  16,  32,   0,  32,   3,  54,   2,  24,  11,  32,   1,  40,   2,  20,  34,   0,  69,  13,   0,  32,   3,  32,   0,  54,   2,  20,  32,   0,  32,   3,  54,   2,  24,  11,   2,  64,  32,   4,  65,  15,  77,   4,  64,  32,   1,  32,   4,  32,   7, 106,  34,   0,  65,   3, 114,  54,   2,   4,  32,   0,  32,   1, 106,  34,   0,  40,   2,   4,  65,   1, 114,  33,   2,  32,   0,  32,   2,  54,   2,   4,  12,   1,  11,  32,   1,  32,   7,  65,   3, 114,  54,   2,   4,  32,   9,  32,   4,  65,   1, 114,  54,   2,   4,  32,   4,  32,   9, 106,  32,   4,  54,   2,   0,  32,  11,   4,  64,  32,  11,  65,   3, 118,  34,   0,  65,   3, 116,  65, 208,  26, 106,  33,   3,  65, 188,  26,  40,   2,   0,  33,   2,   2, 127,  32,   8,  65,   1,  32,   0, 116,  34,   0, 113,  69,   4,  64,  65, 168,  26,  32,   0,  32,   8, 114,  54,   2,   0,  32,   3,  12,   1,  11,  32,   3,  40,   2,   8,  11,  33,   0,  32,   3,  32,   2,  54,   2,   8,  32,   0,  32,   2,  54,   2,  12,  32,   2,  32,   3,  54,   2,  12,  32,   2,  32,   0,  54,   2,   8,  11,  65, 188,  26,  32,   9,  54,   2,   0,  65, 176,  26,  32,   4,  54,   2,   0,  11,  32,   1,  65,   8, 106,  33,   0,  11,  32,  12,  65,  16, 106,  36,   0,  32,   0,  11, 177,  12,   1,   7, 127,   2,  64,  32,   0,  69,  13,   0,  32,   0,  65,   8, 107,  33,   3,  32,   3,  32,   0,  65,   4, 107,  40,   2,   0,  34,   1,  65, 120, 113,  34,   0, 106,  33,   5,   2,  64,  32,   1,  65,   1, 113,  13,   0,  32,   1,  65,   3, 113,  69,  13,   1,  32,   3,  32,   3,  40,   2,   0,  34,   1, 107,  34,   3,  65, 184,  26,  40,   2,   0,  73,  13,   1,  32,   0,  32,   1, 106,  33,   0,  32,   3,  65, 188,  26,  40,   2,   0,  71,   4,  64,  32,   1,  65, 255,   1,  77,   4,  64,  32,   3,  40,   2,   8,  34,   2,  32,   1,  65,   3, 118,  34,   4,  65,   3, 116,  65, 208,  26, 106,  70,  26,  32,   2,  32,   3,  40,   2,  12,  34,   1,  70,   4,  64,  65, 168,  26,  65, 168,  26,  40,   2,   0,  65, 126,  32,   4, 119, 113,  54,   2,   0,  12,   3,  11,  32,   2,  32,   1,  54,   2,  12,  32,   1,  32,   2,  54,   2,   8,  12,   2,  11,  32,   3,  40,   2,  24,  33,   6,   2,  64,  32,   3,  32,   3,  40,   2,  12,  34,   1,  71,   4,  64,  32,   3,  40,   2,   8,  34,   2,  32,   1,  54,   2,  12,  32,   1,  32,   2,  54,   2,   8,  12,   1,  11,   2,  64,  32,   3,  65,  20, 106,  34,   2,  40,   2,   0,  34,   4,  13,   0,  32,   3,  65,  16, 106,  34,   2,  40,   2,   0,  34,   4,  13,   0,  65,   0,  33,   1,  12,   1,  11,   3,  64,  32,   2,  33,   7,  32,   4,  34,   1,  65,  20, 106,  34,   2,  40,   2,   0,  34,   4,  13,   0,  32,   1,  65,  16, 106,  33,   2,  32,   1,  40,   2,  16,  34,   4,  13,   0,  11,  32,   7,  65,   0,  54,   2,   0,  11,  32,   6,  69,  13,   1,   2,  64,  32,   3,  40,   2,  28,  34,   2,  65,   2, 116,  65, 216,  28, 106,  34,   4,  40,   2,   0,  32,   3,  70,   4,  64,  32,   4,  32,   1,  54,   2,   0,  32,   1,  13,   1,  65, 172,  26,  65, 172,  26,  40,   2,   0,  65, 126,  32,   2, 119, 113,  54,   2,   0,  12,   3,  11,  32,   6,  65,  16,  65,  20,  32,   3,  32,   6,  40,   2,  16,  70,  27, 106,  32,   1,  54,   2,   0,  32,   1,  69,  13,   2,  11,  32,   1,  32,   6,  54,   2,  24,  32,   3,  40,   2,  16,  34,   2,   4,  64,  32,   1,  32,   2,  54,   2,  16,  32,   2,  32,   1,  54,   2,  24,  11,  32,   3,  40,   2,  20,  34,   2,  69,  13,   1,  32,   1,  32,   2,  54,   2,  20,  32,   2,  32,   1,  54,   2,  24,  12,   1,  11,  32,   5,  40,   2,   4,  34,   1,  65,   3, 113,  65,   3,  71,  13,   0,  65, 176,  26,  32,   0,  54,   2,   0,  32,   5,  32,   1,  65, 126, 113,  54,   2,   4,  32,   3,  32,   0,  65,   1, 114,  54,   2,   4,  32,   0,  32,   3, 106,  32,   0,  54,   2,   0,  15,  11,  32,   3,  32,   5,  79,  13,   0,  32,   5,  40,   2,   4,  34,   1,  65,   1, 113,  69,  13,   0,   2,  64,  32,   1,  65,   2, 113,  69,   4,  64,  32,   5,  65, 192,  26,  40,   2,   0,  70,   4,  64,  65, 192,  26,  32,   3,  54,   2,   0,  65, 180,  26,  65, 180,  26,  40,   2,   0,  32,   0, 106,  34,   0,  54,   2,   0,  32,   3,  32,   0,  65,   1, 114,  54,   2,   4,  32,   3,  65, 188,  26,  40,   2,   0,  71,  13,   3,  65, 176,  26,  65,   0,  54,   2,   0,  65, 188,  26,  65,   0,  54,   2,   0,  15,  11,  32,   5,  65, 188,  26,  40,   2,   0,  70,   4,  64,  65, 188,  26,  32,   3,  54,   2,   0,  65, 176,  26,  65, 176,  26,  40,   2,   0,  32,   0, 106,  34,   0,  54,   2,   0,  32,   3,  32,   0,  65,   1, 114,  54,   2,   4,  32,   0,  32,   3, 106,  32,   0,  54,   2,   0,  15,  11,  32,   1,  65, 120, 113,  32,   0, 106,  33,   0,   2,  64,  32,   1,  65, 255,   1,  77,   4,  64,  32,   5,  40,   2,   8,  34,   2,  32,   1,  65,   3, 118,  34,   4,  65,   3, 116,  65, 208,  26, 106,  70,  26,  32,   2,  32,   5,  40,   2,  12,  34,   1,  70,   4,  64,  65, 168,  26,  65, 168,  26,  40,   2,   0,  65, 126,  32,   4, 119, 113,  54,   2,   0,  12,   2,  11,  32,   2,  32,   1,  54,   2,  12,  32,   1,  32,   2,  54,   2,   8,  12,   1,  11,  32,   5,  40,   2,  24,  33,   6,   2,  64,  32,   5,  32,   5,  40,   2,  12,  34,   1,  71,   4,  64,  32,   5,  40,   2,   8,  34,   2,  65, 184,  26,  40,   2,   0,  73,  26,  32,   2,  32,   1,  54,   2,  12,  32,   1,  32,   2,  54,   2,   8,  12,   1,  11,   2,  64,  32,   5,  65,  20, 106,  34,   2,  40,   2,   0,  34,   4,  13,   0,  32,   5,  65,  16, 106,  34,   2,  40,   2,   0,  34,   4,  13,   0,  65,   0,  33,   1,  12,   1,  11,   3,  64,  32,   2,  33,   7,  32,   4,  34,   1,  65,  20, 106,  34,   2,  40,   2,   0,  34,   4,  13,   0,  32,   1,  65,  16, 106,  33,   2,  32,   1,  40,   2,  16,  34,   4,  13,   0,  11,  32,   7,  65,   0,  54,   2,   0,  11,  32,   6,  69,  13,   0,   2,  64,  32,   5,  32,   5,  40,   2,  28,  34,   2,  65,   2, 116,  65, 216,  28, 106,  34,   4,  40,   2,   0,  70,   4,  64,  32,   4,  32,   1,  54,   2,   0,  32,   1,  13,   1,  65, 172,  26,  65, 172,  26,  40,   2,   0,  65, 126,  32,   2, 119, 113,  54,   2,   0,  12,   2,  11,  32,   6,  65,  16,  65,  20,  32,   5,  32,   6,  40,   2,  16,  70,  27, 106,  32,   1,  54,   2,   0,  32,   1,  69,  13,   1,  11,  32,   1,  32,   6,  54,   2,  24,  32,   5,  40,   2,  16,  34,   2,   4,  64,  32,   1,  32,   2,  54,   2,  16,  32,   2,  32,   1,  54,   2,  24,  11,  32,   5,  40,   2,  20,  34,   2,  69,  13,   0,  32,   1,  32,   2,  54,   2,  20,  32,   2,  32,   1,  54,   2,  24,  11,  32,   3,  32,   0,  65,   1, 114,  54,   2,   4,  32,   0,  32,   3, 106,  32,   0,  54,   2,   0,  32,   3,  65, 188,  26,  40,   2,   0,  71,  13,   1,  65, 176,  26,  32,   0,  54,   2,   0,  15,  11,  32,   5,  32,   1,  65, 126, 113,  54,   2,   4,  32,   3,  32,   0,  65,   1, 114,  54,   2,   4,  32,   0,  32,   3, 106,  32,   0,  54,   2,   0,  11,  32,   0,  65, 255,   1,  77,   4,  64,  32,   0,  65,   3, 118,  34,   1,  65,   3, 116,  65, 208,  26, 106,  33,   0,   2, 127,  65,   1,  32,   1, 116,  34,   1,  65, 168,  26,  40,   2,   0,  34,   2, 113,  69,   4,  64,  65, 168,  26,  32,   1,  32,   2, 114,  54,   2,   0,  32,   0,  12,   1,  11,  32,   0,  40,   2,   8,  11,  33,   2,  32,   0,  32,   3,  54,   2,   8,  32,   2,  32,   3,  54,   2,  12,  32,   3,  32,   0,  54,   2,  12,  32,   3,  32,   2,  54,   2,   8,  15,  11,  65,  31,  33,   2,  32,   3,  66,   0,  55,   2,  16,  32,   0,  65, 255, 255, 255,   7,  77,   4,  64,  32,   0,  65,   8, 118,  34,   4,  65, 128, 254,  63, 106,  65,  16, 118,  65,   8, 113,  33,   1,  32,   4,  32,   1, 116,  34,   4,  65, 128, 224,  31, 106,  65,  16, 118,  65,   4, 113,  33,   2,  32,   4,  32,   2, 116,  34,   4,  32,   4,  65, 128, 128,  15, 106,  65,  16, 118,  65,   2, 113,  34,   4, 116,  65,  15, 118,  32,   1,  32,   2, 114,  32,   4, 114, 107,  34,   1,  65,   1, 116,  33,   2,  32,   2,  32,   0,  32,   1,  65,  21, 106, 118,  65,   1, 113, 114,  65,  28, 106,  33,   2,  11,  32,   3,  32,   2,  54,   2,  28,  32,   2,  65,   2, 116,  65, 216,  28, 106,  33,   1,   2,  64,   2,  64,   2,  64,  65, 172,  26,  40,   2,   0,  34,   4,  65,   1,  32,   2, 116,  34,   7, 113,  69,   4,  64,  65, 172,  26,  32,   4,  32,   7, 114,  54,   2,   0,  32,   1,  32,   3,  54,   2,   0,  32,   3,  32,   1,  54,   2,  24,  12,   1,  11,  32,   0,  65,   0,  65,  25,  32,   2,  65,   1, 118, 107,  32,   2,  65,  31,  70,  27, 116,  33,   2,  32,   1,  40,   2,   0,  33,   1,   3,  64,  32,   1,  34,   4,  40,   2,   4,  65, 120, 113,  32,   0,  70,  13,   2,  32,   2,  65,  29, 118,  33,   1,  32,   2,  65,   1, 116,  33,   2,  32,   1,  65,   4, 113,  32,   4, 106,  34,   7,  65,  16, 106,  40,   2,   0,  34,   1,  13,   0,  11,  32,   7,  32,   3,  54,   2,  16,  32,   3,  32,   4,  54,   2,  24,  11,  32,   3,  32,   3,  54,   2,  12,  32,   3,  32,   3,  54,   2,   8,  12,   1,  11,  32,   4,  40,   2,   8,  34,   0,  32,   3,  54,   2,  12,  32,   4,  32,   3,  54,   2,   8,  32,   3,  65,   0,  54,   2,  24,  32,   3,  32,   4,  54,   2,  12,  32,   3,  32,   0,  54,   2,   8,  11,  65, 200,  26,  65, 200,  26,  40,   2,   0,  65,   1, 107,  34,   0,  65, 127,  32,   0,  27,  54,   2,   0,  11,  11,  96,   1,   3, 127,  35,   3,  33,   3,  32,   0,  65,   3, 106,  65, 124, 113,  34,   1,  65, 156,  26,  40,   2,   0,  34,   2, 106,  33,   0,   2,  64,  32,   1,  65,   0,  32,   0,  32,   2,  77,  27,  13,   0,  63,   0,  65,  16, 116,  32,   0,  73,   4,  64,  32,   0,  16,   8,  33,   1,  35,   3,  32,   3,  71,   4,  64,   0,  11,  32,   1,  69,  13,   1,  11,  65, 156,  26,  32,   0,  54,   2,   0,  32,   2,  15,  11,  65, 164,  26,  65,  48,  54,   2,   0,  65, 127,  11, 214,   2,   1,   1, 127,   2,  64,  32,   1,  69,  13,   0,  32,   0,  32,   1, 106,  34,   2,  65,   1, 107,  65,   0,  58,   0,   0,  32,   0,  65,   0,  58,   0,   0,  32,   1,  65,   3,  73,  13,   0,  32,   2,  65,   2, 107,  65,   0,  58,   0,   0,  32,   0,  65,   0,  58,   0,   1,  32,   2,  65,   3, 107,  65,   0,  58,   0,   0,  32,   0,  65,   0,  58,   0,   2,  32,   1,  65,   7,  73,  13,   0,  32,   2,  65,   4, 107,  65,   0,  58,   0,   0,  32,   0,  65,   0,  58,   0,   3,  32,   1,  65,   9,  73,  13,   0,  65,   0,  32,   0, 107,  65,   3, 113,  34,   2,  32,   0, 106,  34,   0,  65,   0,  54,   2,   0,  32,   1,  32,   2, 107,  65, 124, 113,  34,   2,  32,   0, 106,  34,   1,  65,   4, 107,  65,   0,  54,   2,   0,  32,   2,  65,   9,  73,  13,   0,  32,   0,  65,   0,  54,   2,   8,  32,   0,  65,   0,  54,   2,   4,  32,   1,  65,   8, 107,  65,   0,  54,   2,   0,  32,   1,  65,  12, 107,  65,   0,  54,   2,   0,  32,   2,  65,  25,  73,  13,   0,  32,   0,  65,   0,  54,   2,  24,  32,   0,  65,   0,  54,   2,  20,  32,   0,  65,   0,  54,   2,  16,  32,   0,  65,   0,  54,   2,  12,  32,   1,  65,  16, 107,  65,   0,  54,   2,   0,  32,   1,  65,  20, 107,  65,   0,  54,   2,   0,  32,   1,  65,  24, 107,  65,   0,  54,   2,   0,  32,   1,  65,  28, 107,  65,   0,  54,   2,   0,  32,   2,  32,   0,  65,   4, 113,  65,  24, 114,  34,   2, 107,  34,   1,  65,  32,  73,  13,   0,  32,   0,  32,   2, 106,  33,   0,   3,  64,  32,   0,  66,   0,  55,   3,  24,  32,   0,  66,   0,  55,   3,  16,  32,   0,  66,   0,  55,   3,   8,  32,   0,  66,   0,  55,   3,   0,  32,   0,  65,  32, 106,  33,   0,  32,   1,  65,  32, 107,  34,   1,  65,  31,  75,  13,   0,  11,  11,  11,   4,   0,  35,   0,  11,   6,   0,  32,   0,  36,   0,  11,  16,   0,  35,   0,  32,   0, 107,  65, 112, 113,  34,   0,  36,   0,  32,   0,  11,  14,   0,  65, 176, 158, 192,   2,  36,   2,  65, 176,  30,  36,   1,  11,  10,   0,  32,   0,  36,   2,  32,   1,  36,   1,  11,   7,   0,  35,   0,  35,   1, 107,  11,   4,   0,  35,   2,  11,   4,   0,  35,   1,  11, 239,   3,   1,   4, 127,  35,   3,  65,   2,  70,   4,  64,  35,   4,  35,   4,  40,   2,   0,  65,  12, 107,  54,   2,   0,  35,   4,  40,   2,   0,  34,   1,  40,   2,   0,  33,   0,  32,   1,  40,   2,   8,  33,   3,  32,   1,  40,   2,   4,  33,   2,  11,   2, 127,  35,   3,  65,   2,  70,   4,  64,  35,   4,  35,   4,  40,   2,   0,  65,   4, 107,  54,   2,   0,  35,   4,  40,   2,   0,  40,   2,   0,  33,   4,  11,  32,   0,  35,   3,  65,   2,  70, 114,   4,  64,   2, 127,  35,   3,  69,   4,  64,  32,   0,  40,   2,  76,  65, 127,  76,  33,   2,  11,  32,   2,  35,   3,  65,   2,  70, 114,  11,   4,  64,  32,   4,  65,   0,  35,   3,  27,  69,   4,  64,  32,   0,  16,  59,  33,   1,  65,   0,  35,   3,  65,   1,  70,  13,   3,  26,  32,   1,  33,   0,  11,  35,   3,  69,   4,  64,  32,   0,  15,  11,  11,  32,   4,  65,   1,  70,  65,   1,  35,   3,  27,   4,  64,  32,   0,  16,  59,  33,   1,  65,   1,  35,   3,  65,   1,  70,  13,   2,  26,  32,   1,  33,   0,  11,  35,   3,  69,   4,  64,  32,   0,  15,  11,  11,   2, 127,  35,   3,  69,   4,  64,  65, 164,  30,  40,   2,   0,  33,   0,  11,  32,   0,  35,   3,  65,   2,  70, 114,  11,   4,  64,  35,   3,  69,   4,  64,  65, 164,  30,  40,   2,   0,  33,   0,  11,  32,   4,  65,   2,  70,  65,   1,  35,   3,  27,   4, 127,  32,   0,  16,  58,  33,   1,  65,   2,  35,   3,  65,   1,  70,  13,   2,  26,  32,   1,   5,  32,   2,  11,  33,   2,  11,   2, 127,  35,   3,  69,   4,  64,  65, 160,  30,  40,   2,   0,  33,   0,  11,  32,   0,  35,   3,  65,   2,  70, 114,  11,   4,  64,   3,  64,   2, 127,  35,   3,  69,   4,  64,  32,   0,  40,   2,  76,  26,  32,   0,  40,   2,  20,  32,   0,  40,   2,  28,  75,  33,   3,  11,  32,   3,  35,   3,  65,   2,  70, 114,  11,   4,  64,  32,   2,   2, 127,  32,   4,  65,   3,  70,  65,   1,  35,   3,  27,   4,  64,  32,   0,  16,  59,  33,   1,  65,   3,  35,   3,  65,   1,  70,  13,   5,  26,  32,   1,  33,   3,  11,  32,   2,  32,   3, 114,  11,  35,   3,  27,  33,   2,  11,  35,   3,  69,   4,  64,  32,   0,  40,   2,  56,  34,   0,  13,   1,  11,  11,  11,  35,   3,  69,   4,  64,  32,   2,  15,  11,   0,  11,  33,   1,  35,   4,  40,   2,   0,  32,   1,  54,   2,   0,  35,   4,  35,   4,  40,   2,   0,  65,   4, 106,  54,   2,   0,  35,   4,  40,   2,   0,  34,   1,  32,   0,  54,   2,   0,  32,   1,  32,   2,  54,   2,   4,  32,   1,  32,   3,  54,   2,   8,  35,   4,  35,   4,  40,   2,   0,  65,  12, 106,  54,   2,   0,  65,   0,  11, 141,   3,   2,   5, 127,   1, 126,  35,   3,  65,   2,  70,   4,  64,  35,   4,  35,   4,  40,   2,   0,  65,  24, 107,  54,   2,   0,  35,   4,  40,   2,   0,  34,   2,  40,   2,   0,  33,   0,  32,   2,  40,   2,   8,  33,   3,  32,   2,  41,   2,  12,  33,   6,  32,   2,  40,   2,  20,  33,   5,  32,   2,  40,   2,   4,  33,   1,  11,   2, 127,  35,   3,  65,   2,  70,   4,  64,  35,   4,  35,   4,  40,   2,   0,  65,   4, 107,  54,   2,   0,  35,   4,  40,   2,   0,  40,   2,   0,  33,   4,  11,  35,   3,  69,   4,  64,  32,   0,  40,   2,  28,  34,   3,  32,   0,  40,   2,  20,  79,  33,   1,  11,   2,  64,  35,   3,  69,   4,  64,  32,   1,  13,   1,  32,   0,  40,   2,  36,  33,   1,  11,  32,   4,  65,   0,  35,   3,  27,  69,   4,  64,  32,   0,  65,   0,  65,   0,  32,   1,  17,   6,   0,  33,   2,  65,   0,  35,   3,  65,   1,  70,  13,   2,  26,  32,   2,  33,   1,  11,  35,   3,  69,   4,  64,  32,   0,  40,   2,  20,  34,   1,  13,   1,  65, 127,  15,  11,  11,  35,   3,   4, 127,  32,   5,   5,  32,   0,  40,   2,   4,  34,   1,  32,   0,  40,   2,   8,  34,   3,  73,  11,  35,   3,  65,   2,  70, 114,   4,  64,  35,   3,  69,   4,  64,  32,   1,  32,   3, 107, 172,  33,   6,  32,   0,  40,   2,  40,  33,   1,  11,  32,   4,  65,   1,  70,  65,   1,  35,   3,  27,   4,  64,  32,   0,  32,   6,  65,   1,  32,   1,  17,  12,   0,  26,  65,   1,  35,   3,  65,   1,  70,  13,   2,  26,  11,  11,  35,   3,  69,   4,  64,  32,   0,  65,   0,  54,   2,  28,  32,   0,  66,   0,  55,   3,  16,  32,   0,  66,   0,  55,   2,   4,  65,   0,  15,  11,   0,  11,  33,   2,  35,   4,  40,   2,   0,  32,   2,  54,   2,   0,  35,   4,  35,   4,  40,   2,   0,  65,   4, 106,  54,   2,   0,  35,   4,  40,   2,   0,  34,   2,  32,   0,  54,   2,   0,  32,   2,  32,   1,  54,   2,   4,  32,   2,  32,   3,  54,   2,   8,  32,   2,  32,   6,  55,   2,  12,  32,   2,  32,   5,  54,   2,  20,  35,   4,  35,   4,  40,   2,   0,  65,  24, 106,  54,   2,   0,  65,   0,  11, 180,   1,   1,   1, 127,  35,   3,  65,   2,  70,   4,  64,  35,   4,  35,   4,  40,   2,   0,  65,   8, 107,  54,   2,   0,  35,   4,  40,   2,   0,  34,   1,  40,   2,   0,  33,   0,  32,   1,  40,   2,   4,  33,   1,  11,   2, 127,  35,   3,  65,   2,  70,   4, 127,  35,   4,  35,   4,  40,   2,   0,  65,   4, 107,  54,   2,   0,  35,   4,  40,   2,   0,  40,   2,   0,   5,  32,   2,  11,  65,   0,  35,   3,  27,  69,   4,  64,  32,   1,  32,   0,  17,   1,   0,  33,   2,  65,   0,  35,   3,  65,   1,  70,  13,   1,  26,  32,   2,  33,   0,  11,  35,   3,  69,   4,  64,  32,   0,  15,  11,   0,  11,  33,   2,  35,   4,  40,   2,   0,  32,   2,  54,   2,   0,  35,   4,  35,   4,  40,   2,   0,  65,   4, 106,  54,   2,   0,  35,   4,  40,   2,   0,  34,   2,  32,   0,  54,   2,   0,  32,   2,  32,   1,  54,   2,   4,  35,   4,  35,   4,  40,   2,   0,  65,   8, 106,  54,   2,   0,  65,   0,  11, 163,   1,   1,   1, 127,  35,   3,  65,   2,  70,   4,  64,  35,   4,  35,   4,  40,   2,   0,  65,   8, 107,  54,   2,   0,  35,   4,  40,   2,   0,  34,   1,  40,   2,   0,  33,   0,  32,   1,  40,   2,   4,  33,   1,  11,   2, 127,  35,   3,  65,   2,  70,   4, 127,  35,   4,  35,   4,  40,   2,   0,  65,   4, 107,  54,   2,   0,  35,   4,  40,   2,   0,  40,   2,   0,   5,  32,   2,  11,  65,   0,  35,   3,  27,  69,   4,  64,  32,   1,  32,   0,  17,   0,   0,  65,   0,  35,   3,  65,   1,  70,  13,   1,  26,  11,  15,  11,  33,   2,  35,   4,  40,   2,   0,  32,   2,  54,   2,   0,  35,   4,  35,   4,  40,   2,   0,  65,   4, 106,  54,   2,   0,  35,   4,  40,   2,   0,  34,   2,  32,   0,  54,   2,   0,  32,   2,  32,   1,  54,   2,   4,  35,   4,  35,   4,  40,   2,   0,  65,   8, 106,  54,   2,   0,  11, 212,   1,   1,   1, 127,  35,   3,  65,   2,  70,   4,  64,  35,   4,  35,   4,  40,   2,   0,  65,  16, 107,  54,   2,   0,  35,   4,  40,   2,   0,  34,   3,  40,   2,   0,  33,   0,  32,   3,  40,   2,   4,  33,   1,  32,   3,  40,   2,   8,  33,   2,  32,   3,  40,   2,  12,  33,   3,  11,   2, 127,  35,   3,  65,   2,  70,   4, 127,  35,   4,  35,   4,  40,   2,   0,  65,   4, 107,  54,   2,   0,  35,   4,  40,   2,   0,  40,   2,   0,   5,  32,   4,  11,  65,   0,  35,   3,  27,  69,   4,  64,  32,   1,  32,   2,  32,   3,  32,   0,  17,   6,   0,  33,   4,  65,   0,  35,   3,  65,   1,  70,  13,   1,  26,  32,   4,  33,   0,  11,  35,   3,  69,   4,  64,  32,   0,  15,  11,   0,  11,  33,   4,  35,   4,  40,   2,   0,  32,   4,  54,   2,   0,  35,   4,  35,   4,  40,   2,   0,  65,   4, 106,  54,   2,   0,  35,   4,  40,   2,   0,  34,   4,  32,   0,  54,   2,   0,  32,   4,  32,   1,  54,   2,   4,  32,   4,  32,   2,  54,   2,   8,  32,   4,  32,   3,  54,   2,  12,  35,   4,  35,   4,  40,   2,   0,  65,  16, 106,  54,   2,   0,  65,   0,  11, 243,   1,   1,   1, 127,  35,   3,  65,   2,  70,   4,  64,  35,   4,  35,   4,  40,   2,   0,  65,  28, 107,  54,   2,   0,  35,   4,  40,   2,   0,  34,   6,  40,   2,   0,  33,   0,  32,   6,  40,   2,   4,  33,   1,  32,   6,  40,   2,   8,  33,   2,  32,   6,  40,   2,  12,  33,   3,  32,   6,  40,   2,  16,  33,   4,  32,   6,  40,   2,  20,  33,   5,  32,   6,  40,   2,  24,  33,   6,  11,   2, 127,  35,   3,  65,   2,  70,   4, 127,  35,   4,  35,   4,  40,   2,   0,  65,   4, 107,  54,   2,   0,  35,   4,  40,   2,   0,  40,   2,   0,   5,  32,   7,  11,  65,   0,  35,   3,  27,  69,   4,  64,  32,   1,  32,   2,  32,   3,  32,   4,  32,   5,  32,   6,  32,   0,  17,   3,   0,  65,   0,  35,   3,  65,   1,  70,  13,   1,  26,  11,  15,  11,  33,   7,  35,   4,  40,   2,   0,  32,   7,  54,   2,   0,  35,   4,  35,   4,  40,   2,   0,  65,   4, 106,  54,   2,   0,  35,   4,  40,   2,   0,  34,   7,  32,   0,  54,   2,   0,  32,   7,  32,   1,  54,   2,   4,  32,   7,  32,   2,  54,   2,   8,  32,   7,  32,   3,  54,   2,  12,  32,   7,  32,   4,  54,   2,  16,  32,   7,  32,   5,  54,   2,  20,  32,   7,  32,   6,  54,   2,  24,  35,   4,  35,   4,  40,   2,   0,  65,  28, 106,  54,   2,   0,  11, 227,   1,   1,   1, 127,  35,   3,  65,   2,  70,   4,  64,  35,   4,  35,   4,  40,   2,   0,  65,  24, 107,  54,   2,   0,  35,   4,  40,   2,   0,  34,   5,  40,   2,   0,  33,   0,  32,   5,  40,   2,   4,  33,   1,  32,   5,  40,   2,   8,  33,   2,  32,   5,  40,   2,  12,  33,   3,  32,   5,  40,   2,  16,  33,   4,  32,   5,  40,   2,  20,  33,   5,  11,   2, 127,  35,   3,  65,   2,  70,   4, 127,  35,   4,  35,   4,  40,   2,   0,  65,   4, 107,  54,   2,   0,  35,   4,  40,   2,   0,  40,   2,   0,   5,  32,   6,  11,  65,   0,  35,   3,  27,  69,   4,  64,  32,   1,  32,   2,  32,   3,  32,   4,  32,   5,  32,   0,  17,   2,   0,  65,   0,  35,   3,  65,   1,  70,  13,   1,  26,  11,  15,  11,  33,   6,  35,   4,  40,   2,   0,  32,   6,  54,   2,   0,  35,   4,  35,   4,  40,   2,   0,  65,   4, 106,  54,   2,   0,  35,   4,  40,   2,   0,  34,   6,  32,   0,  54,   2,   0,  32,   6,  32,   1,  54,   2,   4,  32,   6,  32,   2,  54,   2,   8,  32,   6,  32,   3,  54,   2,  12,  32,   6,  32,   4,  54,   2,  16,  32,   6,  32,   5,  54,   2,  20,  35,   4,  35,   4,  40,   2,   0,  65,  24, 106,  54,   2,   0,  11, 211,   1,   1,   1, 127,  35,   3,  65,   2,  70,   4,  64,  35,   4,  35,   4,  40,   2,   0,  65,  20, 107,  54,   2,   0,  35,   4,  40,   2,   0,  34,   4,  40,   2,   0,  33,   0,  32,   4,  40,   2,   4,  33,   1,  32,   4,  40,   2,   8,  33,   2,  32,   4,  40,   2,  12,  33,   3,  32,   4,  40,   2,  16,  33,   4,  11,   2, 127,  35,   3,  65,   2,  70,   4, 127,  35,   4,  35,   4,  40,   2,   0,  65,   4, 107,  54,   2,   0,  35,   4,  40,   2,   0,  40,   2,   0,   5,  32,   5,  11,  65,   0,  35,   3,  27,  69,   4,  64,  32,   1,  32,   2,  32,   3,  32,   4,  32,   0,  17,   4,   0,  65,   0,  35,   3,  65,   1,  70,  13,   1,  26,  11,  15,  11,  33,   5,  35,   4,  40,   2,   0,  32,   5,  54,   2,   0,  35,   4,  35,   4,  40,   2,   0,  65,   4, 106,  54,   2,   0,  35,   4,  40,   2,   0,  34,   5,  32,   0,  54,   2,   0,  32,   5,  32,   1,  54,   2,   4,  32,   5,  32,   2,  54,   2,   8,  32,   5,  32,   3,  54,   2,  12,  32,   5,  32,   4,  54,   2,  16,  35,   4,  35,   4,  40,   2,   0,  65,  20, 106,  54,   2,   0,  11,  43,   1,   1, 127,  35,   3,  33,   4,  32,   0,  32,   1,  65,   8,  32,   2, 167,  32,   2,  66,  32, 136, 167,  32,   3, 167,  32,   3,  66,  32, 136, 167,  16,  10,  35,   3,  32,   4,  71,   4,  64,   0,  11,  11,  25,   0,  65,   1,  36,   3,  32,   0,  36,   4,  35,   4,  40,   2,   0,  35,   4,  40,   2,   4,  75,   4,  64,   0,  11,  11,  21,   0,  65,   0,  36,   3,  35,   4,  40,   2,   0,  35,   4,  40,   2,   4,  75,   4,  64,   0,  11,  11,  25,   0,  65,   2,  36,   3,  32,   0,  36,   4,  35,   4,  40,   2,   0,  35,   4,  40,   2,   4,  75,   4,  64,   0,  11,  11,  21,   0,  65,   0,  36,   3,  35,   4,  40,   2,   0,  35,   4,  40,   2,   4,  75,   4,  64,   0,  11,  11,   4,   0,  35,   3,  11,  11, 171,  18,   2,   0,  65, 128,   8,  11, 154,  18, 117, 110, 115, 105, 103, 110, 101, 100,  32, 115, 104, 111, 114, 116,   0, 117, 110, 115, 105, 103, 110, 101, 100,  32, 105, 110, 116,   0, 102, 108, 111,  97, 116,   0, 117, 105, 110, 116,  54,  52,  95, 116,   0, 117, 110, 115, 105, 103, 110, 101, 100,  32,  99, 104,  97, 114,   0,  98, 111, 111, 108,   0, 101, 109, 115,  99, 114, 105, 112, 116, 101, 110,  58,  58, 118,  97, 108,   0, 117, 110, 115, 105, 103, 110, 101, 100,  32, 108, 111, 110, 103,   0, 115, 116, 100,  58,  58, 119, 115, 116, 114, 105, 110, 103,   0, 115, 116, 100,  58,  58, 115, 116, 114, 105, 110, 103,   0, 115, 116, 100,  58,  58, 117,  49,  54, 115, 116, 114, 105, 110, 103,   0, 115, 116, 100,  58,  58, 117,  51,  50, 115, 116, 114, 105, 110, 103,   0, 100, 111, 117,  98, 108, 101,   0, 118, 111, 105, 100,   0, 101, 109, 115,  99, 114, 105, 112, 116, 101, 110,  58,  58, 109, 101, 109, 111, 114, 121,  95, 118, 105, 101, 119,  60, 115, 104, 111, 114, 116,  62,   0, 101, 109, 115,  99, 114, 105, 112, 116, 101, 110,  58,  58, 109, 101, 109, 111, 114, 121,  95, 118, 105, 101, 119,  60, 117, 110, 115, 105, 103, 110, 101, 100,  32, 115, 104, 111, 114, 116,  62,   0, 101, 109, 115,  99, 114, 105, 112, 116, 101, 110,  58,  58, 109, 101, 109, 111, 114, 121,  95, 118, 105, 101, 119,  60, 105, 110, 116,  62,   0, 101, 109, 115,  99, 114, 105, 112, 116, 101, 110,  58,  58, 109, 101, 109, 111, 114, 121,  95, 118, 105, 101, 119,  60, 117, 110, 115, 105, 103, 110, 101, 100,  32, 105, 110, 116,  62,   0, 101, 109, 115,  99, 114, 105, 112, 116, 101, 110,  58,  58, 109, 101, 109, 111, 114, 121,  95, 118, 105, 101, 119,  60, 102, 108, 111,  97, 116,  62,   0, 101, 109, 115,  99, 114, 105, 112, 116, 101, 110,  58,  58, 109, 101, 109, 111, 114, 121,  95, 118, 105, 101, 119,  60, 117, 105, 110, 116,  56,  95, 116,  62,   0, 101, 109, 115,  99, 114, 105, 112, 116, 101, 110,  58,  58, 109, 101, 109, 111, 114, 121,  95, 118, 105, 101, 119,  60, 105, 110, 116,  56,  95, 116,  62,   0, 101, 109, 115,  99, 114, 105, 112, 116, 101, 110,  58,  58, 109, 101, 109, 111, 114, 121,  95, 118, 105, 101, 119,  60, 117, 105, 110, 116,  49,  54,  95, 116,  62,   0, 101, 109, 115,  99, 114, 105, 112, 116, 101, 110,  58,  58, 109, 101, 109, 111, 114, 121,  95, 118, 105, 101, 119,  60, 105, 110, 116,  49,  54,  95, 116,  62,   0, 101, 109, 115,  99, 114, 105, 112, 116, 101, 110,  58,  58, 109, 101, 109, 111, 114, 121,  95, 118, 105, 101, 119,  60, 117, 105, 110, 116,  51,  50,  95, 116,  62,   0, 101, 109, 115,  99, 114, 105, 112, 116, 101, 110,  58,  58, 109, 101, 109, 111, 114, 121,  95, 118, 105, 101, 119,  60, 105, 110, 116,  51,  50,  95, 116,  62,   0, 101, 109, 115,  99, 114, 105, 112, 116, 101, 110,  58,  58, 109, 101, 109, 111, 114, 121,  95, 118, 105, 101, 119,  60,  99, 104,  97, 114,  62,   0, 101, 109, 115,  99, 114, 105, 112, 116, 101, 110,  58,  58, 109, 101, 109, 111, 114, 121,  95, 118, 105, 101, 119,  60, 117, 110, 115, 105, 103, 110, 101, 100,  32,  99, 104,  97, 114,  62,   0, 115, 116, 100,  58,  58,  98,  97, 115, 105,  99,  95, 115, 116, 114, 105, 110, 103,  60, 117, 110, 115, 105, 103, 110, 101, 100,  32,  99, 104,  97, 114,  62,   0, 101, 109, 115,  99, 114, 105, 112, 116, 101, 110,  58,  58, 109, 101, 109, 111, 114, 121,  95, 118, 105, 101, 119,  60, 115, 105, 103, 110, 101, 100,  32,  99, 104,  97, 114,  62,   0, 101, 109, 115,  99, 114, 105, 112, 116, 101, 110,  58,  58, 109, 101, 109, 111, 114, 121,  95, 118, 105, 101, 119,  60, 108, 111, 110, 103,  62,   0, 101, 109, 115,  99, 114, 105, 112, 116, 101, 110,  58,  58, 109, 101, 109, 111, 114, 121,  95, 118, 105, 101, 119,  60, 117, 110, 115, 105, 103, 110, 101, 100,  32, 108, 111, 110, 103,  62,   0, 101, 109, 115,  99, 114, 105, 112, 116, 101, 110,  58,  58, 109, 101, 109, 111, 114, 121,  95, 118, 105, 101, 119,  60, 100, 111, 117,  98, 108, 101,  62,   0,  78,  83, 116,  51,  95,  95,  50,  49,  50,  98,  97, 115, 105,  99,  95, 115, 116, 114, 105, 110, 103,  73,  99,  78,  83,  95,  49,  49,  99, 104,  97, 114,  95, 116, 114,  97, 105, 116, 115,  73,  99,  69,  69,  78,  83,  95,  57,  97, 108, 108, 111,  99,  97, 116, 111, 114,  73,  99,  69,  69,  69,  69,   0,  78,  83, 116,  51,  95,  95,  50,  50,  49,  95,  95,  98,  97, 115, 105,  99,  95, 115, 116, 114, 105, 110, 103,  95,  99, 111, 109, 109, 111, 110,  73,  76,  98,  49,  69,  69,  69,   0,  68,  12,   0,   0,  62,   7,   0,   0, 200,  12,   0,   0, 255,   6,   0,   0,   0,   0,   0,   0,   1,   0,   0,   0, 100,   7,   0,   0,   0,   0,   0,   0,  78,  83, 116,  51,  95,  95,  50,  49,  50,  98,  97, 115, 105,  99,  95, 115, 116, 114, 105, 110, 103,  73, 104,  78,  83,  95,  49,  49,  99, 104,  97, 114,  95, 116, 114,  97, 105, 116, 115,  73, 104,  69,  69,  78,  83,  95,  57,  97, 108, 108, 111,  99,  97, 116, 111, 114,  73, 104,  69,  69,  69,  69,   0,   0, 200,  12,   0,   0, 132,   7,   0,   0,   0,   0,   0,   0,   1,   0,   0,   0, 100,   7,   0,   0,   0,   0,   0,   0,  78,  83, 116,  51,  95,  95,  50,  49,  50,  98,  97, 115, 105,  99,  95, 115, 116, 114, 105, 110, 103,  73, 119,  78,  83,  95,  49,  49,  99, 104,  97, 114,  95, 116, 114,  97, 105, 116, 115,  73, 119,  69,  69,  78,  83,  95,  57,  97, 108, 108, 111,  99,  97, 116, 111, 114,  73, 119,  69,  69,  69,  69,   0,   0, 200,  12,   0,   0, 220,   7,   0,   0,   0,   0,   0,   0,   1,   0,   0,   0, 100,   7,   0,   0,   0,   0,   0,   0,  78,  83, 116,  51,  95,  95,  50,  49,  50,  98,  97, 115, 105,  99,  95, 115, 116, 114, 105, 110, 103,  73,  68, 115,  78,  83,  95,  49,  49,  99, 104,  97, 114,  95, 116, 114,  97, 105, 116, 115,  73,  68, 115,  69,  69,  78,  83,  95,  57,  97, 108, 108, 111,  99,  97, 116, 111, 114,  73,  68, 115,  69,  69,  69,  69,   0,   0,   0, 200,  12,   0,   0,  52,   8,   0,   0,   0,   0,   0,   0,   1,   0,   0,   0, 100,   7,   0,   0,   0,   0,   0,   0,  78,  83, 116,  51,  95,  95,  50,  49,  50,  98,  97, 115, 105,  99,  95, 115, 116, 114, 105, 110, 103,  73,  68, 105,  78,  83,  95,  49,  49,  99, 104,  97, 114,  95, 116, 114,  97, 105, 116, 115,  73,  68, 105,  69,  69,  78,  83,  95,  57,  97, 108, 108, 111,  99,  97, 116, 111, 114,  73,  68, 105,  69,  69,  69,  69,   0,   0,   0, 200,  12,   0,   0, 144,   8,   0,   0,   0,   0,   0,   0,   1,   0,   0,   0, 100,   7,   0,   0,   0,   0,   0,   0,  78,  49,  48, 101, 109, 115,  99, 114, 105, 112, 116, 101, 110,  51, 118,  97, 108,  69,   0,   0,  68,  12,   0,   0, 236,   8,   0,   0,  78,  49,  48, 101, 109, 115,  99, 114, 105, 112, 116, 101, 110,  49,  49, 109, 101, 109, 111, 114, 121,  95, 118, 105, 101, 119,  73,  99,  69,  69,   0,   0,  68,  12,   0,   0,   8,   9,   0,   0,  78,  49,  48, 101, 109, 115,  99, 114, 105, 112, 116, 101, 110,  49,  49, 109, 101, 109, 111, 114, 121,  95, 118, 105, 101, 119,  73,  97,  69,  69,   0,   0,  68,  12,   0,   0,  48,   9,   0,   0,  78,  49,  48, 101, 109, 115,  99, 114, 105, 112, 116, 101, 110,  49,  49, 109, 101, 109, 111, 114, 121,  95, 118, 105, 101, 119,  73, 104,  69,  69,   0,   0,  68,  12,   0,   0,  88,   9,   0,   0,  78,  49,  48, 101, 109, 115,  99, 114, 105, 112, 116, 101, 110,  49,  49, 109, 101, 109, 111, 114, 121,  95, 118, 105, 101, 119,  73, 115,  69,  69,   0,   0,  68,  12,   0,   0, 128,   9,   0,   0,  78,  49,  48, 101, 109, 115,  99, 114, 105, 112, 116, 101, 110,  49,  49, 109, 101, 109, 111, 114, 121,  95, 118, 105, 101, 119,  73, 116,  69,  69,   0,   0,  68,  12,   0,   0, 168,   9,   0,   0,  78,  49,  48, 101, 109, 115,  99, 114, 105, 112, 116, 101, 110,  49,  49, 109, 101, 109, 111, 114, 121,  95, 118, 105, 101, 119,  73, 105,  69,  69,   0,   0,  68,  12,   0,   0, 208,   9,   0,   0,  78,  49,  48, 101, 109, 115,  99, 114, 105, 112, 116, 101, 110,  49,  49, 109, 101, 109, 111, 114, 121,  95, 118, 105, 101, 119,  73, 106,  69,  69,   0,   0,  68,  12,   0,   0, 248,   9,   0,   0,  78,  49,  48, 101, 109, 115,  99, 114, 105, 112, 116, 101, 110,  49,  49, 109, 101, 109, 111, 114, 121,  95, 118, 105, 101, 119,  73, 108,  69,  69,   0,   0,  68,  12,   0,   0,  32,  10,   0,   0,  78,  49,  48, 101, 109, 115,  99, 114, 105, 112, 116, 101, 110,  49,  49, 109, 101, 109, 111, 114, 121,  95, 118, 105, 101, 119,  73, 109,  69,  69,   0,   0,  68,  12,   0,   0,  72,  10,   0,   0,  78,  49,  48, 101, 109, 115,  99, 114, 105, 112, 116, 101, 110,  49,  49, 109, 101, 109, 111, 114, 121,  95, 118, 105, 101, 119,  73, 102,  69,  69,   0,   0,  68,  12,   0,   0, 112,  10,   0,   0,  78,  49,  48, 101, 109, 115,  99, 114, 105, 112, 116, 101, 110,  49,  49, 109, 101, 109, 111, 114, 121,  95, 118, 105, 101, 119,  73, 100,  69,  69,   0,   0,  68,  12,   0,   0, 152,  10,   0,   0,  83, 116,  57, 116, 121, 112, 101,  95, 105, 110, 102, 111,   0,   0,   0,   0,  68,  12,   0,   0, 192,  10,   0,   0,  78,  49,  48,  95,  95,  99, 120, 120,  97,  98, 105, 118,  49,  49,  54,  95,  95, 115, 104, 105, 109,  95, 116, 121, 112, 101,  95, 105, 110, 102, 111,  69,   0,   0,   0,   0, 108,  12,   0,   0, 216,  10,   0,   0, 208,  10,   0,   0,  78,  49,  48,  95,  95,  99, 120, 120,  97,  98, 105, 118,  49,  49,  55,  95,  95,  99, 108,  97, 115, 115,  95, 116, 121, 112, 101,  95, 105, 110, 102, 111,  69,   0,   0,   0, 108,  12,   0,   0,   8,  11,   0,   0, 252,  10,   0,   0,   0,   0,   0,   0, 124,  11,   0,   0,   2,   0,   0,   0,   3,   0,   0,   0,   4,   0,   0,   0,   5,   0,   0,   0,   6,   0,   0,   0,  78,  49,  48,  95,  95,  99, 120, 120,  97,  98, 105, 118,  49,  50,  51,  95,  95, 102, 117, 110, 100,  97, 109, 101, 110, 116,  97, 108,  95, 116, 121, 112, 101,  95, 105, 110, 102, 111,  69,   0, 108,  12,   0,   0,  84,  11,   0,   0, 252,  10,   0,   0, 118,   0,   0,   0,  64,  11,   0,   0, 136,  11,   0,   0,  98,   0,   0,   0,  64,  11,   0,   0, 148,  11,   0,   0,  99,   0,   0,   0,  64,  11,   0,   0, 160,  11,   0,   0, 104,   0,   0,   0,  64,  11,   0,   0, 172,  11,   0,   0,  97,   0,   0,   0,  64,  11,   0,   0, 184,  11,   0,   0, 115,   0,   0,   0,  64,  11,   0,   0, 196,  11,   0,   0, 116,   0,   0,   0,  64,  11,   0,   0, 208,  11,   0,   0, 105,   0,   0,   0,  64,  11,   0,   0, 220,  11,   0,   0, 106,   0,   0,   0,  64,  11,   0,   0, 232,  11,   0,   0, 108,   0,   0,   0,  64,  11,   0,   0, 244,  11,   0,   0, 109,   0,   0,   0,  64,  11,   0,   0,   0,  12,   0,   0, 120,   0,   0,   0,  64,  11,   0,   0,  12,  12,   0,   0, 121,   0,   0,   0,  64,  11,   0,   0,  24,  12,   0,   0, 102,   0,   0,   0,  64,  11,   0,   0,  36,  12,   0,   0, 100,   0,   0,   0,  64,  11,   0,   0,  48,  12,   0,   0,   0,   0,   0,   0,  44,  11,   0,   0,   2,   0,   0,   0,   7,   0,   0,   0,   4,   0,   0,   0,   5,   0,   0,   0,   8,   0,   0,   0,   9,   0,   0,   0,  10,   0,   0,   0,  11,   0,   0,   0,   0,   0,   0,   0, 180,  12,   0,   0,   2,   0,   0,   0,  12,   0,   0,   0,   4,   0,   0,   0,   5,   0,   0,   0,   8,   0,   0,   0,  13,   0,   0,   0,  14,   0,   0,   0,  15,   0,   0,   0,  78,  49,  48,  95,  95,  99, 120, 120,  97,  98, 105, 118,  49,  50,  48,  95,  95, 115, 105,  95,  99, 108,  97, 115, 115,  95, 116, 121, 112, 101,  95, 105, 110, 102, 111,  69,   0,   0,   0,   0, 108,  12,   0,   0, 140,  12,   0,   0,  44,  11,   0,   0,   0,   0,   0,   0,  16,  13,   0,   0,   2,   0,   0,   0,  16,   0,   0,   0,   4,   0,   0,   0,   5,   0,   0,   0,   8,   0,   0,   0,  17,   0,   0,   0,  18,   0,   0,   0,  19,   0,   0,   0,  78,  49,  48,  95,  95,  99, 120, 120,  97,  98, 105, 118,  49,  50,  49,  95,  95, 118, 109, 105,  95,  99, 108,  97, 115, 115,  95, 116, 121, 112, 101,  95, 105, 110, 102, 111,  69,   0,   0,   0, 108,  12,   0,   0, 232,  12,   0,   0,  44,  11,   0,  65, 156,  26,  11,   3,  48,  15,  80,]
+        })
+
+        idbfs.then(async (Module)=> {
+          Peer.fs = Module.FS
+          Peer.fs.mkdir('./universe');
+          Peer.fs.mount(Module.FS.filesystems.IDBFS, {test:"value"}, "./universe")
+          fsLoad();
+          // fsSave()
+          console.log('~~~~~~~~~~', action_fs)
+          console.log('readdir: ', Peer.fs.readdir("/universe"))
+         // let read = await  Peer.fs.readFile("/universe/version", { encoding: "utf8" });
+         //  Peer.fs.writeFile("file.txt" , "some contents");
+          console.log('cwd: ', Peer.fs.cwd())
+          sys.alias.fs.key.textContent = "FS connect"
+          resolve({
+            status: false,
+            success: false
+          })
+        })
+      })
+    }
+
+    const fsLoad = () => {
+      return new Promise(async (resolve, reject) => {
+        Peer.fs.syncfs(true,  (err) => {
+            console.log('file load', err)
+            resolve()
+        });
+      })
+    }
+
+    const fsSave  = () => {
+      return new Promise(async (resolve, reject) => {
+        Peer.fs.syncfs(false , (err) => {
+          console.log('file save', err)
+          resolve()
+        });
+      })
+    }
+
+    let action_fs = {
+      mkdir: (path) => {
+        return new Promise(async (resolve, reject) => {
+          try {
+            resolve({
+              status: true,
+              success: true,
+              message: await Peer.fs.mkdir(path)
+            })
+          }catch (e) {
+            resolve({
+              status: false,
+              success: false,
+              message: e
+            })
+          }
+        })
+      },
+      readdir: (path) => {
+        return new Promise(async (resolve, reject) => {
+          try {
+            resolve({
+              status: true,
+              success: true,
+              message: await Peer.fs.readdir(path)
+            })
+          }catch (e) {
+            resolve({
+              status: false,
+              success: false,
+              message: e
+            })
+          }
+        })
+      },
+      rmdir: (path) => {
+        return new Promise(async (resolve, reject) => {
+          try {
+            resolve({
+              status: true,
+              success: true,
+              message: await Peer.fs.rmdir(path)
+            })
+          }catch (e) {
+            resolve({
+              status: false,
+              success: false,
+              message: e
+            })
+          }
+        })
+      },
+      cwd: (path) => {
+        return new Promise(async (resolve, reject) => {
+          try {
+            resolve({
+              status: true,
+              success: true,
+              message: await Peer.fs.cwd()
+            })
+          }catch (e) {
+            resolve({
+              status: false,
+              success: false,
+              message: e
+            })
+          }
+        })
+      },
+      rename: (file, result) => {
+        return new Promise(async (resolve, reject) => {
+          try {
+            resolve({
+              status: true,
+              success: true,
+              message: await Peer.fs.rename(file, result)
+            })
+          }catch (e) {
+            resolve({
+              status: false,
+              success: false,
+              message: e
+            })
+          }
+        })
+      },
+      readFile: (file, encoding = "utf8") => {
+        return new Promise(async (resolve, reject) => {
+          try {
+            resolve({
+              status: true,
+              success: true,
+              message: await Peer.fs.readdir(file, { encoding: encoding })
+            })
+          }catch (e) {
+            resolve({
+              status: false,
+              success: false,
+              message: e
+            })
+          }
+        })
+      },
+      unlink: (file) => {
+        return new Promise(async (resolve, reject) => {
+          try {
+            resolve({
+              status: true,
+              success: true,
+              message: await Peer.fs.unlink(file)
+            })
+          }catch (e) {
+            resolve({
+              status: false,
+              success: false,
+              message: e
+            })
+          }
+        })
+      },
+      writeFile: (file, contents) => {
+        return new Promise(async (resolve, reject) => {
+          try {
+            resolve({
+              status: true,
+              success: true,
+              message: await Peer.fs.writeFile(file, contents)
+            })
+          }catch (e) {
+            resolve({
+              status: false,
+              success: false,
+              message: e
+            })
+          }
+        })
+      },
+      createDataFile: (folder, file, contents, readable = true, writable = true ) => {
+        return new Promise(async (resolve, reject) => {
+          try {
+            resolve({
+              status: true,
+              success: true,
+              message: await Peer.fs.createDataFile(folder, file, contents, readable, writable)
+            })
+          }catch (e) {
+            resolve({
+              status: false,
+              success: false,
+              message: e
+            })
+          }
+        })
+      }
+    }
+    async function terminate() {
+      await postData(`${Peer.location.signal}/${
+        (isEmpty(Peer.initiator))
+          ? Peer.location.terminate.initiator
+          : Peer.location.terminate.dialer}`,{
+        id: Peer.id,
+        recipient: Peer.recipient
+      })
+      emoji('terminate')
+      await fsSave()
+      Peer.isTerminate = false
+    }
+    window.onbeforeunload = async function () {
+      await fsSave()
+    };
+});
+</script>
+</body>
+</html>

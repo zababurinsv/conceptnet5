@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Initiator</title>
+</head>
+<body>
+<style>
+  #outgoing {
+    width: 600px;
+    word-wrap: break-word;
+    white-space: normal;
+  }
+</style>
+<button id="incoming" type="button">Send</button>
+<pre id="outgoing"></pre>
+
+<script>
+  import SimplePeer from '@orbit/simple-peer'
+  import IPFS from 'ipfs'
+
+  // let path = "https://web3-star.herokuapp.com"
+  // let path = "https://web3.news"
+  let path = "http://localhost:4434"
+
+  let Peer = new Proxy({
+    id: "QmcrQZ6RJdpYuGvZqD5QEHAv6qX4BrQLJLQPQUrTrzdcgm",
+    recipient: "Qma3GsJmB47xYuyahPZPSadh1avvxfyYQwk8R3UnFrQ6aP",
+    events: false,
+    initiator: true,
+    terminate: false,
+    peer: false,
+    path: path,
+    offer: false,
+    answer: false,
+    reconnect: false,
+    core: {},
+    signal: {},
+    close: false,
+    message: {
+      offer: {},
+      answer: {}
+    }
+  }, {
+    get: function(obj, prop) {
+      switch (prop) {
+        default:
+          console.log('get', prop)
+          break
+      }
+      return obj[prop];
+    },
+    set: function(obj, prop, value) {
+      switch (prop) {
+        case "terminate":
+          (value) ? terminate() : console.log('create peer');
+          break
+        case "events":
+          (value) ? peer() : console.log('create peer');
+          break
+        case "offer":
+          (value) ? requestAnswerMessage() : console.log('offer send')
+          break
+        case "answer":
+          (value) ? requestConnectMessage() : console.log('answer send')
+          break
+        case "close":
+          (value) ? eventsClose() :  console.log('events close')
+          break
+        case "reconnect":
+          (value) ? signalServer() :  console.log('reconnect true')
+          break
+        default:
+          console.log('void set', prop)
+          break
+      }
+      obj[prop] = value;
+      return true
+    }
+  });
+
+  async function postData(url = '', data = {}) {
+    const response = await fetch(url, {
+      method: 'POST', // *GET, POST, PUT, DELETE, etc.
+      mode: 'cors', // no-cors, *cors, same-origin
+      cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+      credentials: 'same-origin', // include, *same-origin, omit
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      redirect: 'follow', // manual, *follow, error
+      referrerPolicy: 'no-referrer', // no-referrer, *client
+      body: JSON.stringify(data) // body data type must match "Content-Type" header
+    });
+    return await response.json(); // parses JSON response into native JavaScript objects
+  }
+
+  function peer() {
+    let initiator = new SimplePeer({ initiator: Peer.initiator,  trickle: false });
+
+    Peer.core = initiator
+
+    initiator.on('error', (err) => {
+      let error = err
+      switch (error.message) {
+        case"Transport channel closed":
+          document.querySelector('#outgoing').textContent = error.message
+          Peer.reconnect = true
+          break
+        case"Connection failed.":
+          Peer.terminate = true
+          break
+        default:
+          console.log('неизвестная ошибка', error.message)
+          document.querySelector('#outgoing').textContent = error.message
+          break
+      }
+    })
+
+    initiator.on('signal', async data => {
+      try {
+        let qs = await postData(`${Peer.path}/initiator`, {
+          message: data,
+          id: Peer.id,
+          recipient: Peer.recipient
+        })
+        document.querySelector('#outgoing').textContent = qs.status
+      } catch (e) {
+        console.log('error from signal', e)
+      }
+    })
+
+    initiator.on('connect', () => {
+      console.log('CONNECT')
+      document.querySelector('#outgoing').textContent = "CONNECT"
+      Peer.close = true
+    })
+
+    initiator.on('data', data => {
+      document.querySelector('#outgoing').textContent = `data from initiator: ${data}`
+    })
+
+    initiator.on('close', data => {
+      console.log('CLOSE')
+      document.querySelector('#outgoing').textContent = `peer close connection`
+    })
+
+    document.querySelector('#incoming').addEventListener('click', ev => {
+      ev.preventDefault()
+      initiator.send('hello world dialer')
+    })
+  }
+
+  function requestAnswerMessage() {
+    Peer.core.signal(JSON.stringify(Peer.message.offer))
+    Peer.offer = false
+  }
+
+  function requestConnectMessage() {
+    Peer.core.signal(JSON.stringify(Peer.message.answer))
+    Peer.answer = false
+  }
+
+  function eventsClose() {
+    Peer.signal.close()
+    Peer.close = false
+  }
+
+  async function signalServer() {
+    let eventSource = new EventSource(`${Peer.path}/${Peer.id}?recipient=${Peer.recipient}&initiator=true`);
+    Peer.signal = eventSource
+    eventSource.onmessage = function(event) {
+      try {
+        let res = JSON.parse(event.data)
+        switch (res.status) {
+          case "peer save connect":
+            Peer.events = true
+            break
+          case "post: incoming message offer":
+            Peer.message.offer = res.message
+            Peer.offer = true
+            break
+          case "post: incoming message answer":
+            Peer.message.answer = res.message
+            Peer.answer = true
+            break
+          default:
+            break
+        }
+        document.querySelector('#outgoing').textContent = res.status
+      } catch (e) {
+        let error = e
+        console.log('error',error)
+      }
+    };
+    eventSource.onopen = function (event) {
+      let state = ''
+      switch (eventSource.readyState) {
+        case 0:
+          state = "CONNECTING"
+          break
+        case 1:
+          state = "OPEN"
+          break
+        case 2:
+          state = "CLOSED"
+          break
+        default:
+          break
+      }
+      console.log('events',  state)
+    };
+    return false
+  }
+  signalServer().then((status)=>{ Peer.reconnect = status})
+
+  async function terminate() {
+    let res = await postData(`${Peer.path}/terminate`, {
+      initiator: Peer.initiator,
+      id: Peer.id,
+      recipient: Peer.recipient
+    })
+    console.log(res.status, res.message)
+    //await fsSave()
+    Peer.terminate = false
+  }
+
+  window.onbeforeunload = async function () {
+    //await fsSave()
+  };
+</script>
+</body>
+</html>

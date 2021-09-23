@@ -1,15 +1,11 @@
 {
-  "name": "@orbit/concept",
+  "name": "@orbit/search",
   "version": "1.0.0",
-  "description": "index",
-  "main": "src/index.mjs",
-  "private": true,
-  "type": "module",
+  "description": "Search Provider",
+  "main": "index.mjs",
   "author": "Zababurin Sergey",
-  "license": "Apache-2.0",
-  "directories": {
-    "doc": "/"
-  },
+  "license": "GPL-3.0-or-later",
+  "private": true,
   "config": {
     "env": "zb"
   },
@@ -19,8 +15,7 @@
     "dev:star_dialer": "yarn workspace @packages/star dev:dialer",
     "server": "yarn --cwd backend start",
     "build": "yarn --cwd frontend/react build",
-    "test:react": "yarn --cwd frontend/react build",
-    "go:admin": "export GOPATH=$(pwd) && go get github.com/zababurinsv/admin"
+    "test:react": "yarn --cwd frontend/react build"
   },
   "repository": {
     "type": "git",

@@ -1,0 +1,1480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Initiator</title>
+  <link rel="manifest" href="https://zababurinsv.github.io/manifest.json"/>
+  <link rel="shortcut icon" href="data:image/png;base64, AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAbbv+DGW3/mRlt/5kZbf+ZGq6/hIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGa3/ohkt/7/Zbj//2S3/v9lt/6WAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGm5/iRlt/74Zbj//2W4//9luP//Zbf++mi4/i4gIPciGhr24hsb9uwbG/bsGhr24CEh9xoAAAAAAAAAAAAAAABnuP5mZLf+/2W4//9luP//Zbj//2S3/v9muP5yGBj2rhMT9v8TE/b/ExP2/xMT9f8YGPWkAAAAAAAAAAAAAAAAb7z/BGW3/tZluP//Zbj//2W4//9lt/7gJzH3ShMT9f8TE/b/ExP2/xMT9v8TE/b/ExP1/CAg9joAAAAAAAAAAAAAAABmuP5GZLf+6GS3/uhkt/7oZbf+UhgY9YQSEvX/ExP2/xMT9v8TE/b/ExP2/xIS9f8aGvZ8AAAAAD4++gQgIPZ6IiL2hiIi9oYgIPZ8KCj5BAAAAAAtLfgUFBT17BMT9v8TE/b/ExP2/xMT9v8VFfXoLCz4DgAAAAAaGvZqEhL1/xMT9v8TE/b/EhL1/xsb9nIAAAAAAAAAABwc9m4SEvX/ExP2/xMT9v8SEvX/HR32ZAAAAAAnJ/gSFRX16hMT9v8TE/b/ExP2/xMT9v8UFPXuJyf4Fp2xlAKNnqUYLC/mfhYW83ATE/VuFxf1aDc3+gIAAAAAGBj1fhIS9f8TE/b/ExP2/xMT9v8TE/b/ExP1/xkZ9YaGn3yIhZ57/4Wee/+Gn3yKAAAAAAAAAAAAAAAAAAAAACMj9zYTE/X8ExP2/xMT9v8TE/b/ExP2/xMT9f9JUshihZ57+IaffP+Gn3z/hZ579oigfiYAAAAAAAAAAAAAAAAAAAAAGBj1oBIS9f8TE/b/ExP2/xMT9f8YGPWmiKB+PIWee/+Gn3z/hp98/4Wee/+HoH06AAAAAAAAAAAAAAAAAAAAACUl9xgVFfXOExP11BMT9dQUFPXQJib3HgAAAACGn3ymhp98/4affP+Gn3ymAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAiKB+EIihf0CIoX9AiKB+EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAP//AADg/wAA4MMAAOCBAADggQAA8QEAAOeBAADDwwAAgf8AAIAPAACBDwAAgQ8AAMMPAAD//wAA//8AAA==" type="image/png">
+</head>
+<body>
+<div class="__peer">
+  <header class="__header">
+    <pre class="__header_logo_value">
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+░░░░░░░░░░░░░░░░░░█░░░░░░░░░░░░░░░░░░░░░░░░░░░
+░░░░░░████░░░░░░█████░░░░░░░░░░░░░░░░░░░░░░░░░
+░░░░████████░░░███████░░░░░░░░░░░░░░░░░░░░░░░░
+░░░██████████░█████████░░░░░░░░░░░░░░░░░░░░░░░
+░░████████████░░█████░░░░░░░░░░░░░░░░░░░░░░░░░
+░░░██████████░░░░░█░░░░░░░░░░░░░░░░░░░░░░░░░░░
+░░░░████████░░░░░░█████╗░██████╗░░██████╗░░░░░
+░░░░░░░░█████░░░░██╔══██╗██╔══██╗██╔════╝░░░░░
+░░░░░░█████████░░██║░░██║██████╔╝██║░░██╗░░░░░
+░░░░░███████████░██║░░██║██╔══██╗██║░░╚██╗░░░░
+░░░░░░█████████░░╚█████╔╝██║░░██║╚██████╔╝░░░░
+░░░░░░░███████░░░░╚════╝░╚═╝░░╚═╝░╚═════╝░░░░░
+░░░░░░░░░███░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░
+      <div class="spinner" id='spinner'></div>
+      <div class="emscripten" id="status">Downloading</div>
+    </pre>
+    <div id='controls'>
+      <div><input type="checkbox" id="resize">Resize canvas</div>
+      <div><input type="checkbox" id="pointerLock" checked>Lock/hide mouse pointer</div>
+      <div><input type="button" value="Fullscreen" onclick="Module.requestFullscreen(document.getElementById('pointerLock').checked, document.getElementById('resize').checked)"></div>
+    </div>
+    <div class="__header_menu">
+      <div class="__header-menu_status">
+        <div class="__header-menu_status_peer">peer:<span>stop</span></div>
+        <div class="__header-menu_status_db">db:<span>stop</span></div>
+        <div class="__header-menu_status_fs">fs:<span>stop</span></div>
+        <div class="__header-menu_status_worker">worker:<span>stop</span></div>
+      </div>
+    </div>
+  </header>
+  <div class="__peer-body">
+    <div class="__peer-body_menu_canvas">
+      <div class="emscripten">
+        <progress value="0" max="100" id="progress" hidden=1></progress>
+      </div>
+      <div class="emscripten_border">
+        <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" tabindex=-1></canvas>
+      </div>
+    </div>
+    <fieldset class="__peer-body-menu">
+      <legend>Menu</legend>
+      <fieldset class="__peer-body-menu_item_menu">
+        <legend>Peer</legend>
+        <venus-tabs background>
+          <a slot="title" selected >Control</a>
+          <a slot="title">Info</a>
+          <a slot="title">Logs</a>
+          <section>
+            <span class="__peer_info_state"></span>
+            <div class="__peer-body-menu-item_wrapper">
+              <label class="__peer-body-menu-item" for="__peer_state_init">peer init</label>
+              <input type="button" id="__peer_state_init" name="init" style="display: none">
+
+              <label class="__peer-body-menu-item __peer_state_initiator" for="__peer_state_initiator">Initiator</label>
+              <input type="checkbox" id="__peer_state_initiator" name="reset" style="display: none">
+
+              <label class="__peer-body-menu-item" for="__peer_message_send">Message</label>
+              <input type="button" id="__peer_message_send" name="message" style="display: none">
+
+              <label class="__peer-body-menu-item" for="__peer_state_chain">Chain</label>
+              <input type="checkbox" id="__peer_state_chain" name="reset" style="display: none">
+            </div>
+            <span class="__peer_info_status"></span>
+          </section>
+          <section>content panel 2</section>
+          <section>content panel 3</section>
+        </venus-tabs>
+      </fieldset>
+      <fieldset class="__peer-body-menu_item_menu">
+        <legend>DB</legend>
+        <venus-tabs background>
+          <a slot="title" selected >Control</a>
+          <a slot="title">Info</a>
+          <a slot="title">Logs</a>
+          <section>
+            <span class="__db_info_state"></span>
+            <div class="__peer-body-menu-item_wrapper">
+              <label class="__peer-body-menu-item" for="__ipfs_state_init">init ipfs</label>
+              <input type="button" id="__ipfs_state_init" name="reset" style="display: none">
+
+              <label class="__peer-body-menu-item" for="__orbit_state_init">init db</label>
+              <input type="button" id="__orbit_state_init" name="reset" style="display: none">
+
+              <label class="__peer-body-menu-item" for="__orbit_state_open">open db</label>
+              <input type="button" id="__orbit_state_open" name="reset" style="display: none">
+
+              <label class="__peer-body-menu-item" for="__pin_state_init">init pin</label>
+              <input type="button" id="__pin_state_init" name="reset" style="display: none">
+            </div>
+            <span class="__db_info_status"></span>
+          </section>
+          <section>content panel 2</section>
+          <section>content panel 3</section>
+        </venus-tabs>
+      </fieldset>
+      <fieldset class="__peer-body-menu_item_menu">
+        <legend>FS</legend>
+        <venus-tabs background>
+          <a slot="title" selected >Control</a>
+          <a slot="title">Info</a>
+          <a slot="title">Logs</a>
+          <section>
+            <span class="__fs_info_state"></span>
+            <div class="__peer-body-menu-item_wrapper">
+              <label class="__peer-body-menu-item" for="__fs_state_init">init fs</label>
+              <input type="button" id="__fs_state_init" name="reset" style="display: none">
+            </div>
+            <span class="__fs_info_status"></span>
+          </section>
+          <section>content panel 2</section>
+          <section>content panel 3</section>
+        </venus-tabs>
+      </fieldset>
+      <fieldset class="__peer-body-menu_item_menu">
+        <legend>Worker</legend>
+        <venus-tabs background>
+          <a slot="title" selected >Control</a>
+          <a slot="title">Info</a>
+          <a slot="title">Logs</a>
+          <section>
+            <span class="__worker_info_state"></span>
+            <div class="__peer-body-menu-item_wrapper">
+              <label class="__peer-body-menu-item" for="__worker_state_init">init worker</label>
+              <input type="button" id="__worker_state_init" name="reset" style="display: none">
+            </div>
+            <span class="__worker_info_status"></span>
+          </section>
+          <section>content panel 2</section>
+          <section>content panel 3</section>
+        </venus-tabs>
+      </fieldset>
+      <fieldset class="__peer-body-menu_item_menu">
+        <legend>DEX</legend>
+        <venus-tabs background>
+          <a slot="title" selected >Control</a>
+          <a slot="title">Info</a>
+          <a slot="title">Logs</a>
+          <section>
+            <span class="__dex_info_state"></span>
+            <div class="__peer-body-menu-item_wrapper">
+              <label class="__peer-body-menu-item" for="__peer-body-menu-item_dex_reset">Reset<input type="button" id="__peer-body-menu-item_dex_reset" name="reset" style="display: none"></label>
+              <label class="__peer-body-menu-item" for="__peer-body-menu-item_dex_create">Create<input type="button" id="__peer-body-menu-item_dex_create" name="reset" style="display: none"></label>
+              <label class="__peer-body-menu-item" for="__peer-body-menu-item_dex_delete">Delete<input type="button" id="__peer-body-menu-item_dex_delete" name="reset" style="display: none"></label>
+              <label class="__peer-body-menu-item" for="__peer-body-menu-item_dex_update">Update<input type="button" id="__peer-body-menu-item_dex_update" name="reset" style="display: none"></label>
+              <label class="__peer-body-menu-item" for="__peer-body-menu-item_dex_read">Read<input type="button" id="__peer-body-menu-item_dex_read" name="reset" style="display: none"></label>
+            </div>
+          </section>
+          <section>content panel 2</section>
+          <section>content panel 3</section>
+        </venus-tabs>
+      </fieldset>
+      <fieldset class="__peer-body-menu_item_menu">
+        <legend>Contract</legend>
+        <venus-tabs background>
+          <a slot="title" selected >Control</a>
+          <a slot="title">Info</a>
+          <a slot="title">Logs</a>
+          <section>
+            <span class="__peer-body-menu-item_status"></span>
+            <div class="__peer-body-menu-item_wrapper">
+              <label class="__peer-body-menu-item" for="__peer-body-menu-item_contract_reset">Reset<input type="button" id="__peer-body-menu-item_contract_reset" name="reset" style="display: none"></label>
+              <label class="__peer-body-menu-item" for="__peer-body-menu-item_contract_create">Create<input type="button" id="__peer-body-menu-item_contract_create" name="reset" style="display: none"></label>
+              <label class="__peer-body-menu-item" for="__peer-body-menu-item_contract_delete">Delete<input type="button" id="__peer-body-menu-item_contract_delete" name="reset" style="display: none"></label>
+              <label class="__peer-body-menu-item" for="__peer-body-menu-item_contract_update">Update<input type="button" id="__peer-body-menu-item_contract_update" name="reset" style="display: none"></label>
+              <label class="__peer-body-menu-item" for="__peer-body-menu-item_contract_read">Read<input type="button" id="__peer-body-menu-item_contract_read" name="reset" style="display: none"></label>
+            </div>
+          </section>
+          <section>content panel 2</section>
+          <section>content panel 3</section>
+        </venus-tabs>
+      </fieldset>
+      <fieldset class="__peer-body-menu_item_menu">
+        <legend>OCW</legend>
+        <venus-tabs background>
+          <a slot="title" selected >Control</a>
+          <a slot="title">Info</a>
+          <a slot="title">Logs</a>
+          <section>
+            <span class="__peer-body-menu-item_status"></span>
+            <div class="__peer-body-menu-item_wrapper">
+              <label class="__peer-body-menu-item" for="__peer-body-menu-item_ocw_reset">Reset<input type="button" id="__peer-body-menu-item_ocw_reset" name="reset" style="display: none"></label>
+              <label class="__peer-body-menu-item" for="__peer-body-menu-item_ocw_create">Create<input type="button" id="__peer-body-menu-item_ocw_create" name="reset" style="display: none"></label>
+              <label class="__peer-body-menu-item" for="__peer-body-menu-item_ocw_delete">Delete<input type="button" id="__peer-body-menu-item_ocw_delete" name="reset" style="display: none"></label>
+              <label class="__peer-body-menu-item" for="__peer-body-menu-item_ocw_update">Update<input type="button" id="__peer-body-menu-item_ocw_update" name="reset" style="display: none"></label>
+              <label class="__peer-body-menu-item" for="__peer-body-menu-item_ocw_read">Read<input type="button" id="__peer-body-menu-item_ocw_read" name="reset" style="display: none"></label>
+            </div>
+          </section>
+          <section>content panel 2</section>
+          <section>content panel 3</section>
+        </venus-tabs>
+      </fieldset>
+      <fieldset class="__peer-body-menu_item_menu">
+        <legend>Artificial intelligence</legend>
+        <venus-tabs background>
+          <a slot="title" selected >Control</a>
+          <a slot="title">Info</a>
+          <a slot="title">Logs</a>
+          <section>
+            <span class="__peer-body-menu-item_status"></span>
+            <div class="__peer-body-menu-item_wrapper">
+              <label class="__peer-body-menu-item" for="__peer-body-menu-item_ai_reset">Reset<input type="button" id="__peer-body-menu-item_ai_reset" name="reset" style="display: none"></label>
+              <label class="__peer-body-menu-item" for="__peer-body-menu-item_ai_create">Create<input type="button" id="__peer-body-menu-item_ai_create" name="reset" style="display: none"></label>
+              <label class="__peer-body-menu-item" for="__peer-body-menu-item_ai_delete">Delete<input type="button" id="__peer-body-menu-item_ai_delete" name="reset" style="display: none"></label>
+              <label class="__peer-body-menu-item" for="__peer-body-menu-item_ai_update">Update<input type="button" id="__peer-body-menu-item_ai_update" name="reset" style="display: none"></label>
+              <label class="__peer-body-menu-item" for="__peer-body-menu-item_ai_read">Read<input type="button" id="__peer-body-menu-item_ai_read" name="reset" style="display: none"></label>
+            </div>
+          </section>
+          <section>content panel 2</section>
+          <section>content panel 3</section>
+        </venus-tabs>
+      </fieldset>
+    </fieldset>
+    <textarea id="output" rows="8"></textarea>
+  </div>
+</div>
+<style>@import "./index.css";</style>
+<script type="module" src="./page-external.mjs"></script>
+<script type="module">
+  import SimplePeer from '@orbit/simple-peer'
+  import loaderFS from './fs/main.mjs'
+  import wasm from './fs/wasmBinary.mjs'
+  import IPFS from 'ipfs'
+  import OrbitDB from './es5/OrbitDB.js'
+  import isEmpty from '@orbit/isEmpty'
+  import PeerId from 'peer-id'
+  import ipns from 'ipns'
+  import task from './task.js'
+  import bem from './bem.js'
+  import { base58btc } from 'multiformats/bases/base58'
+  import uint8ArrayFromString from 'uint8arrays/from-string'
+  import uint8ArrayConcat from 'uint8arrays/concat'
+  import pinataSDK from "@pinata/sdk";
+  import VenusTabs from './tabs/index.mjs'
+  import parser from './bemParser.mjs'
+  import api_fs from './fs.mjs'
+  import api_ipfs from './ipfs.mjs'
+  import api_db from './db.mjs'
+  VenusTabs()
+  document.addEventListener("DOMContentLoaded",async () => {
+    try {
+      let itemID = document.body.querySelectorAll("[id]")
+      let itemCLASS = document.body.querySelectorAll("[class]")
+      let itemSLOT = document.body.querySelectorAll("[slot]")
+      let API = {}
+      API['id'] = {}
+      API['class'] = {}
+      API['slot'] = {}
+      console.assert(false, itemCLASS)
+      API = await parser(API, itemID, { type: 'id' })
+      API = await parser(API, itemCLASS, { type: 'class' })
+      API = await parser(API, itemSLOT, { type: 'slot' })
+
+      let path = "http://localhost:4434"
+      // let path = "https://web3-star.herokuapp.com"
+      // let path = "https://web3.news"
+      let sys = {
+        rout: {
+          page: {
+            '/': '/'
+          },
+          db: {
+            '/orbitdb': '',
+            '/orbitdb/set/:external': '',
+            '/orbitdb/get/:external': '',
+            '/orbitdb/delete': '',
+          }
+        },
+        events: {
+          'ipfs.state.init': {
+            key: API.id.ipfs.state.init[0],
+          },
+          'peer.state.initiator': {
+            key: API.id.peer.state.initiator[0],
+          },
+          'peer.state.init': {
+            key: API.id.peer.state.init[0],
+          },
+          "orbit.state.init": {
+            key: API.id.orbit.state.init[0],
+          },
+          "orbit.state.open": {
+            key: API.id.orbit.state.open[0],
+          },
+          "pin.state.init": {
+            key: API.id.pin.state.init[0],
+          },
+          "fs.state.init": {
+            key: API.id.fs.state.init[0],
+          },
+        }
+      }
+
+      console.log('=== SYS API ===', {
+        SYS: sys,
+        API: API
+      })
+
+      function initWorker() {
+        let worker = new Worker(new URL('./worker.mjs', import.meta.url), { type: "module" })
+
+        worker.onmessage = msg => {
+          let status = document.querySelector('.__peer-header-info_status_worker span')
+          status.innerHTML = 'worker start 🖤'
+          console.log("[Main thread] Got message back:", msg.data);
+        }
+
+        // let blob = new Blob(['blob data']);
+        // worker.postMessage(blob);
+        // document
+        //   .getElementById('upload')
+        //   .addEventListener('change', function(e){
+        //     worker.postMessage(this.files)
+        //   });
+        console.log('~~~~ worker ~~~~', worker)
+      }
+
+      let Peer = new Proxy({
+        peer: await createPeerID(),
+        initiator: true,
+        id: "QmcrQZ6RJdpYuGvZqD5QEHAv6qX4BrQLJLQPQUrTrzdcgm",
+        recipient: "Qma3GsJmB47xYuyahPZPSadh1avvxfyYQwk8R3UnFrQ6aP",
+        emoji: {
+          moon: [
+            ['💥','⭐','🌟','◼️'],
+            ['🌕','🌔','🌓','🌒'],
+            ['🌑','🌘','🌗','🌖'],
+          ],
+          hearts: [
+            ['💜','💛','💚','💙','🖤','💔'],
+            ['❤','♥','❣','😻','👩‍❤️‍👩','👨‍❤️‍👨'],
+            ['💗','💖','💕','💑','💓','💞','💟'],
+          ]
+        },
+        role: {
+          initiator:[],
+          dialer:[]
+        },
+        external: {
+          db: {},
+          interval:  Math.floor((Math.random() * 300) + (Math.random() * 2000)),
+          updateInterval: 0,
+          count: 0,
+          dbType: {},
+          dbAddress: {},
+          core: {}
+        },
+        location: {
+          signal: path,
+          message: {
+            initiator: "initiator",
+            dialer: "dialer"
+          },
+          terminate: {
+            initiator: "terminate",
+            dialer: "terminate"
+          }
+        },
+        fs: {
+          this: {},
+          api: {}
+        },
+        ipfs: {
+          this: {},
+          api: {},
+          config: {
+            key: {
+              "id": "QmcrQZ6RJdpYuGvZqD5QEHAv6qX4BrQLJLQPQUrTrzdcgm",
+              "privKey": "CAASqAkwggSkAgEAAoIBAQDLZZcGcbe4urMBVlcHgN0fpBymY+xcr14ewvamG70QZODJ1h9sljlExZ7byLiqRB3SjGbfpZ1FweznwNxWtWpjHkQjTVXeoM4EEgDSNO/Cg7KNlU0EJvgPJXeEPycAZX9qASbVJ6EECQ40VR/7+SuSqsdL1hrmG1phpIju+D64gLyWpw9WEALfzMpH5I/KvdYDW3N4g6zOD2mZNp5y1gHeXINHWzMF596O72/6cxwyiXV1eJ000k1NVnUyrPjXtqWdVLRk5IU1LFpoQoXZU5X1hKj1a2qt/lZfH5eOrF/ramHcwhrYYw1txf8JHXWO/bbNnyemTHAvutZpTNrsWATfAgMBAAECggEAQj0obPnVyjxLFZFnsFLgMHDCv9Fk5V5bOYtmxfvcm50us6ye+T8HEYWGUa9RrGmYiLweuJD34gLgwyzE1RwptHPj3tdNsr4NubefOtXwixlWqdNIjKSgPlaGULQ8YF2tm/kaC2rnfifwz0w1qVqhPReO5fypL+0ShyANVD3WN0Fo2ugzrniCXHUpR2sHXSg6K+2+qWdveyjNWog34b7CgpV73Ln96BWae6ElU8PR5AWdMnRaA9ucA+/HWWJIWB3Fb4+6uwlxhu2L50Ckq1gwYZCtGw63q5L4CglmXMfIKnQAuEzazq9T4YxEkp+XDnVZAOgnQGUBYpetlgMmkkh9qQKBgQDvsEs0ThzFLgnhtC2Jy//ZOrOvIAKAZZf/mS08AqWH3L0/Rjm8ZYbLsRcoWU78sl8UFFwAQhMRDBP9G+RPojWVahBL/B7emdKKnFR1NfwKjFdDVaoX5uNvZEKSl9UubbC4WZJ65u/cd5jEnj+w3ir9G8n+P1gp/0yBz02nZXFgSwKBgQDZPQr4HBxZL7Kx7D49ormIlB7CCn2i7mT11Cppn5ifUTrp7DbFJ2t9e8UNk6tgvbENgCKXvXWsmflSo9gmMxeEOD40AgAkO8Pn2R4OYhrwd89dECiKM34HrVNBzGoB5+YsAno6zGvOzLKbNwMG++2iuNXqXTk4uV9GcI8OnU5ZPQKBgCZUGrKSiyc85XeiSGXwqUkjifhHNh8yH8xPwlwGUFIZimnD4RevZI7OEtXw8iCWpX2gg9XGuyXOuKORAkF5vvfVriV4e7c9Ad4Igbj8mQFWz92EpV6NHXGCpuKqRPzXrZrNOA9PPqwSs+s9IxI1dMpk1zhBCOguWx2m+NP79NVhAoGBAI6WSoTfrpu7ewbdkVzTWgQTdLzYNe6jmxDf2ZbKclrf7lNr/+cYIK2Ud5qZunsdBwFdgVcnu/02czeS42TvVBgs8mcgiQc/Uy7yi4/VROlhOnJTEMjlU2umkGc3zLzDgYiRd7jwRDLQmMrYKNyEr02HFKFn3w8kXSzW5I8rISnhAoGBANhchHVtJd3VMYvxNcQb909FiwTnT9kl9pkjhwivx+f8/K8pDfYCjYSBYCfPTM5Pskv5dXzOdnNuCj6Y2H/9m2SsObukBwF0z5Qijgu1DsxvADVIKZ4rzrGb4uSEmM6200qjJ/9U98fVM7rvOraakrhcf9gRwuspguJQnSO9cLj6",
+              "pubKey": "CAASpgIwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDLZZcGcbe4urMBVlcHgN0fpBymY+xcr14ewvamG70QZODJ1h9sljlExZ7byLiqRB3SjGbfpZ1FweznwNxWtWpjHkQjTVXeoM4EEgDSNO/Cg7KNlU0EJvgPJXeEPycAZX9qASbVJ6EECQ40VR/7+SuSqsdL1hrmG1phpIju+D64gLyWpw9WEALfzMpH5I/KvdYDW3N4g6zOD2mZNp5y1gHeXINHWzMF596O72/6cxwyiXV1eJ000k1NVnUyrPjXtqWdVLRk5IU1LFpoQoXZU5X1hKj1a2qt/lZfH5eOrF/ramHcwhrYYw1txf8JHXWO/bbNnyemTHAvutZpTNrsWATfAgMBAAE="
+            }
+          }
+        },
+        db: {
+          this: {},
+          api: {}
+        },
+        pinata: {
+          this: {},
+          api: {}
+        },
+        isFS: false,
+        isIPFS: false,
+        isDB: false,
+        isPinata: false,
+        isOpenDB: false,
+        isCreate: false,
+        isEvents: false,
+        isConsole: false,
+        isWorker: false,
+        isTerminate: false,
+        isPeer: false,
+        isOffer: false,
+        isAnswer: false,
+        isReconnect: false,
+        isClose: false,
+        core: {},
+        signal: {},
+        message: {
+          offer: {},
+          answer: {}
+        }
+      }, {
+        get: function(obj, prop) {
+          switch (prop) {
+            default:
+              console.log('proxy get', prop)
+              break
+          }
+          return obj[prop];
+        },
+        set: function(obj, prop, value) {
+          switch (prop) {
+            case "isTerminate":
+              (value)
+                ? terminate()
+                : stdout('isTerminate', 'terminate true')
+              break
+            case "isEvents":
+              (value)
+                ? peer()
+                : stdout('peer', 'create peer')
+              break
+            case "isOffer":
+              (value)
+                ? requestAnswerMessage()
+                : stdout('peer', 'offer send')
+              break
+            case "isAnswer":
+              (value)
+                ? requestConnectMessage()
+                : stdout('peer', 'answer send')
+              break
+            case "isClose":
+              (value)
+                ? eventsClose()
+                : stdout('peer', 'events close')
+              break
+            case "isReconnect":
+              (value)
+                ? signalServer()
+                : stdout('peer', 'reconnect true')
+              break
+            case "isPinata":
+              (value)
+                ? (
+                  initPinata().then((obj) => {
+                    if(!obj.status) {
+                      Peer.isPinata = false
+                    } else {
+                      stdout('db', "error load FS", {console:true, message: obj})
+                    }
+                  })
+                )
+                : (
+                  stdout('db', "connect pinata",{console: true}),
+                  next(prop, value)
+                )
+              break
+            case "isFS":
+              (value)
+                ? (
+                  initFS().then((obj)=>{
+                    if(!obj.status) {
+                      Peer.isFS = false
+                    } else {
+                      stdout('fs',"error load FS",{console:true, message: obj})
+                    }
+                  })
+                )
+                : (
+                  stdout('fs',"connect FS"),
+                  next(prop, value)
+                )
+              break
+            case "isIPFS":
+              (value)
+                ? (API.class.db.info.status[0].textContent = "ipfs init start ...",
+                    initIPFS().then(obj => {
+                      if(!obj.status) {
+                        Peer.isIPFS = obj.status
+                      } else {
+                        stdout('ipfs', 'error ipfs', {console:true, message: obj.message })
+                      }
+                    })
+                )
+                : (
+                    stdout('ipfs',"ipfs init"),
+                    next(prop, value)
+                )
+              break
+            case "isDB":
+              (value)
+                ? (
+                  initOrbitDb(Peer.ipfs.this).then((obj) => {
+                    if(!obj.status) {
+                      Peer.isDB = obj.status
+                    } else {
+                      stdout('db', 'orbitdb is error')
+                    }
+                  })
+                )
+                : (
+                  stdout('db', "orbitdb init"),
+                  next(prop, value)
+                )
+              break
+            case "isCreate":
+              (value)
+                ? (
+                  createDatabase().then((obj) => {
+                    if(!obj.status) {
+                      Peer.isCreate = obj.status
+                    } else {
+                      stdout('db', 'error is create', {console: true})
+                    }
+                  })
+                )
+                : (
+                  stdout('db', 'offer send'),
+                  next(prop, value)
+                )
+              break
+            case "isOpenDB":
+              (value)
+                ? (
+                  openDatabase('/orbitdb/zdpuAsNQ2TorfhoXPYmaAKQj1n36kHSTyRs6cw7AfLyZ2LynC/test')
+                    .then((obj) => {
+                      if(!obj.status) {
+                        Peer.isOpenDB = obj.status
+                      } else {
+                        stdout('error', "error to connect db", {console: true, message: obj.message})
+                      }
+                    })
+                )
+                : (
+                  stdout('db', "connect db", {console: true})
+                )
+              break
+            case"signal":
+              stdout('peer', "signal server connect")
+              break
+            case "isPeer":
+              (value)
+                ? (
+                  initPeer().then(obj => {
+                    (!obj.status)
+                      ? (
+                        stdout('peer', 'init peer true'),
+                        Peer.isPeer = obj.status
+                      )
+                      : (
+                        stdout('peer', `error: ${obj.message}`)
+                      )
+                  })
+                )
+                : (
+                  stdout('peer', "connect peer start", {console: true, }),
+                  next(prop, value)
+                )
+              break
+            default:
+              console.log('неисветсное свойство', prop)
+              break
+          }
+          obj[prop] = value;
+          return true
+        }
+      });
+
+      function stdout( action = '', message = '') {
+        switch (action) {
+          case 'db':
+            API.class.db.info.status[0].textContent = message
+            break
+          case 'fs':
+            API.class.fs.info.status[0].textContent = message
+            break
+          case 'pinata':
+            API.class.fs.info.status[0].textContent = message
+            break
+          case 'ipfs':
+            API.class.fs.info.status[0].textContent = message
+            break
+          case 'peer':
+            API.class.peer.info.status[0].textContent = message
+            break
+          case 'worker':
+            API.class.worker.info.status[0].textContent = message
+            break
+          default:
+            console.log('неизвестный action', {
+              action: action,
+              message: message
+            })
+            break
+        }
+      }
+
+      for(let item in sys.events) {
+        sys.events[item].key.type = 'button'
+        sys.events[item].key.addEventListener('click', (events) => {
+          switch (item) {
+            case"ipfs.state.init":
+              Peer.isIPFS = true
+              sys.events[item].key.disabled = 'true'
+              break
+            case"orbit.state.init":
+              Peer.isDB = true
+              sys.events[item].key.disabled = 'true'
+              break
+            case"fs.state.init":
+              Peer.isFS = true
+              sys.events[item].key.disabled = 'true'
+              break
+            case"pin.state.init":
+              Peer.isPinata = true
+              sys.events[item].key.disabled = 'true'
+              break
+            case"peer.state.init":
+              Peer.isPeer = true
+              sys.events[item].key.disabled = 'true'
+              break
+            case"peer.state.initiator":
+              API.id.peer.state.initiator[0].checked = !API.id.peer.state.initiator[0].checked;
+              (API.id.peer.state.initiator[0].checked)
+                ? (
+                  API.class.peer.state.initiator[0].style.boxShadow = 'rgb(32 162 17 / 98%) 0px 0px 1vw 0px inset',
+                  API.class.peer.state.initiator[0].innerHTML = 'Dialer'
+                )
+                : (
+                  API.class.peer.state.initiator[0].style.boxShadow = 'inset 0 0 1vw 0 rgb(244 118 156 / 98%)',
+                  API.class.peer.state.initiator[0].innerHTML = 'Initiator'
+                )
+              break
+            default:
+              console.log('необработанные события', item)
+              break
+          }
+        })
+      }
+
+      function initDevTool() {
+        return new Promise(async (resolve, reject) => {
+            try {
+              (function () { var script = document.createElement('script'); script.src="//cdn.jsdelivr.net/npm/eruda"; document.body.appendChild(script); script.onload = function () { eruda.init() } })();
+            } catch (e) {
+
+            }
+        })
+      }
+
+      function emoji(prop) {
+        switch (prop) {
+          case 'init':
+            (Peer.initiator)
+              ? API.class.peer.info.state[0].textContent = "🌎"
+              : API.class.peer.info.state[0].textContent = "🌞"
+            break
+          case 'await':
+            (Peer.initiator)
+              ? API.class.peer.info.state[0].textContent = "🌎 🌓"
+              : API.class.peer.info.state[0].textContent = "🌞 🌗"
+            break
+          case 'connect':
+            (Peer.initiator)
+              ? API.class.peer.info.state[0].textContent = "🌎 🌓 🌞"
+              : API.class.peer.info.state[0].textContent = "🌞 🌗 🌎"
+            break
+          case 'peer save connect':
+            (Peer.initiator)
+              ? API.class.peer.info.state[0].textContent = "🌎"
+              : API.class.peer.info.state[0].textContent = "🌞"
+            break
+          case 'incoming message offer':
+
+            break
+          case 'incoming message answer':
+
+            break
+          default:
+            console.log('неизвестное emoji', {
+              prop: prop
+            })
+            break
+        }
+      }
+
+      function openORcreate(props, value) {
+        switch (props) {
+          case"isDB":
+
+            console.log('~~~~ openORcreate ~~~~~~~', Peer)
+            // Peer.isOpenDB = true,
+            // Peer.isCreate = true
+            // : (console.log('is Create'))
+
+            break
+          default:
+            console.log("Неопределено поведение openORcreate", props)
+            break
+        }
+      }
+
+      function next(prop, value) {
+        return new Promise(async (resolve, reject) => {
+          switch (prop) {
+            case"isDB":
+              (!value)
+                ? (
+                  console.log('Orbit create: set open db'),
+                    await openORcreate(prop, value)
+                )
+                : (
+                  console.warn('положительное значение', {
+                    prop: prop,
+                    value: value
+                  })
+                )
+              break
+            case"isReconnect":
+              (!value)
+                ? (
+                    console.log('reconnect start'),
+                    Peer.isReconnect = true
+                )
+                : (
+                  console.warn('положительное значение', {
+                    prop: prop,
+                    value: value
+                  })
+                )
+              break
+            case"isIPFS":
+              (!value)
+                ? (
+                  console.log('следующее состояние за инициализацией ipfs', prop)
+                )
+                : (
+                  console.warn('положительное значение', {
+                    prop: prop,
+                    value: value
+                  })
+                )
+              break
+            case"peer save connect":
+              (!value)
+                ? (
+                  console.log('следующее состояние за инициализацией peer - а', prop)
+                )
+                : (
+                  console.warn('положительное значение', {
+                    prop: prop,
+                    value: value
+                  })
+                )
+              break
+            case"Peer.message.offer-false":
+              (!value)
+                ? (
+                  console.log('следующее состояние за инициализацией', prop)
+                )
+                : (
+                  console.warn('положительное значение', {
+                    prop: prop,
+                    value: value
+                  })
+                )
+              break
+            case"post: incoming message offer-offer":
+              (!value)
+                ? (
+                  console.log('следующее состояние за инициализацией', prop)
+                )
+                : (
+                  console.warn('положительное значение', {
+                    prop: prop,
+                    value: value
+                  })
+                )
+              break
+            case"Peer.message.offer-true":
+              (!value)
+                ? (
+                  console.log('следующее состояние за инициализацией', prop)
+                )
+                : (
+                  console.warn('положительное значение', {
+                    prop: prop,
+                    value: value
+                  })
+                )
+              break
+            case"post: incoming message offer-events":
+              (!value)
+                ? (
+                  console.log('следующее состояние за инициализацией', prop)
+                )
+                : (
+                  console.warn('положительное значение', {
+                    prop: prop,
+                    value: value
+                  })
+                )
+              break
+            case"post: incoming message answer":
+              (!value)
+                ? (
+                  console.log('следующее состояние за инициализацией', prop)
+                )
+                : (
+                  console.warn('положительное значение', {
+                    prop: prop,
+                    value: value
+                  })
+                )
+              break
+            case"isFS":
+              (!value)
+                ? (
+                  console.log('следующее состояние за инициализацией', prop)
+                )
+                : (
+                  console.warn('положительное значение', {
+                    prop: prop,
+                    value: value
+                  })
+                )
+              break
+            case "isPinata":
+              (!value)
+                ? (
+                  console.log('следующее состояние за инициализацией', prop)
+                )
+                : (
+                  console.warn('положительное значение', {
+                    prop: prop,
+                    value: value
+                  })
+                )
+              break
+            case "isPeer":
+              (!value)
+                ? (
+                  console.log('следующее состояние за инициализацией', prop)
+                )
+                : (
+                  console.warn('положительное значение', {
+                    prop: prop,
+                    value: value
+                  })
+                )
+              break
+            default:
+              console.warn("Неопределено поведение",{
+                prop: prop,
+                value: value
+              })
+              break
+          }
+          resolve(true)
+        })
+      }
+
+      // function events() {
+      //   sys.control.db.forEach((item)=>{
+      //
+      //     console.log('@@@@@@@@@@@@@@@@@@', item)
+      //
+      //   })
+      // }
+
+      function initTask() {
+        task.get(true, 'await', '5', '','/orbitdb', async (object)=>{
+          let md = query(db)
+          object.callback({status:'ok',md:md})
+        })
+        task.get(true, 'await', '5', '','/orbitdb/set/:external', async (object)=>{
+          await update(db, object.substrate, object.property)
+          object.callback({status:'ok'})
+        })
+        task.get(true, 'await', '5', '','/orbitdb/get/:external', async (object)=>{
+          try{
+            let md = await query(db, object.property)
+            isEmpty(md)
+              ?object.callback({status:'false', md:false})
+              :object.callback({status:'ok', md:md})
+
+          }catch (e) {
+            object.callback({status:'false', md:e})
+          }
+        })
+        task.get(true, 'await', '5', '','/orbitdb/delete', async (object)=>{
+          try{
+            console.log('/orbitdb/delete')
+            const hash = await db.del(object.substrate.item)
+            object.callback({status:'ok', hash:hash})
+          }catch (e) {
+            object.callback({status:'false', error:e})
+          }
+        })
+      }
+
+      function initDB() {
+        return new Promise(async (resolve, reject) => {
+          events()
+        })
+      }
+
+      const openDatabase = (dbAddressField) => {
+        return new Promise(async (resolve, reject) => {
+          try {
+            const address = dbAddressField.value
+
+            await resetDatabase(Peer.external.db)
+
+            // openButton.disabled = true
+            // createButton.disabled = true
+
+            try {
+              statusElm.innerHTML = "Connecting to peers..."
+              Peer.external.db = await Peer.db.open(address, { sync: true })
+              await load(Peer.external.db, 'Loading database...')
+
+              if (!readonlyCheckbox.checked) {
+                Peer.external.core(Peer.external.db, Peer.external.interval)
+              } else {
+                sys.alias.fs.key.textContent = `Listening for updates to the database...`
+              }
+            } catch (e) {
+              console.error(e)
+            }
+            openButton.disabled = false
+            createButton.disabled = false
+            resolve({
+              _:"status ok",
+              status: false
+            })
+          } catch (e) {
+            resolve({
+              _:"status error",
+              message:e,
+              status: true
+            })
+          }
+        })
+      }
+
+      const update = async (db) => {
+        Peer.external.count ++
+
+        const time = new Date().toISOString()
+        const idx = Math.floor(Math.random() * Peer.emoji.moon.length)
+        const creature = Peer.emoji.moon[idx]
+
+        if (db.type === 'eventlog') {
+          const value = "GrEEtinGs from " + Peer.db.id + " " + creature + ": Hello #" + Peer.external.count + " (" + time + ")"
+          await db.add(value)
+        } else if (db.type === 'feed') {
+          const value = "GrEEtinGs from " + Peer.db.id + " " + creature + ": Hello #" + Peer.external.count + " (" + time + ")"
+          await db.add(value)
+        } else if (db.type === 'docstore') {
+          const value = { _id: 'peer1', avatar: creature, updated: time }
+          console.log('~~~~~~~~~', value)
+          await db.put(value)
+        } else if (db.type === 'keyvalue') {
+          await db.set('mykey', creature)
+        } else if (db.type === 'counter') {
+          await db.inc(1)
+        } else {
+          throw new Error("Unknown datatbase type: ", db.type)
+        }
+      }
+
+      const resetDatabase = async (db) => {
+        // writerText.innerHTML = ""
+        // outputElm.innerHTML = ""
+        // outputHeaderElm.innerHTML = ""
+
+        clearInterval(Peer.external.updateInterval)
+
+        if (!isEmpty(Peer.external.db)) {
+          await Peer.external.db.close()
+        }
+
+        Peer.external.interval = Math.floor((Math.random() * 300) + (Math.random() * 2000))
+      }
+
+      Peer.external.core = async (db, interval) => {
+        return new Promise(function (resolve, reject) {
+          // Set the status text
+          sys.alias.writerText.innerHTML = `Writing to database every ${Peer.external.interval} milliseconds...`
+
+          // Start update/insert loop
+          Peer.external.updateInterval = setInterval(async () => {
+            try {
+              await update(Peer.external.db)
+            } catch (e) {
+              console.error(e.toString())
+              sys.alias.writerText.innerHTML = '<span style="color: red">' + e.toString() + '</span>'
+              clearInterval(Peer.external.updateInterval)
+            }
+          }, Peer.external.interval)
+        })
+      }
+
+      const createDatabase = async () => {
+        await resetDatabase(Peer.external.db)
+        stdout('db', "create external db start")
+        // openButton.disabled = true
+        // createButton.disabled = true
+
+        try {
+          const name = "Olga"
+          const type = "docstore"
+          const publicAccess = true
+
+          Peer.external.db = await Peer.db.open(name, {
+            // If database doesn't exist, create it
+            create: true,
+            overwrite: true,
+            // Load only the local version of the database,
+            // don't load the latest from the network yet
+            localOnly: false,
+            type: type,
+            // If "Public" flag is set, allow anyone to write to the database,
+            // otherwise only the creator of the database can write
+            accessController: {
+              write: publicAccess ? ['*'] : [Peer.db.identity.id],
+            }
+          })
+
+          await load(Peer.external.db, 'Creating database...')
+          // await Peer.external.core(Peer.external.db, Peer.external.interval)
+        } catch (e) {
+          console.error(e)
+        }
+        // openButton.disabled = false
+        // createButton.disabled = false
+      }
+
+      const queryAndRender = async (db) => {
+        console.log('queryAndRender', db)
+      }
+
+      const load = async (db, statusText) => {
+        // Set the status text
+       // API.class.db.info.status[0].textContent = statusText
+        stdout('db',statusText)
+        // When the database is ready (ie. loaded), display results
+        db.events.on('ready', () => queryAndRender(db))
+        // When database gets replicated with a peer, display results
+        db.events.on('replicated', () => queryAndRender(db))
+        // When we update the database, display result
+        db.events.on('write', () => queryAndRender(db))
+
+        db.events.on('replicate.progress', () => queryAndRender(db))
+
+        // Hook up to the load progress event and render the progress
+        let maxTotal = 0, loaded = 0
+        db.events.on('load.progress', (address, hash, entry, progress, total) => {
+          loaded ++
+          maxTotal = Math.max.apply(null, [maxTotal, progress, 0])
+          total = Math.max.apply(null, [progress, maxTotal, total, entry.clock.time, 0])
+          stdout('db',`Loading database... ${maxTotal} / ${total}`)
+        })
+
+        db.events.on('ready', () => {
+          // Set the status text
+          setTimeout(() => {
+           stdout('db', 'Database is ready')
+           // API.class.db.info.status[0].textContent = 'Database is ready'
+          }, 1000)
+        })
+
+        // Load locally persisted database
+        await db.load()
+      }
+
+      async function initPinata() {
+        return new Promise(async (resolve, reject) => {
+          try {
+            stdout('db',"pinata init start")
+            const pinata = pinataSDK('604779a1617a8dbb791e', '842b2195a752048e6f5db7ba178c622b2eeb64c937c266f75d5fe636aafebcd8');
+
+            pinata.testAuthentication().then((result) => {
+              stdout('db',"pinata init", {console: true})
+              Peer.pinata = pinata
+              resolve({
+                status: false,
+                success: false
+              })
+            }).catch((err) => {
+              resolve({
+                status: true,
+                success: true
+              })
+              console.log(err);
+            });
+            pinata.userPinnedDataTotal().then((result) => {
+              //handle results here
+              console.log(result);
+            }).catch((err) => {
+              //handle error here
+              console.log(err);
+            });
+
+            pinata.pinList().then((result) => {
+              //handle results here
+              console.log(result);
+            }).catch((err) => {
+              //handle error here
+              console.log(err);
+            });
+          } catch (e) {
+            stdout('db',"pinata error init", {console: true, message: e} )
+            resolve({
+              status: true,
+              success: true,
+              message: {
+                text: "error from pinata init",
+                e: e
+              }
+            })
+          }
+        })
+      }
+
+      function createPeerID() {
+        return new Promise(async (resolve, reject) => {
+          let id = await PeerId.create({ bits: 1024, keyType: 'RSA' })
+          resolve(id.toJSON())
+        })
+      }
+
+      function CreateRecordPublic(privateKey = {}, value = '', sequenceNumber = 0,  lifetime = 0) {
+        return new Promise(async (resolve, reject) => {
+          const entryData = await ipns.create(Peer.ipns.public.privateKey, value, sequenceNumber, lifetime)
+        })
+      }
+
+      function getLocalKeyPublic() {
+        return new Promise(async (resolve, reject) => {
+          ipns.getLocalKey(Peer.ipns.public.id)
+          resolve(true)
+        })
+      }
+
+      function initIPFS() {
+        return new Promise(async (resolve, reject) => {
+          try {
+            let node = await IPFS.create({
+              repo: '/universe',
+              emptyRepo: true,
+              init: {
+                privateKey: Peer.ipfs.config.key,
+              },
+              start: true,
+              preload: {
+                enabled: true
+              },
+              EXPERIMENTAL: {
+                pubsub: true,
+              },
+              config: {
+                Addresses: {
+                  Swarm: [
+                    '/dns4/wrtc-star1.par.dwebops.pub/tcp/443/wss/p2p-webrtc-star/',
+                    '/dns4/wrtc-star2.sjc.dwebops.pub/tcp/443/wss/p2p-webrtc-star/',
+                    '/dns4/webrtc-star.discovery.libp2p.io/tcp/443/wss/p2p-webrtc-star/'
+                  ]
+                },
+              }
+            });
+
+            Peer.ipfs.this = node
+            Peer.ipfs.api = await api_ipfs(Peer)
+
+            resolve({
+              success: false,
+              status: false,
+              message: 'ipfs init'
+            })
+          } catch (e) {
+            console.log('ipfs error',e)
+            resolve({
+              message: e.message,
+              success: true,
+              status: true
+            })
+          }
+        })
+      }
+
+      let initOrbitDb = async (ipfs) => {
+        return new Promise(async (resolve, reject) => {
+          try {
+            let db = await OrbitDB.createInstance(Peer.ipfs.this,{
+              maxHistory: 64,
+              directory:'./moon'
+            });
+
+            Peer.db = db;
+
+            resolve({
+              status: false,
+              success: false
+            })
+          } catch (e) {
+            stdout('db','error in orbitDb',{console: true, message: e} )
+            console.log('error in db', e)
+            // orbitDB().then((data) =>{ console.log('@@@@@@@@@@@@@@@@', data)})
+          }
+        })
+      }
+
+      async function postData(url = '', data = {}) {
+        const response = await fetch(url, {
+          method: 'POST',
+          mode: 'cors',
+          cache: 'no-cache',
+          credentials: 'same-origin',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          redirect: 'follow',
+          referrerPolicy: 'no-referrer',
+          body: JSON.stringify(data)
+        });
+        return await response.json();
+      }
+
+      function peer() {
+        let peer = new SimplePeer({ initiator: Peer.initiator,  trickle: false });
+        Peer.core = peer
+        peer.on('error', (err) => {
+          let error = err
+          switch (error.message) {
+            case"Transport channel closed":
+              stdout('peer', 'Transport channel closed', {console: true, message: error.message})
+              next('isReconnect')
+              Peer.isReconnect = true
+              break
+            case"Connection failed.":
+              stdout('peer', 'Connection failed', {console: true, message: error.message})
+              next('isTerminate')
+              Peer.isTerminate = true
+              break
+            default:
+              console.log('неизвестная ошибка', error.message)
+             API.class.peer.info.status[0].textContent = error.message
+              break
+          }
+        })
+
+        peer.on('signal', async data => {
+          try {
+            let query = Peer.location
+            let qs = await postData((Peer.initiator)
+              ? `${query.signal}/${query.message.initiator}`
+              : `${query.signal}/${query.message.dialer}`, {
+              message: data,
+              id: Peer.id,
+              recipient: Peer.recipient
+            })
+           API.class.peer.info.status[0].textContent = qs.status
+          } catch (e) {
+            console.log('error from signal', e)
+          }
+        })
+
+        peer.on('connect', () => {
+          console.log('CONNECT')
+          emoji('connect')
+         API.class.peer.info.status[0].textContent = "connect"
+          Peer.isClose = true
+        })
+
+        peer.on('data', data => {
+          console.log('data', data)
+          emoji('message')
+         API.class.peer.info.status[0].textContent = `data from initiator: ${data}`
+        })
+
+        peer.on('close', data => {
+          console.log('CLOSE')
+          emoji('init')
+         API.class.peer.info.status[0].textContent = `peer close connection`
+        })
+
+        // document.querySelector('#incoming').addEventListener('click', ev => {
+        //   ev.preventDefault()
+        //   initiator.send('hello world dialer')
+        // })
+
+        isEmpty(Peer.message.offer)
+          ? (
+            next("Peer.message.offer-false", false),
+              Peer.isEvents = false
+          )
+          : (
+            next("Peer.message.offer-true", false),
+              Peer.isEvents = false,
+              Peer.isOffer = true
+          )
+      }
+
+      function requestAnswerMessage() {
+        Peer.core.signal(JSON.stringify(Peer.message.offer))
+        Peer.isOffer = false
+      }
+
+      function requestConnectMessage() {
+        Peer.core.signal(JSON.stringify(Peer.message.answer))
+        Peer.isAnswer = false
+      }
+
+      function eventsClose() {
+        Peer.signal.close()
+        Peer.isClose = false
+      }
+
+      async function signalServer() {
+        return new Promise( async (resolve, reject) => {
+        try {
+            let eventSource = new EventSource(`${Peer.location.signal}/${Peer.id}?recipient=${Peer.recipient}&initiator=${Peer.initiator}`);
+            eventSource.onmessage = function(event) {
+              try {
+                let res = JSON.parse(event.data)
+                switch (res.status)  {
+                  case "peer save connect":
+                    emoji('peer save connect'),
+                      next("peer save connect", false)
+                    Peer.isEvents = true
+                    break
+                  case "post: incoming message offer":
+                    (isEmpty(Peer.core))
+                      ? (
+                        emoji('incoming message offer'),
+                          Peer.message.offer = res.message,
+                          next("post: incoming message offer-events",false),
+                          Peer.isEvents = true
+                      )
+                      : (
+                        emoji('incoming message offer'),
+                          Peer.message.offer = res.message,
+                          next("post: incoming message offer-offer",false),
+                          Peer.isOffer = true
+                      )
+                    break
+                  case "post: incoming message answer":
+                    Peer.message.answer = res.message
+                    emoji('incoming message answer'),
+                      next("post: incoming message answer", false)
+                    Peer.isAnswer = true
+                    break
+                  default:
+                    break
+                }
+               API.class.peer.info.status[0].textContent = res.status
+              } catch (e) {
+                let error = e
+                console.log('error',error)
+              }
+            };
+            eventSource.onopen = function (event) {
+              let state = ''
+              switch (eventSource.readyState) {
+                case 0:
+                  state = "CONNECTING"
+                  break
+                case 1:
+                  state = "OPEN"
+                  break
+                case 2:
+                  state = "CLOSED"
+                  break
+                default:
+                  break
+              }
+              console.log('events',  state)
+            };
+            eventSource.onerror = function(e) {
+              // console.log('error', e)
+            };
+            Peer.signal = eventSource
+            resolve({
+              success: false,
+              status: false
+            })
+          } catch (e) {
+            resolve({
+              message: e.message,
+              success: true,
+              status: true
+            })
+          }
+        })
+      }
+
+      function initPeer() {
+        return new Promise( async (resolve, reject) => {
+          try {
+            resolve(await signalServer())
+          } catch (e) {
+            resolve({
+              message: e.message,
+              success: true,
+              status: true
+            })
+          }
+        })
+      }
+
+      function initFS() {
+        return new Promise( async (resolve, reject) => {
+          sys.alias.fs.key.textContent = "init FS start"
+          let idbfs = loaderFS({ wasmBinary: wasm })
+          idbfs.then(async (Module)=> {
+            Peer.fs.this = Module.FS
+            Peer.fs.this.mkdir('./fs');
+            Peer.fs.this.mount(Module.FS.filesystems.IDBFS, { test:"test" }, "./fs")
+            Peer.fs.api = await api_fs(Peer)
+            Peer.fs.api.fsLoad();
+            console.log('readdir: ', Peer.fs.this.readdir("./"))
+            console.log('cwd: ', Peer.fs.this.cwd())
+            sys.alias.fs.key.textContent = "FS connect"
+
+            console.log('sssssssssssa', Peer.ipfs.this.files)
+
+            resolve({
+              status: false,
+              success: false
+            })
+          })
+        })
+      }
+
+      async function terminate() {
+        await postData(`${Peer.location.signal}/${
+          (isEmpty(Peer.initiator))
+            ? Peer.location.terminate.initiator
+            : Peer.location.terminate.dialer}`,{
+          id: Peer.id,
+          recipient: Peer.recipient
+        })
+        await Peer.fs.api.fsSave()
+        emoji('terminate')
+
+        Peer.isTerminate = false
+      }
+      window.onbeforeunload = async function () {
+        await Peer.fs.api.fsSave()
+      };
+
+      function test() {
+
+      }
+    } catch (e) {
+      console.log('main error', {
+        error: e
+      })
+    }
+  });
+</script>
+</body>
+</html>

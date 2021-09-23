@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Listener</title>
+</head>
+<body>
+<header>
+  <h1 id="status">Starting Listener...</h1>
+</header>
+
+<main>
+  <pre id="output"></pre>
+</main>
+
+<script type="module">
+  import WStar from '@orbit/star'
+  import multiaddr from '@orbit/multiaddr'
+  import pipe from '@orbit/pipe'
+  import { collect } from '@orbit/streaming'
+  import Libp2p from 'libp2p'
+  import Websockets from 'libp2p-websockets'
+  import WebRTCStar from 'libp2p-webrtc-star'
+  import { NOISE } from 'libp2p-noise'
+  import Mplex from 'libp2p-mplex'
+  import Bootstrap from 'libp2p-bootstrap'
+  import defaultsDeep from '@nodeutils/defaults-deep'
+  import PeerId from 'peer-id'
+
+  let PeerListener = {
+    "id": "QmcrQZ6RJdpYuGvZqD5QEHAv6qX4BrQLJLQPQUrTrzdcgm",
+    "privKey": "CAASqAkwggSkAgEAAoIBAQDLZZcGcbe4urMBVlcHgN0fpBymY+xcr14ewvamG70QZODJ1h9sljlExZ7byLiqRB3SjGbfpZ1FweznwNxWtWpjHkQjTVXeoM4EEgDSNO/Cg7KNlU0EJvgPJXeEPycAZX9qASbVJ6EECQ40VR/7+SuSqsdL1hrmG1phpIju+D64gLyWpw9WEALfzMpH5I/KvdYDW3N4g6zOD2mZNp5y1gHeXINHWzMF596O72/6cxwyiXV1eJ000k1NVnUyrPjXtqWdVLRk5IU1LFpoQoXZU5X1hKj1a2qt/lZfH5eOrF/ramHcwhrYYw1txf8JHXWO/bbNnyemTHAvutZpTNrsWATfAgMBAAECggEAQj0obPnVyjxLFZFnsFLgMHDCv9Fk5V5bOYtmxfvcm50us6ye+T8HEYWGUa9RrGmYiLweuJD34gLgwyzE1RwptHPj3tdNsr4NubefOtXwixlWqdNIjKSgPlaGULQ8YF2tm/kaC2rnfifwz0w1qVqhPReO5fypL+0ShyANVD3WN0Fo2ugzrniCXHUpR2sHXSg6K+2+qWdveyjNWog34b7CgpV73Ln96BWae6ElU8PR5AWdMnRaA9ucA+/HWWJIWB3Fb4+6uwlxhu2L50Ckq1gwYZCtGw63q5L4CglmXMfIKnQAuEzazq9T4YxEkp+XDnVZAOgnQGUBYpetlgMmkkh9qQKBgQDvsEs0ThzFLgnhtC2Jy//ZOrOvIAKAZZf/mS08AqWH3L0/Rjm8ZYbLsRcoWU78sl8UFFwAQhMRDBP9G+RPojWVahBL/B7emdKKnFR1NfwKjFdDVaoX5uNvZEKSl9UubbC4WZJ65u/cd5jEnj+w3ir9G8n+P1gp/0yBz02nZXFgSwKBgQDZPQr4HBxZL7Kx7D49ormIlB7CCn2i7mT11Cppn5ifUTrp7DbFJ2t9e8UNk6tgvbENgCKXvXWsmflSo9gmMxeEOD40AgAkO8Pn2R4OYhrwd89dECiKM34HrVNBzGoB5+YsAno6zGvOzLKbNwMG++2iuNXqXTk4uV9GcI8OnU5ZPQKBgCZUGrKSiyc85XeiSGXwqUkjifhHNh8yH8xPwlwGUFIZimnD4RevZI7OEtXw8iCWpX2gg9XGuyXOuKORAkF5vvfVriV4e7c9Ad4Igbj8mQFWz92EpV6NHXGCpuKqRPzXrZrNOA9PPqwSs+s9IxI1dMpk1zhBCOguWx2m+NP79NVhAoGBAI6WSoTfrpu7ewbdkVzTWgQTdLzYNe6jmxDf2ZbKclrf7lNr/+cYIK2Ud5qZunsdBwFdgVcnu/02czeS42TvVBgs8mcgiQc/Uy7yi4/VROlhOnJTEMjlU2umkGc3zLzDgYiRd7jwRDLQmMrYKNyEr02HFKFn3w8kXSzW5I8rISnhAoGBANhchHVtJd3VMYvxNcQb909FiwTnT9kl9pkjhwivx+f8/K8pDfYCjYSBYCfPTM5Pskv5dXzOdnNuCj6Y2H/9m2SsObukBwF0z5Qijgu1DsxvADVIKZ4rzrGb4uSEmM6200qjJ/9U98fVM7rvOraakrhcf9gRwuspguJQnSO9cLj6",
+    "pubKey": "CAASpgIwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDLZZcGcbe4urMBVlcHgN0fpBymY+xcr14ewvamG70QZODJ1h9sljlExZ7byLiqRB3SjGbfpZ1FweznwNxWtWpjHkQjTVXeoM4EEgDSNO/Cg7KNlU0EJvgPJXeEPycAZX9qASbVJ6EECQ40VR/7+SuSqsdL1hrmG1phpIju+D64gLyWpw9WEALfzMpH5I/KvdYDW3N4g6zOD2mZNp5y1gHeXINHWzMF596O72/6cxwyiXV1eJ000k1NVnUyrPjXtqWdVLRk5IU1LFpoQoXZU5X1hKj1a2qt/lZfH5eOrF/ramHcwhrYYw1txf8JHXWO/bbNnyemTHAvutZpTNrsWATfAgMBAAE="
+  };
+  const upgrader = {
+    upgradeInbound: maConn => {
+
+      console.log('upgradeInbound', maConn)
+      return maConn
+    },
+    upgradeOutbound: maConn => {
+      console.log('upgradeOutbound', maConn)
+      return maConn
+    }
+  }
+  async function createLibp2p(_options) {
+    const defaults = {
+      addresses: {
+        // Add the signaling server address, along with our PeerId to our multiaddrs list
+        // libp2p will automatically attempt to dial to the signaling server so that it can
+        // receive inbound connections from other peers
+        listen: [
+          '/dns4/wrtc-star2.sjc.dwebops.pub/tcp/443/wss/p2p-webrtc-star'
+        ]
+      },
+      modules: {
+        transport: [Websockets, WebRTCStar],
+        connEncryption: [NOISE],
+        streamMuxer: [Mplex],
+        peerDiscovery: [Bootstrap]
+      },
+      config: {
+        peerDiscovery: {
+          // The `tag` property will be searched when creating the instance of your Peer Discovery service.
+          // The associated object, will be passed to the service when it is instantiated.
+          [Bootstrap.tag]: {
+            enabled: true,
+            list: [
+              '/dnsaddr/bootstrap.libp2p.io/p2p/QmNnooDu7bfjPFoTZYxMNLWUQJyrVwtbZg5gBMjTezGAJN',
+              '/dnsaddr/bootstrap.libp2p.io/p2p/QmbLHAnMoJPWSCR5Zhtx6BHJX9KiKNN6tpvbUcqanj75Nb',
+              '/dnsaddr/bootstrap.libp2p.io/p2p/QmZa1sAxajnQjVM8WjWXoMbmPd7NsWhfKsPkErzpm9wGkp',
+              '/dnsaddr/bootstrap.libp2p.io/p2p/QmQCU2EcMqAqQPR2i9bChDtGNJchTbq5TbXJJ16u19uLTa',
+            ]
+          }
+        }
+      }
+    }
+    return Libp2p.create(defaultsDeep(_options, defaults))
+  };
+
+  (async ()=>{
+
+    document.addEventListener('DOMContentLoaded', async () => {
+      // Create our libp2p node
+      const ws = new WStar({ upgrader })
+
+
+      const idListener = await PeerId.createFromJSON(PeerListener)
+
+      const libp2p = await createLibp2p({ peerId: idListener })
+      const addr = multiaddr.multiaddr('/dns4/wrtc-star2.sjc.dwebops.pub/tcp/443/wss/p2p-webrtc-star/p2p/Qma3GsJmB47xYuyahPZPSadh1avvxfyYQwk8R3UnFrQ6aP')
+      // UI elements
+      const status = document.getElementById('status')
+      const output = document.getElementById('output')
+
+      output.textContent = ''
+
+      function log (txt) {
+        console.info(txt)
+        output.textContent += `${txt.trim()}\n`
+      }
+
+      // Listen for new peers
+      libp2p.on('peer:discovery', (peerId) => {
+        if('Qma3GsJmB47xYuyahPZPSadh1avvxfyYQwk8R3UnFrQ6aP' === peerId.toB58String()) {
+          log(`Found peer ${peerId.toB58String()}`)
+        }
+      })
+
+      // Listen for new connections to peers
+      libp2p.connectionManager.on('peer:connect', (connection) => {
+        if('Qma3GsJmB47xYuyahPZPSadh1avvxfyYQwk8R3UnFrQ6aP' === connection.remotePeer.toB58String()) {
+          log(`Connected to ${connection.remotePeer.toB58String()}`)
+        }
+      })
+
+      // Listen for peers disconnecting
+      libp2p.connectionManager.on('peer:disconnect', (connection) => {
+        console.log("peer:disconnect", connection.remotePeer.toB58String())
+        if('Qma3GsJmB47xYuyahPZPSadh1avvxfyYQwk8R3UnFrQ6aP' === connection.remotePeer.toB58String()) {
+          log(`Disconnected from ${connection.remotePeer.toB58String()}`)
+        }
+
+      })
+
+      await libp2p.start()
+      status.innerText = 'Listener started!'
+      log(`Listener id is ${libp2p.peerId.toB58String()}`)
+
+
+      const listener = ws.createListener((socket) => {
+        console.log('new connection opened', socket)
+        pipe(
+          ['hello'],
+          socket
+        )
+      })
+      //
+      // await listener.listen(addr)
+      // const socket = await ws.dial(addr)
+      // const values = await pipe(
+      //   socket,
+      //   collect
+      // )
+      // await listener.close()
+    })
+  })()
+</script>
+</body>
+</html>
