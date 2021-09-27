@@ -20,7 +20,9 @@
     "server": "yarn --cwd backend start",
     "build": "yarn --cwd frontend/react build",
     "test:react": "yarn --cwd frontend/react build",
-    "go:admin": "export GOPATH=$(pwd) && go get github.com/zababurinsv/admin"
+    "initialization": "./scripts/service-initialization.sh",
+    "up": "./scripts/service-up.sh",
+    "git:push": "mr add && mr commit && mr git push"
   },
   "repository": {
     "type": "git",
@@ -40,17 +42,13 @@
     "not op_mini all"
   ],
   "maintainers": [],
-  "workspaces": [
-    "frontend",
-    "backend",
-    "packages/*"
-  ],
+  "workspaces": [ ],
   "devDependencies": {
     "@parcel/resolver-default": "^2.0.0-alpha.3",
-    "es-module-lexer": "^0.9.0",
     "parcel": "2.0.0-rc.0",
     "parcel-plugin-static-files-copy": "^2.6.0",
-    "stylelint": "^13.13.1"
+    "stylelint": "^13.13.1",
+    "es-module-lexer": "^0.9.0"
   },
   "optionalDependencies": {
     "bufferutil": "^4.0.3",
