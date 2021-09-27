@@ -22,7 +22,7 @@
     "test:react": "yarn --cwd frontend/react build",
     "initialization": "./scripts/service-initialization.sh",
     "up": "./scripts/service-up.sh",
-    "git:push": "mr add && mr commit && mr git push"
+    "git:push": "mr add && mr commit && mr push"
   },
   "repository": {
     "type": "git",
