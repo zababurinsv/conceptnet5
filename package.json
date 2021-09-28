@@ -42,20 +42,18 @@
     "not op_mini all"
   ],
   "maintainers": [],
-  "workspaces": [ ],
+  "workspaces": [
+    "src/**",
+    "packages/*"
+  ],
   "devDependencies": {
     "@parcel/resolver-default": "^2.0.0-alpha.3",
     "parcel": "2.0.0-rc.0",
     "parcel-plugin-static-files-copy": "^2.6.0",
     "stylelint": "^13.13.1",
-    "es-module-lexer": "^0.9.0"
-  },
-  "optionalDependencies": {
-    "bufferutil": "^4.0.3",
-    "utf-8-validate": "^5.0.5"
-  },
-  "dependencies": {
     "stylelint-config-prettier": "^8.0.2",
-    "stylelint-config-standard": "^22.0.0"
+    "stylelint-config-standard": "^22.0.0",
+    "es-module-lexer": "^0.9.0",
+    "@orbit/config": "^1.0.0"
   }
 }
