@@ -25,4 +25,6 @@ export GOPATH=$(pwd)
 #sleep ${delay}
 #go get github.com/zababurinsv/search
 #sleep ${delay}
-go get github.com/zababurinsv/auction
+#go get github.com/zababurinsv/auction
+#sleep ${delay}
+go get github.com/zababurinsv/chat
