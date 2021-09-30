@@ -31,70 +31,62 @@ export GOPATH=$(pwd)
 #sleep ${delay}
 #go get github.com/zababurinsv/contract-deals
 #sleep ${delay}
-go get github.com/zababurinsv/openbazaar-web
-sleep ${delay}
-go get github.com/zababurinsv/ob-proxy
-sleep ${delay}
-go get github.com/zababurinsv/Michurin
-sleep ${delay}
-go get github.com/zababurinsv/post
-sleep ${delay}
-go get github.com/zababurinsv/dashboard
-sleep ${delay}
-go get github.com/zababurinsv/monopoly-await
-sleep ${delay}
-go get github.com/zababurinsv/monopoly-player
-sleep ${delay}
-go get github.com/zababurinsv/monopoly
-sleep ${delay}
-go get github.com/zababurinsv/board
-sleep ${delay}
-go get github.com/zababurinsv/design
-sleep ${delay}
-go get github.com/zababurinsv/moderator
-sleep ${delay}
-go get github.com/zababurinsv/bank
-sleep ${delay}
-go get github.com/zababurinsv/dark-web-app
-sleep ${delay}
-go get github.com/zababurinsv/dark-offchain
-sleep ${delay}
-go get github.com/zababurinsv/server-feed-mjs
-sleep ${delay}
-go get github.com/zababurinsv/server-account-cjs
-sleep ${delay}
-go get github.com/zababurinsv/server-demon
-sleep ${delay}
-go get github.com/zababurinsv/server-webdav
-sleep ${delay}
-go get github.com/zababurinsv/server-demon
-sleep ${delay}
-go get github.com/zababurinsv/gaia
-sleep ${delay}
-go get github.com/zababurinsv/Russia
-sleep ${delay}
-go get github.com/zababurinsv/dictionary
-sleep ${delay}
-go get github.com/zababurinsv/sscore
-sleep ${delay}
-go get github.com/zababurinsv/marker-tracking
-sleep ${delay}
-go get github.com/zababurinsv/merkle-tree
-sleep ${delay}
-go get github.com/zababurinsv/stackexchange
-sleep ${delay}
-go get github.com/zababurinsv/telegram
-sleep ${delay}
-go get github.com/zababurinsv/interface
-sleep ${delay}
-go get github.com/zababurinsv/webdav
-sleep ${delay}
-go get github.com/zababurinsv/waves-faucet
-sleep ${delay}
-go get github.com/zababurinsv/pay-fiat
-sleep ${delay}
-go get github.com/zababurinsv/pay-crypto
-sleep ${delay}
-go get github.com/zababurinsv/ClearGDPR
-sleep ${delay}
-go get github.com/zababurinsv/algorithms_js
+#go get github.com/zababurinsv/openbazaar-web
+#sleep ${delay}
+#go get github.com/zababurinsv/ob-proxy
+#sleep ${delay}
+#go get github.com/zababurinsv/Michurin
+#sleep ${delay}
+#go get github.com/zababurinsv/post
+#sleep ${delay}
+#go get github.com/zababurinsv/dashboard
+#sleep ${delay}
+#go get github.com/zababurinsv/monopoly-await
+#sleep ${delay}
+#go get github.com/zababurinsv/monopoly-player
+#sleep ${delay}
+#go get github.com/zababurinsv/monopoly
+#sleep ${delay}
+#go get github.com/zababurinsv/board
+#sleep ${delay}
+#go get github.com/zababurinsv/design
+#sleep ${delay}
+#go get github.com/zababurinsv/moderator
+#sleep ${delay}
+#go get github.com/zababurinsv/bank
+#sleep ${delay}
+#go get github.com/zababurinsv/server-feed-mjs
+#sleep ${delay}
+#go get github.com/zababurinsv/server-account-cjs
+#sleep ${delay}
+#go get github.com/zababurinsv/server-demon
+#sleep ${delay}
+#go get github.com/zababurinsv/server-webdav
+#sleep ${delay}
+#go get github.com/zababurinsv/server-demon
+#sleep ${delay}
+#go get github.com/zababurinsv/Russia
+#sleep ${delay}
+#go get github.com/zababurinsv/dictionary
+#sleep ${delay}
+#go get github.com/zababurinsv/marker-tracking
+#sleep ${delay}
+#go get github.com/zababurinsv/merkle-tree
+#sleep ${delay}
+#go get github.com/zababurinsv/stackexchange
+#sleep ${delay}
+#go get github.com/zababurinsv/telegram
+#sleep ${delay}
+#go get github.com/zababurinsv/interface
+#sleep ${delay}
+#go get github.com/zababurinsv/webdav
+#sleep ${delay}
+#go get github.com/zababurinsv/waves-faucet
+#sleep ${delay}
+#go get github.com/zababurinsv/pay-fiat
+#sleep ${delay}
+#go get github.com/zababurinsv/pay-crypto
+#sleep ${delay}
+#go get github.com/zababurinsv/algorithms_js
+#sleep ${delay}
+go get github.com/zababurinsv/Visualizing-Deep-Learning

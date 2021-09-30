@@ -84,23 +84,8 @@ checkout = git clone 'https://github.com/zababurinsv/board' 'board'
 pull = git pull --rebase
 push = git add -A && git commit -m 'update' && git push
 
-[conceptnet5/src/github.com/zababurinsv/ClearGDPR]
-checkout = git clone 'https://github.com/zababurinsv/ClearGDPR' 'ClearGDPR'
-pull = git pull --rebase
-push = git add -A && git commit -m 'update' && git push
-
 [conceptnet5/src/github.com/zababurinsv/contract-deals]
 checkout = git clone 'https://github.com/zababurinsv/contract-deals' 'contract-deals'
-pull = git pull --rebase
-push = git add -A && git commit -m 'update' && git push
-
-[conceptnet5/src/github.com/zababurinsv/dark-offchain]
-checkout = git clone 'https://github.com/zababurinsv/dark-offchain' 'dark-offchain'
-pull = git pull --rebase
-push = git add -A && git commit -m 'update' && git push
-
-[conceptnet5/src/github.com/zababurinsv/dark-web-app]
-checkout = git clone 'https://github.com/zababurinsv/dark-web-app' 'dark-web-app'
 pull = git pull --rebase
 push = git add -A && git commit -m 'update' && git push
 
@@ -116,11 +101,6 @@ push = git add -A && git commit -m 'update' && git push
 
 [conceptnet5/src/github.com/zababurinsv/dictionary]
 checkout = git clone 'https://github.com/zababurinsv/dictionary' 'dictionary'
-pull = git pull --rebase
-push = git add -A && git commit -m 'update' && git push
-
-[conceptnet5/src/github.com/zababurinsv/gaia]
-checkout = git clone 'https://github.com/zababurinsv/gaia' 'gaia'
 pull = git pull --rebase
 push = git add -A && git commit -m 'update' && git push
 
@@ -211,11 +191,6 @@ push = git add -A && git commit -m 'update' && git push
 
 [conceptnet5/src/github.com/zababurinsv/server-webdav]
 checkout = git clone 'https://github.com/zababurinsv/server-webdav' 'server-webdav'
-pull = git pull --rebase
-push = git add -A && git commit -m 'update' && git push
-
-[conceptnet5/src/github.com/zababurinsv/sscore]
-checkout = git clone 'https://github.com/zababurinsv/sscore' 'sscore'
 pull = git pull --rebase
 push = git add -A && git commit -m 'update' && git push
 
