@@ -77,8 +77,3 @@ assumption that the small test database has already been built.
 
 Run `pytest --fulldb` to run additional tests on the fully built
 ConceptNet database.
-
-
-### Other
-* [python with vue](https://medium.com/project-enferno/a-modern-and-simple-workflow-with-flask-parcel-and-vue-js-in-enferno-3-0-e9c5facdc10f)
-    * [monorepo](https://github.com/mkocik/yarn-monorepo-example/blob/master/frontend/package.json)
