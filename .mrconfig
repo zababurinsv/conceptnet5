@@ -1,0 +1,240 @@
+
+[conceptnet5/src/github.com/zababurinsv/admin]
+checkout = git clone 'https://github.com/zababurinsv/admin' 'admin'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
+
+[conceptnet5/src/github.com/zababurinsv/bus]
+checkout = git clone 'https://github.com/zababurinsv/bus' 'bus'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
+
+[conceptnet5/src/github.com/zababurinsv/config]
+checkout = git clone 'https://github.com/zababurinsv/config' 'config'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
+
+[conceptnet5/src/github.com/zababurinsv/dispatcher]
+checkout = git clone 'https://github.com/zababurinsv/dispatcher' 'dispatcher'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
+
+[conceptnet5/src/github.com/zababurinsv/documentation]
+checkout = git clone 'https://github.com/zababurinsv/documentation' 'documentation'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
+
+[conceptnet5/src/github.com/zababurinsv/newkind]
+checkout = git clone 'https://github.com/zababurinsv/newkind' 'newkind'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
+
+[conceptnet5/src/github.com/zababurinsv/registry]
+checkout = git clone 'https://github.com/zababurinsv/registry' 'registry'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
+
+[conceptnet5/src/github.com/zababurinsv/routing]
+checkout = git clone 'https://github.com/zababurinsv/routing' 'routing'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
+
+[conceptnet5/src/github.com/zababurinsv/ssg]
+checkout = git clone 'https://github.com/zababurinsv/ssg.git' 'ssg'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
+
+[conceptnet5/src/github.com/zababurinsv/static]
+checkout = git clone 'https://github.com/zababurinsv/static' 'static'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
+
+[conceptnet5/src/github.com/zababurinsv/zababurinsv.github.io]
+checkout = git clone 'https://github.com/zababurinsv/zababurinsv.github.io' 'zababurinsv.github.io'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
+
+[conceptnet5]
+checkout = git clone 'https://github.com/zababurinsv/conceptnet5.git' 'conceptnet5'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
+
+[conceptnet5/src/github.com/zababurinsv/chat]
+checkout = git clone 'https://github.com/zababurinsv/chat' 'chat'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
+
+[conceptnet5/src/github.com/zababurinsv/algorithms_js]
+checkout = git clone 'https://github.com/zababurinsv/algorithms_js' 'algorithms_js'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
+
+[conceptnet5/src/github.com/zababurinsv/auction]
+checkout = git clone 'https://github.com/zababurinsv/auction' 'auction'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
+
+[conceptnet5/src/github.com/zababurinsv/bank]
+checkout = git clone 'https://github.com/zababurinsv/bank' 'bank'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
+
+[conceptnet5/src/github.com/zababurinsv/board]
+checkout = git clone 'https://github.com/zababurinsv/board' 'board'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
+
+[conceptnet5/src/github.com/zababurinsv/ClearGDPR]
+checkout = git clone 'https://github.com/zababurinsv/ClearGDPR' 'ClearGDPR'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
+
+[conceptnet5/src/github.com/zababurinsv/contract-deals]
+checkout = git clone 'https://github.com/zababurinsv/contract-deals' 'contract-deals'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
+
+[conceptnet5/src/github.com/zababurinsv/dark-offchain]
+checkout = git clone 'https://github.com/zababurinsv/dark-offchain' 'dark-offchain'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
+
+[conceptnet5/src/github.com/zababurinsv/dark-web-app]
+checkout = git clone 'https://github.com/zababurinsv/dark-web-app' 'dark-web-app'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
+
+[conceptnet5/src/github.com/zababurinsv/dashboard]
+checkout = git clone 'https://github.com/zababurinsv/dashboard' 'dashboard'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
+
+[conceptnet5/src/github.com/zababurinsv/design]
+checkout = git clone 'https://github.com/zababurinsv/design' 'design'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
+
+[conceptnet5/src/github.com/zababurinsv/dictionary]
+checkout = git clone 'https://github.com/zababurinsv/dictionary' 'dictionary'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
+
+[conceptnet5/src/github.com/zababurinsv/gaia]
+checkout = git clone 'https://github.com/zababurinsv/gaia' 'gaia'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
+
+[conceptnet5/src/github.com/zababurinsv/interface]
+checkout = git clone 'https://github.com/zababurinsv/interface' 'interface'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
+
+[conceptnet5/src/github.com/zababurinsv/marker-tracking]
+checkout = git clone 'https://github.com/zababurinsv/marker-tracking' 'marker-tracking'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
+
+[conceptnet5/src/github.com/zababurinsv/merkle-tree]
+checkout = git clone 'https://github.com/zababurinsv/merkle-tree' 'merkle-tree'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
+
+[conceptnet5/src/github.com/zababurinsv/Michurin]
+checkout = git clone 'https://github.com/zababurinsv/Michurin' 'Michurin'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
+
+[conceptnet5/src/github.com/zababurinsv/moderator]
+checkout = git clone 'https://github.com/zababurinsv/moderator' 'moderator'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
+
+[conceptnet5/src/github.com/zababurinsv/monopoly]
+checkout = git clone 'https://github.com/zababurinsv/monopoly' 'monopoly'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
+
+[conceptnet5/src/github.com/zababurinsv/monopoly-await]
+checkout = git clone 'https://github.com/zababurinsv/monopoly-await' 'monopoly-await'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
+
+[conceptnet5/src/github.com/zababurinsv/monopoly-player]
+checkout = git clone 'https://github.com/zababurinsv/monopoly-player' 'monopoly-player'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
+
+[conceptnet5/src/github.com/zababurinsv/ob-proxy]
+checkout = git clone 'https://github.com/zababurinsv/ob-proxy' 'ob-proxy'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
+
+[conceptnet5/src/github.com/zababurinsv/openbazaar-web]
+checkout = git clone 'https://github.com/zababurinsv/openbazaar-web' 'openbazaar-web'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
+
+[conceptnet5/src/github.com/zababurinsv/pay-crypto]
+checkout = git clone 'https://github.com/zababurinsv/pay-crypto' 'pay-crypto'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
+
+[conceptnet5/src/github.com/zababurinsv/pay-fiat]
+checkout = git clone 'https://github.com/zababurinsv/pay-fiat' 'pay-fiat'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
+
+[conceptnet5/src/github.com/zababurinsv/post]
+checkout = git clone 'https://github.com/zababurinsv/post' 'post'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
+
+[conceptnet5/src/github.com/zababurinsv/Russia]
+checkout = git clone 'https://github.com/zababurinsv/Russia' 'Russia'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
+
+[conceptnet5/src/github.com/zababurinsv/server-account-cjs]
+checkout = git clone 'https://github.com/zababurinsv/server-account-cjs' 'server-account-cjs'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
+
+[conceptnet5/src/github.com/zababurinsv/server-demon]
+checkout = git clone 'https://github.com/zababurinsv/server-demon' 'server-demon'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
+
+[conceptnet5/src/github.com/zababurinsv/server-feed-mjs]
+checkout = git clone 'https://github.com/zababurinsv/server-feed-mjs' 'server-feed-mjs'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
+
+[conceptnet5/src/github.com/zababurinsv/server-webdav]
+checkout = git clone 'https://github.com/zababurinsv/server-webdav' 'server-webdav'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
+
+[conceptnet5/src/github.com/zababurinsv/sscore]
+checkout = git clone 'https://github.com/zababurinsv/sscore' 'sscore'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
+
+[conceptnet5/src/github.com/zababurinsv/stackexchange]
+checkout = git clone 'https://github.com/zababurinsv/stackexchange' 'stackexchange'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
+
+[conceptnet5/src/github.com/zababurinsv/telegram]
+checkout = git clone 'https://github.com/zababurinsv/telegram' 'telegram'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
+
+[conceptnet5/src/github.com/zababurinsv/waves-faucet]
+checkout = git clone 'https://github.com/zababurinsv/waves-faucet' 'waves-faucet'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
+
+[conceptnet5/src/github.com/zababurinsv/webdav]
+checkout = git clone 'https://github.com/zababurinsv/webdav' 'webdav'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push

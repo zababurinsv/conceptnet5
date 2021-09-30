@@ -22,8 +22,8 @@
     "test:react": "yarn --cwd frontend/react build",
     "initialization": "./scripts/service-initialization.sh",
     "up": "./scripts/service-up.sh",
-    "git:push": "mr push --trust-all",
-    "git:pull": "mr pull --trust-all",
+    "git:push": "mr --trust-all push",
+    "git:pull": "mr --trust-all pull",
     "config:mr": "sudo nano ~/.mrconfig"
   },
   "repository": {
