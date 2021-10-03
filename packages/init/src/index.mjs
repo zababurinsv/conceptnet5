@@ -14,8 +14,18 @@ let type = userAgent.getResult().device.type
 if(!type)
   type = 'desktop'
 
-export default async ( path = false, console = true ) => {
-  (type !== 'desktop' && console)
+let get = async () => {
+ let response = await fetch('/public/test.index.mjs')
+  response = await response.text();
+  return response
+}
+
+export default async ( path = false, devTool = true ) => {
+    // let js = await get()
+    // Mocha.addFile(js);
+    // console.log('sssssss');
+
+  (type !== 'desktop' && devTool)
       ? (eruda.init())
       : (path)
         ? (

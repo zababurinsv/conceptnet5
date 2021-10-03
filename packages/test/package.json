@@ -7,7 +7,7 @@
   "license": "GPL-3.0-only",
   "private": true,
   "config": {
-    "port": 3267
+    "port": 8426
   },
   "scripts": {
     "start": "start",
