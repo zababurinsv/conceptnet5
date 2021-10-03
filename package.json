@@ -24,7 +24,8 @@
     "up": "./scripts/service-up.sh",
     "git:push": "mr --trust-all push",
     "git:pull": "mr --trust-all pull",
-    "config:mr": "sudo nano ~/.mrconfig"
+    "config:mr": "sudo nano ~/.mrconfig",
+    "clean:All": "find . -name \"node_modules\" -exec rm -rf '{}' +; find . -name \"package-lock.json\" -exec rm -rf '{}' +;  find . -name \"yarn.lock\" -exec rm -rf '{}' +;"
   },
   "repository": {
     "type": "git",
