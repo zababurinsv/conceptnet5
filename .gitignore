@@ -43,7 +43,6 @@ yarn-error.log*
 lerna-debug.log*
 projects
 projects/*
-packages/*
 **/.parcel-cache/**
 # Diagnostic reports (https://nodejs.org/api/report.html)
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json

@@ -25,7 +25,8 @@
     "git:push": "mr --trust-all push",
     "git:pull": "mr --trust-all pull",
     "config:mr": "sudo nano ~/.mrconfig",
-    "clean:All": "find . -name \"node_modules\" -exec rm -rf '{}' +; find . -name \"package-lock.json\" -exec rm -rf '{}' +;  find . -name \"yarn.lock\" -exec rm -rf '{}' +;"
+    "clean:All": "find . -name \"node_modules\" -exec rm -rf '{}' +; find . -name \"package-lock.json\" -exec rm -rf '{}' +;  find . -name \"yarn.lock\" -exec rm -rf '{}' +;",
+    "clean:Parcel": "find . -name \".parcel-cache\" -exec rm -rf '{}' +; "
   },
   "repository": {
     "type": "git",
@@ -51,14 +52,11 @@
   ],
   "devDependencies": {
     "@babel/preset-react": "^7.14.5",
-    "@parcel/resolver-default": "^2.0.0-alpha.3",
-    "@parcel/transformer-sass": "^2.0.0-alpha.3",
     "parcel-plugin-static-files-copy": "^2.6.0",
     "parcel": "2.0.0-rc.0",
     "stylelint": "^13.13.1",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-standard": "^22.0.0",
-    "es-module-lexer": "^0.9.0",
     "@orbit/config": "^1.0.0",
     "@orbit/task": "^1.0.0"
   }
