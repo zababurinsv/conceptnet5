@@ -17,9 +17,9 @@ export GOPATH=$(pwd)
 #sleep ${delay}
 #go get github.com/zababurinsv/newkind
 #sleep ${delay}
-#go get github.com/zababurinsv/documentation
+go get github.com/zababurinsv/documentation
 sleep ${delay}
-go get github.com/zababurinsv/zababurinsv.github.io
+#go get github.com/zababurinsv/zababurinsv.github.io
 #sleep ${delay}
 #go get github.com/zababurinsv/static
 #sleep ${delay}

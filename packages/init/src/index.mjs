@@ -14,7 +14,7 @@ let type = userAgent.getResult().device.type
 if(!type)
   type = 'desktop'
 
-let get = async () => {
+let addTest = async () => {
  let response = await fetch('/public/test.index.mjs')
   response = await response.text();
   return response

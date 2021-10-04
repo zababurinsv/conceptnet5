@@ -20,7 +20,7 @@
     "server": "yarn --cwd backend start",
     "build": "yarn --cwd frontend/react build",
     "test:react": "yarn --cwd frontend/react build",
-    "initialization": "./scripts/service-initialization.sh",
+    "download": "./scripts/service-initialization.sh",
     "dev:up:task": "yarn workspace @orbit/task dev",
     "dev:up:init": "yarn workspace @orbit/init dev",
     "dev:up:test": "yarn workspace @orbit/test dev",

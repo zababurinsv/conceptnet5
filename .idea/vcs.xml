@@ -8,6 +8,7 @@
     <mapping directory="$PROJECT_DIR$/core/routing" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/core/ssg" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/packages/orbit" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/packages/z-events" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/scripts/ssg" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/src/github.com/zababurinsv/admin" vcs="Git" />
   </component>

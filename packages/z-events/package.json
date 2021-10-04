@@ -1,0 +1,24 @@
+{
+  "name": "z-events",
+  "version": "0.1.1",
+  "description": "Task Manager",
+  "main": "index,mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "packages": "npm publish --access public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zababurinsv/z-events.git"
+  },
+  "keywords": [
+    "task",
+    "manager"
+  ],
+  "author": "Zababurin Sergey",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/zababurinsv/z-events/issues"
+  },
+  "homepage": "https://github.com/zababurinsv/z-events#readme"
+}
