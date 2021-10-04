@@ -5,6 +5,11 @@
     <title>Task Manager</title>
 </head>
 <body>
-
 </body>
+<script type="module">
+    import test from './index.mjs'
+    test().then((obj) => {
+        console.log('obj', obj)
+    })
+</script>
 </html>

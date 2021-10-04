@@ -1,10 +1,11 @@
-import heap from './task/task.mjs'
+import task from './task/task.mjs'
 import emoji from './emoji/emoji.mjs'
+
 export let set = (view,property,color,substrate,relation)=>{
   return new Promise(function (resolve, reject) {
     console.log(`${emoji('moon')[1][0]}`, relation + ' init')
     if(view) {
-      heap(view, property,color,substrate ,relation, (event)=>{
+      task(view, property,color,substrate ,relation, (event)=>{
         console.log(`    ${emoji('moon')[2][0]}`,relation)
         resolve(event)
       })
@@ -21,11 +22,11 @@ export let set = (view,property,color,substrate,relation)=>{
 
 export let get = (view,property,color,substrate,relation, callback)=>{
   console.log(`${emoji('moon')[0][0]}`, relation)
-  return heap(view, 'await',color,{property, substrate} ,relation, callback)
+  return task(view, 'await',color,{property, substrate} ,relation, callback)
 }
 
 export let list = (view,property,color,substrate,relation, callback) => {
-  let list = heap(view, 'list')
+  let list = task(view, 'list')
   list.then((item)=>{
     console.log(`${emoji('moon')[0][1]}`, item)
   })
@@ -33,7 +34,7 @@ export let list = (view,property,color,substrate,relation, callback) => {
 }
 
 export let close = (view,property,color,substrate,relation, callback)=> {
-  let close = heap(view,'close',color,substrate,relation)
+  let close = task(view,'close',color,substrate,relation)
   close.then((item)=>{
     console.log(`${emoji('moon')[0][3]}`, item)
   })

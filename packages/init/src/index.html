@@ -6,12 +6,13 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 </head>
 <body>
-<noscript> </noscript>
+<noscript>
+    Включите потдержку скриптов
+</noscript>
 </body>
-<script type="module" src="./test.index.mjs"></script>
 <script type="module">
         import init from './index.mjs'
-        init('/').then(obj => console.log(obj))
+        init('/public/pushkin.index.mjs').then(obj => console.log(obj))
 </script>
 <style> @import url("./index.scss");</style>
 </html>
