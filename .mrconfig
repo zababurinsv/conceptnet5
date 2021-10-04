@@ -213,3 +213,8 @@ push = git add -A && git commit -m 'update' && git push
 checkout = git clone 'https://github.com/zababurinsv/webdav' 'webdav'
 pull = git pull --rebase
 push = git add -A && git commit -m 'update' && git push
+
+[src/github.com/zababurinsv/z-events-private]
+checkout = git clone 'https://github.com/zababurinsv/z-events-private' 'z-events-private'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
