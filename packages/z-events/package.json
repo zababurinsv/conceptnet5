@@ -1,11 +1,12 @@
 {
   "name": "z-events",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Task Manager",
   "main": "index,mjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "packages": "npm publish --access public"
+    "npm:publish": "npm publish --access public",
+    "npm:login": "npm login"
   },
   "repository": {
     "type": "git",
