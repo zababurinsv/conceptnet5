@@ -1,26 +1,26 @@
-## Installation
+# z-events
 
-Use yarn to install dependecies.
+## Table of Contents <!-- omit in toc -->
 
-```bash
-yarn
+- [Getting Started](#getting-started)
+    - [Install](#install)
+- [License](#license)
+
+## Getting Started
+
+It is librari for easy to use test of mocha.js devTool eruda and events bus for uour projects 
+
+### Install
+
+Installing `z-events` with npm
+```console
+$ npm i z-events
+```
+Installing `z-events` with yarn
+```console
+$ yarn add z-events
 ```
 
-## Usage
-To run the project, you need to build it and start it.
+## License
 
-```bash
-yarn build
-yarn start
-```
-
-## Base structure
-The project contains backend and frontend workspaces, together with packages, that can be used to extract some logic there.
-```bash
-backend/
-frontend/
-packages/
-     config/
-     .../
-     .../
-```
+*GNU GENERAL PUBLIC LICENSE version 3* by [Zababurin Sergey](https://raw.githubusercontent.com/zababurinsv/z-events/master/LICENSE) converted to Markdown. Read the [original GPL v3](http://www.gnu.org/licenses/).

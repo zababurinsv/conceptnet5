@@ -22,8 +22,8 @@ export GOPATH=$(pwd)
 #go get github.com/zababurinsv/zababurinsv.github.io
 #sleep ${delay}
 #go get github.com/zababurinsv/static
-sleep ${delay}
-go get github.com/zababurinsv/z-events-private
+#sleep ${delay}
+#go get github.com/zababurinsv/z-events-private
 #go get github.com/zababurinsv/search
 #sleep ${delay}
 #go get github.com/zababurinsv/auction
@@ -91,3 +91,6 @@ go get github.com/zababurinsv/z-events-private
 #go get github.com/zababurinsv/algorithms_js
 #sleep ${delay}
 #go get github.com/zababurinsv/Visualizing-Deep-Learning
+
+sleep ${delay}
+go get github.com/zababurinsv/test_07_10_2021

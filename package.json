@@ -58,14 +58,13 @@
   ],
   "devDependencies": {
     "@babel/preset-react": "^7.14.5",
-    "@parcel/resolver-default": "^2.0.0-alpha.3",
+    "@orbit/config": "^1.0.0",
+    "@orbit/task": "^1.0.0",
     "@parcel/transformer-sass": "2.0.0-rc.0",
     "parcel": "2.0.0-rc.0",
     "parcel-plugin-static-files-copy": "^2.6.0",
     "stylelint": "^13.13.1",
     "stylelint-config-prettier": "^8.0.2",
-    "stylelint-config-standard": "^22.0.0",
-    "@orbit/config": "^1.0.0",
-    "@orbit/task": "^1.0.0"
+    "stylelint-config-standard": "^22.0.0"
   }
 }
