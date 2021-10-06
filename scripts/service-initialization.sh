@@ -91,6 +91,9 @@ export GOPATH=$(pwd)
 #go get github.com/zababurinsv/algorithms_js
 #sleep ${delay}
 #go get github.com/zababurinsv/Visualizing-Deep-Learning
-
+#sleep ${delay}
+#go get github.com/zababurinsv/test_07_10_2021
+#sleep ${delay}
+#go get github.com/zababurinsv/wasm
 sleep ${delay}
-go get github.com/zababurinsv/test_07_10_2021
+go get github.com/zababurinsv/store

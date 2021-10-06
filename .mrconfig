@@ -223,3 +223,13 @@ push = git add -A && git commit -m 'update' && git push
 checkout = git clone 'https://github.com/zababurinsv/orbit.git' 'z-events'
 pull = git pull --rebase
 push = git add -A && git commit -m 'update' && git push
+
+[src/github.com/zababurinsv/wasm]
+checkout = git clone 'https://github.com/zababurinsv/wasm' 'wasm'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
+
+[src/github.com/zababurinsv/store]
+checkout = git clone 'https://github.com/zababurinsv/store' 'store'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
