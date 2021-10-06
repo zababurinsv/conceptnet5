@@ -218,3 +218,8 @@ push = git add -A && git commit -m 'update' && git push
 checkout = git clone 'https://github.com/zababurinsv/z-events-private' 'z-events-private'
 pull = git pull --rebase
 push = git add -A && git commit -m 'update' && git push
+
+[packages/z-events]
+checkout = git clone 'https://github.com/zababurinsv/orbit.git' 'z-events'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
