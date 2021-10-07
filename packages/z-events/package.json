@@ -1,6 +1,6 @@
 {
   "name": "z-events",
-  "version": "0.2.2",
+  "version": "0.2.4",
   "description": "Task Manager",
   "main": "index.min.mjs",
   "scripts": {

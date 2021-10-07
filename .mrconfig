@@ -233,3 +233,8 @@ push = git add -A && git commit -m 'update' && git push
 checkout = git clone 'https://github.com/zababurinsv/store' 'store'
 pull = git pull --rebase
 push = git add -A && git commit -m 'update' && git push
+
+[src/github.com/zababurinsv/tests]
+checkout = git clone 'https://github.com/zababurinsv/tests' 'tests'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
