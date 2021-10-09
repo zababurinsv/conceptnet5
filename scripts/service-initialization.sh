@@ -97,5 +97,7 @@ export GOPATH=$(pwd)
 #go get github.com/zababurinsv/wasm
 #sleep ${delay}
 #go get github.com/zababurinsv/store
+#sleep ${delay}
+#go get github.com/zababurinsv/tests
 sleep ${delay}
 go get github.com/zababurinsv/tests
