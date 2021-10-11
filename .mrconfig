@@ -243,3 +243,8 @@ push = git add -A && git commit -m 'update' && git push
 checkout = git clone 'https://github.com/zababurinsv/test_07_10_2021' 'bucket'
 pull = git pull --rebase
 push = git add -A && git commit -m 'update' && git push
+
+[src/github.com/zababurinsv/server-signal]
+checkout = git clone 'https://github.com/zababurinsv/server-signal' 'server-signal'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
