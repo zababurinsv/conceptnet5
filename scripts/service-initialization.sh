@@ -101,5 +101,7 @@ export GOPATH=$(pwd)
 #go get github.com/zababurinsv/tests
 #sleep ${delay}
 #go get github.com/zababurinsv/tests
+#sleep ${delay}
+#go get github.com/zababurinsv/server-signal
 sleep ${delay}
-go get github.com/zababurinsv/server-signal
+go get github.com/zababurinsv/zb-fs
