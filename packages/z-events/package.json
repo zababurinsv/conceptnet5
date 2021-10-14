@@ -1,5 +1,5 @@
 {
-  "name": "z-events",
+  "name": "@newkind/events",
   "version": "0.2.4",
   "description": "Task Manager",
   "main": "index.min.mjs",
