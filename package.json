@@ -32,7 +32,8 @@
     "config:mr:trust": "sudo nano ~/.mrtrust",
     "config:mr": "sudo nano ~/.mrconfig",
     "clean:All": "find . -name \"node_modules\" -exec rm -rf '{}' +; find . -name \"package-lock.json\" -exec rm -rf '{}' +;  find . -name \"yarn.lock\" -exec rm -rf '{}' +;",
-    "clean:Parcel": "find . -name \".parcel-cache\" -exec rm -rf '{}' +; "
+    "clean:Parcel": "find . -name \".parcel-cache\" -exec rm -rf '{}' +; ",
+    "clean:idea": "find . -name \".idea\" -exec rm -rf '{}' +; "
   },
   "repository": {
     "type": "git",

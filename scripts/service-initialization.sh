@@ -111,5 +111,9 @@ export GOPATH=$(pwd)
 #go get github.com/zababurinsv/html
 #sleep ${delay}
 #go get github.com/zababurinsv/connect
+#sleep ${delay}
+#go get github.com/zababurinsv/newkind-fs
 sleep ${delay}
-go get github.com/zababurinsv/newkind-fs
+go get github.com/zababurinsv/newkind-events
+sleep ${delay}
+go get github.com/zababurinsv/newkind-test
