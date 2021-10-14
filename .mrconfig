@@ -268,3 +268,8 @@ push = git add -A && git commit -m 'update' && git push
 checkout = git clone 'https://github.com/zababurinsv/html' 'html'
 pull = git pull --rebase
 push = git add -A && git commit -m 'update' && git push
+
+[src/github.com/zababurinsv/newkind-fs]
+checkout = git clone 'https://github.com/zababurinsv/zb-fs' 'newkind-fs'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
