@@ -219,11 +219,6 @@ checkout = git clone 'https://github.com/zababurinsv/z-events-private' 'z-events
 pull = git pull --rebase
 push = git add -A && git commit -m 'update' && git push
 
-[packages/z-events]
-checkout = git clone 'https://github.com/zababurinsv/orbit.git' 'z-events'
-pull = git pull --rebase
-push = git add -A && git commit -m 'update' && git push
-
 [src/github.com/zababurinsv/wasm]
 checkout = git clone 'https://github.com/zababurinsv/wasm' 'wasm'
 pull = git pull --rebase
@@ -236,11 +231,6 @@ push = git add -A && git commit -m 'update' && git push
 
 [src/github.com/zababurinsv/tests]
 checkout = git clone 'https://github.com/zababurinsv/tests' 'tests'
-pull = git pull --rebase
-push = git add -A && git commit -m 'update' && git push
-
-[src/github.com/zababurinsv/bucket]
-checkout = git clone 'https://github.com/zababurinsv/test_07_10_2021' 'bucket'
 pull = git pull --rebase
 push = git add -A && git commit -m 'update' && git push
 
@@ -259,16 +249,6 @@ checkout = git clone 'https://github.com/zababurinsv/webrtc' 'webrtc'
 pull = git pull --rebase
 push = git add -A && git commit -m 'update' && git push
 
-[src/github.com/zababurinsv/connect]
-checkout = git clone 'https://github.com/zababurinsv/connect' 'connect'
-pull = git pull --rebase
-push = git add -A && git commit -m 'update' && git push
-
-[src/github.com/zababurinsv/html]
-checkout = git clone 'https://github.com/zababurinsv/html' 'html'
-pull = git pull --rebase
-push = git add -A && git commit -m 'update' && git push
-
 [src/github.com/zababurinsv/newkind-fs]
 checkout = git clone 'https://github.com/zababurinsv/zb-fs' 'newkind-fs'
 pull = git pull --rebase
@@ -281,5 +261,20 @@ push = git add -A && git commit -m 'update' && git push
 
 [src/github.com/zababurinsv/newkind-events]
 checkout = git clone 'https://github.com/zababurinsv/newkind-events' 'newkind-events'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
+
+[src/github.com/zababurinsv/newkind-cart]
+checkout = git clone 'https://github.com/zababurinsv/newkind-cart' 'newkind-cart'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
+
+[src/github.com/zababurinsv/newkind-connect]
+checkout = git clone 'https://github.com/zababurinsv/newkind-connect' 'newkind-connect'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
+
+[src/github.com/zababurinsv/newkind-html]
+checkout = git clone 'https://github.com/zababurinsv/newkind-html' 'newkind-html'
 pull = git pull --rebase
 push = git add -A && git commit -m 'update' && git push
