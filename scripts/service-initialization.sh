@@ -118,4 +118,8 @@ export GOPATH=$(pwd)
 #sleep ${delay}
 #go get github.com/zababurinsv/newkind-test
 #sleep ${delay}
-go get github.com/zababurinsv/newkind-cart
+#go get github.com/zababurinsv/newkind-cart
+sleep ${delay}
+go get github.com/zababurinsv/newkind-db
+sleep ${delay}
+go get github.com/zababurinsv/newkind-ipfs
