@@ -308,3 +308,8 @@ push = git add -A && git commit -m 'update' && git push
 checkout = git clone 'https://github.com/zababurinsv/openbazaar-web-ts.git' 'openbazaar-web-ts'
 pull = git pull --rebase
 push = git add -A && git commit -m 'update' && git push
+
+[src/github.com/zababurinsv/newkind-shell]
+checkout = git clone 'https://github.com/zababurinsv/newkind-shell.git' 'newkind-shell'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push

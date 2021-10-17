@@ -131,5 +131,7 @@ export GOPATH=$(pwd)
 #go get github.com/zababurinsv/openbazaar-web
 #sleep ${delay}
 #go get github.com/feeedback/minesweeper-project
+#sleep ${delay}
+#go get github.com/zababurinsv/newkind-ts-types
 sleep ${delay}
-go get github.com/zababurinsv/newkind-ts-types
+go get github.com/zababurinsv/newkind
