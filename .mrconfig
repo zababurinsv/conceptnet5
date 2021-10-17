@@ -288,3 +288,23 @@ push = git add -A && git commit -m 'update' && git push
 checkout = git clone 'https://github.com/zababurinsv/newkind-db' 'newkind-db'
 pull = git pull --rebase
 push = git add -A && git commit -m 'update' && git push
+
+[src/github.com/zababurinsv/newkind-py]
+checkout = git clone 'https://github.com/zababurinsv/newkind-py' 'newkind-py'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
+
+[src/github.com/zababurinsv/openbazaar-web]
+checkout = git clone 'https://github.com/zababurinsv/openbazaar-web' 'openbazaar-web'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
+
+[src/github.com/zababurinsv/newkind-ts-types]
+checkout = git clone 'https://github.com/zababurinsv/newkind-ts-types' 'newkind-ts-types'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
+
+[src/github.com/zababurinsv/openbazaar-web-ts]
+checkout = git clone 'https://github.com/zababurinsv/openbazaar-web-ts.git' 'openbazaar-web-ts'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
