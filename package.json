@@ -97,6 +97,6 @@
     "webpack": "4.44.2"
   },
   "dependencies": {
-    "@newkind/universe": "^0.1.0"
+    "@newkind/universe": "^0.1.1"
   }
 }
