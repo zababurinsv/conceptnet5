@@ -318,3 +318,13 @@ push = git add -A && git commit -m 'update' && git push
 checkout = git clone 'https://github.com/feeedback/minesweeper-project' 'minesweeper-project'
 pull = git pull --rebase
 push = git add -A && git commit -m 'update' && git push
+
+[src/github.com/zababurinsv/newkind-index]
+checkout = git clone 'https://github.com/zababurinsv/newkind-universe' 'newkind-index'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
+
+[src/github.com/zababurinsv/newkind]
+checkout = git clone 'https://github.com/zababurinsv/newkind' 'newkind'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push

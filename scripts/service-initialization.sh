@@ -133,5 +133,7 @@ export GOPATH=$(pwd)
 #go get github.com/feeedback/minesweeper-project
 #sleep ${delay}
 #go get github.com/zababurinsv/newkind-ts-types
+#sleep ${delay}
+#go get github.com/zababurinsv/newkind
 sleep ${delay}
-go get github.com/zababurinsv/newkind
+go get github.com/zababurinsv/newkind-universe
