@@ -239,11 +239,6 @@ checkout = git clone 'https://github.com/zababurinsv/server-signal' 'server-sign
 pull = git pull --rebase
 push = git add -A && git commit -m 'update' && git push
 
-[src/github.com/zababurinsv/zb-fs]
-checkout = git clone 'https://github.com/zababurinsv/zb-fs' 'zb-fs'
-pull = git pull --rebase
-push = git add -A && git commit -m 'update' && git push
-
 [src/github.com/zababurinsv/webrtc]
 checkout = git clone 'https://github.com/zababurinsv/webrtc' 'webrtc'
 pull = git pull --rebase
