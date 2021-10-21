@@ -333,3 +333,8 @@ push = git add -A && git commit -m 'update' && git push
 checkout = git clone 'https://github.com/zababurinsv/universe.git' 'universe'
 pull = git pull --rebase
 push = git add -A && git commit -m 'update' && git push
+
+[src/github.com/zababurinsv/newkind-react]
+checkout = git clone 'https://github.com/zababurinsv/newkind-react.git' 'newkind-react'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
