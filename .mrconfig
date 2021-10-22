@@ -214,11 +214,6 @@ checkout = git clone 'https://github.com/zababurinsv/webdav' 'webdav'
 pull = git pull --rebase
 push = git add -A && git commit -m 'update' && git push
 
-[src/github.com/zababurinsv/z-events-private]
-checkout = git clone 'https://github.com/zababurinsv/z-events-private' 'z-events-private'
-pull = git pull --rebase
-push = git add -A && git commit -m 'update' && git push
-
 [src/github.com/zababurinsv/wasm]
 checkout = git clone 'https://github.com/zababurinsv/wasm' 'wasm'
 pull = git pull --rebase
