@@ -310,7 +310,7 @@ pull = git pull --rebase
 push = git add -A && git commit -m 'update' && git push
 
 [src/github.com/zababurinsv/newkind-index]
-checkout = git clone 'https://github.com/zababurinsv/newkind-universe' 'newkind-index'
+checkout = git clone 'https://github.com/zababurinsv/newkind-index.git' 'newkind-index'
 pull = git pull --rebase
 push = git add -A && git commit -m 'update' && git push
 
