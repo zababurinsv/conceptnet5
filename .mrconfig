@@ -343,3 +343,8 @@ push = git add -A && git commit -m 'update' && git push
 checkout = git clone 'https://github.com/zababurinsv/newkind-service.git' 'newkind-service'
 pull = git pull --rebase
 push = git add -A && git commit -m 'update' && git push
+
+[src/github.com/zababurinsv/newkind-tests]
+checkout = git clone 'https://github.com/zababurinsv/newkind-tests.git' 'newkind-tests'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
