@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let input  = 234
+    let output = 0
+    let current = 0
+    while(input !== 0) {
+        current = input % 10
+        output = (output * 10) + current
+        input = parseInt(input / 10, 10)
+    }
+    console.log(output)
+</script>
+</body>
+</html>
