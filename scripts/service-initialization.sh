@@ -137,5 +137,7 @@ export GOPATH=$(pwd)
 #go get github.com/zababurinsv/newkind
 #sleep ${delay}
 #go get github.com/zababurinsv/newkind-universe
+#sleep ${delay}
+#go get github.com/zababurinsv/wasi-fs-access
 sleep ${delay}
-go get github.com/zababurinsv/wasi-fs-access
+go get github.com/zababurinsv/css
