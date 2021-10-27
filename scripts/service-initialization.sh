@@ -141,5 +141,7 @@ export GOPATH=$(pwd)
 #go get github.com/zababurinsv/wasi-fs-access
 #sleep ${delay}
 #go get github.com/zababurinsv/css
+#sleep ${delay}
+#go get github.com/biowasm/aioli
 sleep ${delay}
-go get github.com/biowasm/aioli
+go get github.com/zababurinsv/newkind-elite
