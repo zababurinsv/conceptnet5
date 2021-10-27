@@ -309,11 +309,6 @@ checkout = git clone 'https://github.com/feeedback/minesweeper-project' 'mineswe
 pull = git pull --rebase
 push = git add -A && git commit -m 'update' && git push
 
-[src/github.com/zababurinsv/newkind-index]
-checkout = git clone 'https://github.com/zababurinsv/newkind-index.git' 'newkind-index'
-pull = git pull --rebase
-push = git add -A && git commit -m 'update' && git push
-
 [src/github.com/zababurinsv/newkind]
 checkout = git clone 'https://github.com/zababurinsv/newkind' 'newkind'
 pull = git pull --rebase
@@ -344,3 +339,7 @@ checkout = git clone 'https://github.com/zababurinsv/newkind-tests.git' 'newkind
 pull = git pull --rebase
 push = git add -A && git commit -m 'update' && git push
 
+[src/github.com/zababurinsv/newkind-elite]
+checkout = git clone 'https://github.com/zababurinsv/newkind-elite.git' 'newkind-elite'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
