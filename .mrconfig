@@ -343,3 +343,8 @@ push = git add -A && git commit -m 'update' && git push
 checkout = git clone 'https://github.com/zababurinsv/newkind-elite.git' 'newkind-elite'
 pull = git pull --rebase
 push = git add -A && git commit -m 'update' && git push
+
+[src/github.com/zababurinsv/newkind-gpu]
+checkout = git clone 'https://github.com/zababurinsv/newkind-gpu.git' 'newkind-gpu'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
