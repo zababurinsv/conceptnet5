@@ -244,11 +244,6 @@ checkout = git clone 'https://github.com/zababurinsv/zb-fs' 'newkind-fs'
 pull = git pull --rebase
 push = git add -A && git commit -m 'update' && git push
 
-[src/github.com/zababurinsv/z-events-private/newkind-events]
-checkout = git clone 'https://github.com/zababurinsv/newkind-events.git' 'newkind-events'
-pull = git pull --rebase
-push = git add -A && git commit -m 'update' && git push
-
 [src/github.com/zababurinsv/newkind-events]
 checkout = git clone 'https://github.com/zababurinsv/newkind-events' 'newkind-events'
 pull = git pull --rebase
