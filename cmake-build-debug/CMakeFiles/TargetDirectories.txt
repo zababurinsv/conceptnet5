@@ -1,0 +1,3 @@
+/home/zb/conceptnet5/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/zb/conceptnet5/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/zb/conceptnet5/cmake-build-debug/CMakeFiles/conceptnet5.dir

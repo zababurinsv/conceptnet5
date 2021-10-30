@@ -1,5 +1,5 @@
 {
-  "name": "@orbit/concept",
+  "name": "@newkind/conceptnet",
   "version": "1.0.0",
   "description": "index",
   "main": "src/index.mjs",
@@ -14,6 +14,7 @@
     "env": "zb"
   },
   "scripts": {
+    "setup": "yarn install && yarn allow-scripts && ...",
     "dev": "parcel web/conceptnet_web/templates/index.html",
     "dev:star_initiator": "yarn workspace @packages/star dev:initiator",
     "dev:star_dialer": "yarn workspace @packages/star dev:dialer",
@@ -100,5 +101,13 @@
   },
   "dependencies": {
     "@newkind/universe": "^0.1.1"
-  }
+  },
+  "lavamoat": {
+    "allowScripts": {
+      "@lavamoat/preinstall-always-fail": false,
+      "core-js": true,
+      "electron": true
+    }
+  },
+  "packageManager": "yarn@3.1.0"
 }

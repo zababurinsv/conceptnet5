@@ -145,5 +145,9 @@ export GOPATH=$(pwd)
 #go get github.com/biowasm/aioli
 #sleep ${delay}
 #go get github.com/zababurinsv/newkind-elite
+#sleep ${delay}
+#go get github.com/zababurinsv/newkind-streams
+#sleep ${delay}
+#go get github.com/mdn/dom-examples
 sleep ${delay}
-go get github.com/zababurinsv/newkind-streams
+go get github.com/MetaMask/post-message-stream
