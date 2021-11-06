@@ -74,7 +74,7 @@
   "devDependencies": {
     "@babel/preset-react": "^7.16.0",
     "@newkind/ts-types": "^0.1.0",
-    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/jest-dom": "^5.15.0",
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.0.2",
@@ -87,28 +87,25 @@
     "doxdox": "^3.0.0",
     "eslint": "^8.1.0",
     "eslint-config-react-app": "^6.0.0",
+    "eslint-plugin-jest": "^25.2.2",
+    "eslint-plugin-testing-library": "^5.0.0",
     "jsdoc": "^3.6.7",
     "parcel": "2.0.0",
     "parcel-reporter-static-files-copy": "^1.3.0",
+    "postcss-safe-parser": "^6.0.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-scripts": "4.0.3",
     "stylelint": "^14.0.1",
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-standard": "^23.0.0",
+    "sugarss": "^4.0.1",
     "typescript": "^4.4.4",
     "web-vitals": "^2.1.2",
     "webpack": "5.61.0"
   },
   "dependencies": {
     "@newkind/universe": "^0.1.6"
-  },
-  "lavamoat": {
-    "allowScripts": {
-      "@lavamoat/preinstall-always-fail": false,
-      "core-js": true,
-      "electron": true
-    }
   },
   "packageManager": "yarn@3.1.0"
 }
