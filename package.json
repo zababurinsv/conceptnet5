@@ -68,7 +68,7 @@
   },
   "maintainers": [],
   "workspaces": [
-    "src/**",
+    "src/github.com/zababurinsv/**",
     "packages/*"
   ],
   "devDependencies": {

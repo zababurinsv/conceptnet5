@@ -11,5 +11,7 @@ export GOPATH=$(pwd)
 #go get github.com/AnthumChris/fetch-progress-indicators
 #sleep ${delay}
 #go get github.com/GoogleChromeLabs/comlink
+#sleep ${delay}
+#go get github.com/webtorrent/webtorrent
 sleep ${delay}
-go get github.com/webtorrent/webtorrent
+go get github.com/captbaritone/webamp

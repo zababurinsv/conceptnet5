@@ -358,3 +358,13 @@ push = git add -A && git commit -m 'update' && git push
 checkout = git clone 'https://github.com/zababurinsv/server-radio' 'server-radio'
 pull = git pull --rebase
 push = git add -A && git commit -m 'update' && git push
+
+[src/github.com/zababurinsv/static-origin]
+checkout = git clone 'https://github.com/zababurinsv/static-origin' 'static-origin'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
+
+[src/github.com/zababurinsv/newkind-radio]
+checkout = git clone 'https://github.com/zababurinsv/newkind-radio.git' 'newkind-radio'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
