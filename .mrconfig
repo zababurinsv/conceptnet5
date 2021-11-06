@@ -353,3 +353,8 @@ push = git add -A && git commit -m 'update' && git push
 checkout = git clone 'https://github.com/zababurinsv/newkind-streams.git' 'newkind-streams'
 pull = git pull --rebase
 push = git add -A && git commit -m 'update' && git push
+
+[src/github.com/zababurinsv/server-radio]
+checkout = git clone 'https://github.com/zababurinsv/server-radio' 'server-radio'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push

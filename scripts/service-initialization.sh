@@ -147,3 +147,7 @@ export GOPATH=$(pwd)
 #go get github.com/zababurinsv/newkind-elite
 #sleep ${delay}
 #go get github.com/zababurinsv/newkind-streams
+#sleep ${delay}
+#go get github.com/zababurinsv/server-radio
+sleep ${delay}
+go get github.com/zababurinsv/static-origin
