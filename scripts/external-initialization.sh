@@ -13,5 +13,9 @@ export GOPATH=$(pwd)
 #go get github.com/GoogleChromeLabs/comlink
 #sleep ${delay}
 #go get github.com/webtorrent/webtorrent
+#sleep ${delay}
+#go get github.com/captbaritone/webamp
+#sleep ${delay}
+#go get github.com/WICG/background-sync
 sleep ${delay}
-go get github.com/captbaritone/webamp
+go get github.com/mdn/sw-test
