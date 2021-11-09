@@ -17,5 +17,7 @@ export GOPATH=$(pwd)
 #go get github.com/captbaritone/webamp
 #sleep ${delay}
 #go get github.com/WICG/background-sync
-sleep ${delay}
-go get github.com/mdn/sw-test
+#sleep ${delay}
+#go get github.com/mdn/sw-test
+#sleep ${delay}
+#go get github.com/ClementKerneur/React-Alarm
