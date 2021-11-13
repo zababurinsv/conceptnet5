@@ -23,5 +23,7 @@ export GOPATH=$(pwd)
 #go get github.com/ClementKerneur/React-Alarm
 #sleep ${delay}
 #go get github.com/AnthumChris/fetch-stream-audio
+#sleep ${delay}
+#go get github.com/zababurinsv/wasi-fs-access
 sleep ${delay}
-go get github.com/zababurinsv/wasi-fs-access
+go get github.com/zababurinsv/web-audio-samples

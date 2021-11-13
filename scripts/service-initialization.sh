@@ -1,7 +1,7 @@
 #!/bin/sh
 delay=5
 export GOPATH=$(pwd)
-#go get github.com/zababurinsv/admin
+go get github.com/zababurinsv/admin
 #sleep ${delay}
 #go get github.com/zababurinsv/bus
 #sleep ${delay}
@@ -151,5 +151,7 @@ export GOPATH=$(pwd)
 #go get github.com/zababurinsv/server-radio
 #sleep ${delay}
 #go get github.com/zababurinsv/static-origin
-sleep ${delay}
-go get github.com/zababurinsv/manifest
+#sleep ${delay}
+#go get github.com/zababurinsv/manifest
+#sleep ${delay}
+#go get github.com/zababurinsv/newkind-audio
