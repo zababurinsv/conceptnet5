@@ -373,3 +373,8 @@ push = git add -A && git commit -m 'update' && git push
 checkout = git clone 'https://github.com/zababurinsv/manifest' 'manifest'
 pull = git pull --rebase
 push = git add -A && git commit -m 'update' && git push
+
+[src/github.com/zababurinsv/wasi-fs-access]
+checkout = git clone 'https://github.com/zababurinsv/wasi-fs-access' 'wasi-fs-access'
+pull = git pull --rebase
+push = git add -A && git commit -m 'update' && git push
