@@ -68,8 +68,7 @@
   },
   "maintainers": [],
   "workspaces": [
-    "src/github.com/zababurinsv/**",
-    "packages/*"
+    "src/github.com/zababurinsv/**"
   ],
   "devDependencies": {
     "@babel/preset-react": "^7.16.0",

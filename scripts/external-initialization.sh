@@ -25,5 +25,19 @@ export GOPATH=$(pwd)
 #go get github.com/AnthumChris/fetch-stream-audio
 #sleep ${delay}
 #go get github.com/zababurinsv/wasi-fs-access
+#sleep ${delay}
+#go get github.com/zababurinsv/web-audio-samples
+#sleep ${delay}
+#go get github.com/hodgef/simple-keyboard
+#sleep ${delay}
+#go get github.com/gpujs/gpu.js
+#sleep ${delay}
+#go get github.com/philnash/service-worker-background-fetch
+#sleep ${delay}
+#go get gitlab.com/terafoundation/tera2
+#sleep ${delay}
+#go get gitlab.com/terafoundation/docs
+#sleep ${delay}
+#go get gitlab.com/terafoundation/dapps
 sleep ${delay}
-go get github.com/zababurinsv/web-audio-samples
+go get gitlab.com/terafoundation/terarun
