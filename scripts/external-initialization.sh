@@ -39,5 +39,7 @@ export GOPATH=$(pwd)
 #go get gitlab.com/terafoundation/docs
 #sleep ${delay}
 #go get gitlab.com/terafoundation/dapps
+#sleep ${delay}
+#go get gitlab.com/terafoundation/terarun
 sleep ${delay}
-go get gitlab.com/terafoundation/terarun
+go get github.com/GoogleChromeLabs/web-audio-samples
