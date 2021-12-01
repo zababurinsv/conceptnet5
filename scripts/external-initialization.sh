@@ -9,8 +9,8 @@ export GOPATH=$(pwd)
 #go get github.com/wavesplatform/signer
 #sleep ${delay}
 #go get github.com/AnthumChris/fetch-progress-indicators
-#sleep ${delay}
-#go get github.com/GoogleChromeLabs/comlink
+sleep ${delay}
+go get github.com/GoogleChromeLabs/comlink
 #sleep ${delay}
 #go get github.com/webtorrent/webtorrent
 #sleep ${delay}
@@ -41,5 +41,5 @@ export GOPATH=$(pwd)
 #go get gitlab.com/terafoundation/dapps
 #sleep ${delay}
 #go get gitlab.com/terafoundation/terarun
-sleep ${delay}
-go get github.com/GoogleChromeLabs/web-audio-samples
+#sleep ${delay}
+#go get github.com/GoogleChromeLabs/web-audio-samples
